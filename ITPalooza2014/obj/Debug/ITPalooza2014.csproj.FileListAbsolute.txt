@@ -1,0 +1,12 @@
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\QuickITPalooza2014.dll
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\QuickITPalooza2014.pdb
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\SQLite.Net.dll
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\Xamarin.Forms.Core.dll
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\Xamarin.Forms.Maps.dll
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\Xamarin.Forms.Core.xml
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\bin\Debug\Xamarin.Forms.Maps.xml
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\obj\Debug\QuickITPalooza2014.dll
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\obj\Debug\QuickITPalooza2014.pdb
+D:\Xamarin3\ITPalooza2014\ITPalooza2014\obj\Debug\ITPalooza2014.csprojResolveAssemblyReference.cache
