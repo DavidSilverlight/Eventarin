@@ -31,16 +31,7 @@ namespace ITPalooza2014
 				new MenuCell {Text = "Sessions", Host = this},
 				new MenuCell {Text = "Speakers", Host = this},
 				new MenuCell {Text = "Favorites", Host = this},
-				new MenuCell {Text = "Room Plan", Host = this},
-				new MenuCell {Text = "Map", Host = this},
 				new MenuCell {Text = "About", Host = this},
-				new MenuCell {Text = "Feedback", Host = this},
-				new MenuCell {Text = "Video", Host = this},
-				new MenuCell {Text = "Contests", Host = this},
-				new MenuCell {Text = "Jobs", Host = this},
-				new MenuCell {Text = "Parties", Host = this},
-				new MenuCell {Text = "PhotoTap", Host = this},
-				new MenuCell {Text = "Get Social", Host = this},
 
 			};
 
