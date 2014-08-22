@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ITPalooza2014\App.cs">
+    <Files>
+      <File FileName="ITPalooza2014.Android\TweetButtonRenderer.cs" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\SplashScreen.cs" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\Resources\Resource.designer.cs" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\Assets\AboutAssets.txt" Line="1" Column="1" />
+      <File FileName="C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\Resources\drawable\splashscreen.xml" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\Resources\values\Styles.xml" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\Resources\values\Strings.xml" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\MenuTableViewRenderer.cs" Line="1" Column="1" />
+      <File FileName="ITPalooza2014\Views\MenuPage.cs" Line="1" Column="1" />
+      <File FileName="ITPalooza2014\App.cs" Line="4" Column="4" />
+      <File FileName="ITPalooza2014.Android\Resources\AboutResources.txt" Line="1" Column="1" />
+      <File FileName="ITPalooza2014.Android\packages.config" Line="1" Column="1" />
+      <File FileName="ITPalooza2014\packages.config" Line="1" Column="1" />
+      <File FileName="ITPalooza2014\README_FIRST.txt" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Targets.ITPalooza2014.Android MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
+</Properties>
