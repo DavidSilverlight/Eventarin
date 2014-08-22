@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventarin", "Eventarin\Eventarin.csproj", "{546B354D-5C9F-4418-A63C-184D6960F6F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventarin.Android", "Android\Eventarin.Android.csproj", "{E6FAAB44-B106-4696-B8DB-25C71A090256}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{546B354D-5C9F-4418-A63C-184D6960F6F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546B354D-5C9F-4418-A63C-184D6960F6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546B354D-5C9F-4418-A63C-184D6960F6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546B354D-5C9F-4418-A63C-184D6960F6F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6FAAB44-B106-4696-B8DB-25C71A090256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6FAAB44-B106-4696-B8DB-25C71A090256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6FAAB44-B106-4696-B8DB-25C71A090256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6FAAB44-B106-4696-B8DB-25C71A090256}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Android\Eventarin.Android.csproj
+	EndGlobalSection
+EndGlobal
