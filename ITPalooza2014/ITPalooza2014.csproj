@@ -38,6 +38,7 @@
     <Compile Include="Views\SpeakersPage.cs" />
     <Compile Include="Views\SpeakerPage.cs" />
     <Compile Include="Views\SessionPage.cs" />
+    <Compile Include="Views\MapPage.cs" />
     <Compile Include="Views\AboutPage.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\Speaker.cs" />
@@ -45,14 +46,13 @@
     <Compile Include="Models\Favorite.cs" />
     <Compile Include="Views\FavoritesPage.cs" />
     <Compile Include="Views\SessionCell.cs" />
+    <Compile Include="Views\FloorplanPage.cs" />
     <Compile Include="Views\MenuHeader.cs" />
     <Compile Include="Models\SessionSpeaker.cs" />
     <Compile Include="Controls\TweetButton.cs" />
     <Compile Include="Controls\WrapLayout.cs" />
     <Compile Include="Views\SpeakersPageWrap.cs" />
     <Compile Include="Views\SpeakerCell.cs" />
-    <Compile Include="Views\NotUsed\MapPage.cs" />
-    <Compile Include="Views\NotUsed\FloorplanPage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -74,7 +74,6 @@
     <Folder Include="Models\" />
     <Folder Include="Data\" />
     <Folder Include="Controls\" />
-    <Folder Include="Views\NotUsed\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
