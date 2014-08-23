@@ -14,18 +14,25 @@ public final class R {
         public static final int check=0x7f020000;
         public static final int check2x=0x7f020001;
         public static final int default_568h_2x=0x7f020002;
-        public static final int logo=0x7f020003;
-        public static final int logofeaturegraphic=0x7f020004;
-        public static final int logohighres=0x7f020005;
-        public static final int logopromographic=0x7f020006;
-        public static final int plus=0x7f020007;
-        public static final int roundmask=0x7f020008;
-        public static final int slideout=0x7f020009;
-        public static final int slideout2x=0x7f02000a;
+        public static final int launcher=0x7f020003;
+        public static final int logo=0x7f020004;
+        public static final int logofeaturegraphic=0x7f020005;
+        public static final int logohighres=0x7f020006;
+        public static final int logopromographic=0x7f020007;
+        public static final int plus=0x7f020008;
+        public static final int roundmask=0x7f020009;
+        public static final int slideout=0x7f02000a;
+        public static final int slideout2x=0x7f02000b;
+        public static final int splash=0x7f02000c;
+        public static final int splash_background=0x7f02000d;
     }
     public static final class id {
-        public static final int listView1=0x7f060001;
-        public static final int myButton=0x7f060000;
+        public static final int checkBox1=0x7f070003;
+        public static final int editText1=0x7f070000;
+        public static final int editText2=0x7f070004;
+        public static final int editText3=0x7f070001;
+        public static final int listView1=0x7f070005;
+        public static final int myButton=0x7f070002;
     }
     public static final class layout {
         public static final int main=0x7f030000;
@@ -37,5 +44,8 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f050001;
         public static final int hello=0x7f050000;
+    }
+    public static final class style {
+        public static final int Theme_Splash=0x7f060000;
     }
 }

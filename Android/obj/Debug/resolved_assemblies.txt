@@ -1,9 +1,9 @@
 D:\Dev\Eventarin\Android\bin\Debug\Eventarin.Android.dll
 D:\Dev\Eventarin\Eventarin\bin\Debug\Eventarin.dll
-D:\Dev\Eventarin\packages\Xamarin.Android.Support.v4.19.0.2\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll
-D:\Dev\Eventarin\packages\Xamarin.Forms.1.0.6186\lib\MonoAndroid10\Xamarin.Forms.Core.dll
-D:\Dev\Eventarin\packages\Xamarin.Forms.1.0.6186\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll
-D:\Dev\Eventarin\packages\Xamarin.Forms.1.0.6186\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll
+D:\Dev\Eventarin\packages\Xamarin.Android.Support.v4.20.0.0.3\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll
+D:\Dev\Eventarin\packages\Xamarin.Forms.1.2.2.6243\lib\MonoAndroid10\Xamarin.Forms.Core.dll
+D:\Dev\Eventarin\packages\Xamarin.Forms.1.2.2.6243\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll
+D:\Dev\Eventarin\packages\Xamarin.Forms.1.2.2.6243\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Collections.Concurrent.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Collections.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.ComponentModel.Annotations.dll

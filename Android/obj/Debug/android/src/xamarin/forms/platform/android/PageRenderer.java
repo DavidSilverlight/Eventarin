@@ -2,7 +2,7 @@ package xamarin.forms.platform.android;
 
 
 public class PageRenderer
-	extends xamarin.forms.platform.android.ViewRenderer
+	extends xamarin.forms.platform.android.VisualElementRenderer_1
 	implements
 		mono.android.IGCUserPeer
 {
@@ -13,7 +13,7 @@ public class PageRenderer
 			"n_onAttachedToWindow:()V:GetOnAttachedToWindowHandler\n" +
 			"n_onDetachedFromWindow:()V:GetOnDetachedFromWindowHandler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.PageRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", PageRenderer.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.PageRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", PageRenderer.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class PageRenderer
 	{
 		super (p0);
 		if (getClass () == PageRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.PageRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.PageRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
 	}
 
 
@@ -29,7 +29,7 @@ public class PageRenderer
 	{
 		super (p0, p1);
 		if (getClass () == PageRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.PageRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0, p1 });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.PageRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0, p1 });
 	}
 
 
@@ -37,7 +37,7 @@ public class PageRenderer
 	{
 		super (p0, p1, p2);
 		if (getClass () == PageRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.PageRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:System.Int32, mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e", this, new java.lang.Object[] { p0, p1, p2 });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.PageRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:System.Int32, mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e", this, new java.lang.Object[] { p0, p1, p2 });
 	}
 
 

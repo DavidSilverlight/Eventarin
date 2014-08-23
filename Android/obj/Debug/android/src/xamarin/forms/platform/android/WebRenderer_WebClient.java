@@ -11,7 +11,7 @@ public class WebRenderer_WebClient
 		__md_methods = 
 			"n_shouldOverrideUrlLoading:(Landroid/webkit/WebView;Ljava/lang/String;)Z:GetShouldOverrideUrlLoading_Landroid_webkit_WebView_Ljava_lang_String_Handler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.WebRenderer/WebClient, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", WebRenderer_WebClient.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.WebRenderer/WebClient, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", WebRenderer_WebClient.class, __md_methods);
 	}
 
 
@@ -19,7 +19,7 @@ public class WebRenderer_WebClient
 	{
 		super ();
 		if (getClass () == WebRenderer_WebClient.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.WebRenderer/WebClient, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.WebRenderer/WebClient, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

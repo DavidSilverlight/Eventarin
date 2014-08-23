@@ -76,5 +76,9 @@ D:\Dev\Eventarin\Android\obj\Debug\res\drawable-ldpi\slideout.png
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable-mdpi\slideout.png
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable-xxhdpi\slideout.png
 D:\Dev\Eventarin\Android\obj\Debug\res\raw\evolvesqlite.db3
+D:\Dev\Eventarin\Android\obj\Debug\res\drawable\launcher.png
+D:\Dev\Eventarin\Android\obj\Debug\res\drawable\splash.png
+D:\Dev\Eventarin\Android\obj\Debug\res\drawable\splash_background.xml
+D:\Dev\Eventarin\Android\obj\Debug\res\values\styles.xml
 D:\Dev\Eventarin\Android\obj\Debug\R.cs.flag
 D:\Dev\Eventarin\Android\obj\Debug\uploadflags.txt

@@ -2,7 +2,7 @@ package xamarin.forms.platform.android;
 
 
 public class EntryRenderer
-	extends xamarin.forms.platform.android.NativeRenderer
+	extends xamarin.forms.platform.android.ViewRenderer_2
 	implements
 		mono.android.IGCUserPeer,
 		android.text.TextWatcher,
@@ -17,7 +17,7 @@ public class EntryRenderer
 			"n_onTextChanged:(Ljava/lang/CharSequence;III)V:GetOnTextChanged_Ljava_lang_CharSequence_IIIHandler:Android.Text.ITextWatcherInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onEditorAction:(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z:GetOnEditorAction_Landroid_widget_TextView_ILandroid_view_KeyEvent_Handler:Android.Widget.TextView/IOnEditorActionListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.EntryRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", EntryRenderer.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.EntryRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", EntryRenderer.class, __md_methods);
 	}
 
 
@@ -25,7 +25,7 @@ public class EntryRenderer
 	{
 		super (p0);
 		if (getClass () == EntryRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.EntryRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.EntryRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
 	}
 
 
@@ -33,7 +33,7 @@ public class EntryRenderer
 	{
 		super (p0, p1);
 		if (getClass () == EntryRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.EntryRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0, p1 });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.EntryRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0, p1 });
 	}
 
 
@@ -41,7 +41,7 @@ public class EntryRenderer
 	{
 		super (p0, p1, p2);
 		if (getClass () == EntryRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.EntryRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:System.Int32, mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e", this, new java.lang.Object[] { p0, p1, p2 });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.EntryRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:System.Int32, mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e", this, new java.lang.Object[] { p0, p1, p2 });
 	}
 
 

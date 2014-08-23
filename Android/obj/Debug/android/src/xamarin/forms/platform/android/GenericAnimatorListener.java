@@ -13,7 +13,7 @@ public class GenericAnimatorListener
 			"n_onAnimationRepeat:(Landroid/animation/Animator;)V:GetOnAnimationRepeat_Landroid_animation_Animator_Handler\n" +
 			"n_onAnimationEnd:(Landroid/animation/Animator;)V:GetOnAnimationEnd_Landroid_animation_Animator_Handler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.GenericAnimatorListener, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", GenericAnimatorListener.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.GenericAnimatorListener, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", GenericAnimatorListener.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class GenericAnimatorListener
 	{
 		super ();
 		if (getClass () == GenericAnimatorListener.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.GenericAnimatorListener, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.GenericAnimatorListener, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

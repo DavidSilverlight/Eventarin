@@ -16,7 +16,7 @@ public class ListViewAdapter
 			"n_getItemId:(I)J:GetGetItemId_IHandler\n" +
 			"n_isEnabled:(I)Z:GetIsEnabled_IHandler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ListViewAdapter.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", ListViewAdapter.class, __md_methods);
 	}
 
 
@@ -24,7 +24,7 @@ public class ListViewAdapter
 	{
 		super ();
 		if (getClass () == ListViewAdapter.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

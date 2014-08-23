@@ -54,28 +54,37 @@ namespace Eventarin.Android
 			public const int Default_568h_2x = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int Logo = 2130837507;
+			public const int launcher = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int LogoFeatureGraphic = 2130837508;
+			public const int Logo = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int LogoHighRes = 2130837509;
+			public const int LogoFeatureGraphic = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int LogoPromoGraphic = 2130837510;
+			public const int LogoHighRes = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int plus = 2130837511;
+			public const int LogoPromoGraphic = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int roundmask = 2130837512;
+			public const int plus = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int slideout = 2130837513;
+			public const int roundmask = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int slideout2x = 2130837514;
+			public const int slideout = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int slideout2x = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int splash = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int splash_background = 2130837517;
 			
 			static Drawable()
 			{
@@ -90,11 +99,23 @@ namespace Eventarin.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int listView1 = 2131099649;
+			// aapt resource value: 0x7f070003
+			public const int checkBox1 = 2131165187;
 			
-			// aapt resource value: 0x7f060000
-			public const int myButton = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int editText1 = 2131165184;
+			
+			// aapt resource value: 0x7f070004
+			public const int editText2 = 2131165188;
+			
+			// aapt resource value: 0x7f070001
+			public const int editText3 = 2131165185;
+			
+			// aapt resource value: 0x7f070005
+			public const int listView1 = 2131165189;
+			
+			// aapt resource value: 0x7f070002
+			public const int myButton = 2131165186;
 			
 			static Id()
 			{
@@ -156,6 +177,22 @@ namespace Eventarin.Android
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int Theme_Splash = 2131099648;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

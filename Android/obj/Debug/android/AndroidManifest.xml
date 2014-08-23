@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="ITPalooza.ITPalooza">
   <uses-sdk android:minSdkVersion="15" />
   <application android:label="ITPalooza 2014" android:icon="@drawable/logo" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:label="Eventarin.Android.Android" android:name="eventarin.android.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:label="Eventarin.Android.Android" android:name="eventarin.android.MainActivity" />
+    <activity android:noHistory="true" android:theme="@style/Theme.Splash" android:name="eventarin.android.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
@@ -16,5 +17,7 @@
       </intent-filter>
     </receiver>
   </application>
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

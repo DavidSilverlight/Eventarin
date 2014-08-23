@@ -13,7 +13,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace Eventarin.Android
 {
-	[Activity (Label = "Eventarin.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "Eventarin.Android.Android", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)

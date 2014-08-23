@@ -1,8 +1,8 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.MonoForAndroid_API_15" />
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.56.101:5555" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Eventarin\App.cs">
     <Files>
-      <File FileName="Eventarin\App.cs" Line="1" Column="1" />
+      <File FileName="Eventarin\App.cs" Line="9" Column="9" />
       <File FileName="Eventarin\Views\MenuPage.cs" Line="1" Column="1" />
       <File FileName="Eventarin\Views\MenuHeader.cs" Line="1" Column="1" />
       <File FileName="Eventarin\Views\MenuCell.cs" Line="1" Column="1" />
@@ -22,12 +22,16 @@
       <File FileName="Eventarin\Views\SpeakersPageWrap.cs" Line="1" Column="1" />
       <File FileName="Eventarin\Controls\TweetButton.cs" Line="1" Column="1" />
       <File FileName="Eventarin\Controls\WrapLayout.cs" Line="1" Column="1" />
-      <File FileName="Eventarin\Data\EvolveDatabase.cs" Line="1" Column="1" />
-      <File FileName="Eventarin\Models\Favorite.cs" Line="1" Column="1" />
-      <File FileName="Eventarin\Models\Session.cs" Line="1" Column="1" />
+      <File FileName="Eventarin\Data\EvolveDatabase.cs" Line="18" Column="18" />
       <File FileName="Eventarin\Models\SessionSpeaker.cs" Line="1" Column="1" />
       <File FileName="Eventarin\Models\Speaker.cs" Line="1" Column="1" />
       <File FileName="Eventarin\Views\MapPage.cs" Line="1" Column="1" />
+      <File FileName="Eventarin\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Android\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Android\Resources\values\Strings.xml" Line="1" Column="1" />
+      <File FileName="Android\Resources\values\styles.xml" Line="1" Column="1" />
+      <File FileName="Android\Resources\drawable\splash_background.xml" Line="1" Column="1" />
+      <File FileName="Android\SplashActivity.cs" Line="18" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

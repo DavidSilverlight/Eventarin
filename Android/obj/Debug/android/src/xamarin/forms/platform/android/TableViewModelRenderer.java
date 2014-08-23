@@ -16,7 +16,7 @@ public class TableViewModelRenderer
 			"n_getView:(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;:GetGetView_ILandroid_view_View_Landroid_view_ViewGroup_Handler\n" +
 			"n_getItem:(I)Ljava/lang/Object;:GetGetItem_IHandler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.TableViewModelRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", TableViewModelRenderer.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.TableViewModelRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", TableViewModelRenderer.class, __md_methods);
 	}
 
 
@@ -24,7 +24,7 @@ public class TableViewModelRenderer
 	{
 		super ();
 		if (getClass () == TableViewModelRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.TableViewModelRenderer, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.TableViewModelRenderer, Xamarin.Forms.Platform.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 
