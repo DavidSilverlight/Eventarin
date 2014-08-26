@@ -21,7 +21,7 @@ namespace Eventarin
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.Center,
 			};
-			/*
+
 			var speakers = App.Database.GetSpeakers ();
 
 			foreach (var speaker in speakers) {
@@ -44,7 +44,7 @@ namespace Eventarin
 				layout.Children.Add (cell);
 			}
 
-			*/
+
 			// simple WrapLayout population
 //			for (int i = 0; i < 5; i++) {
 //

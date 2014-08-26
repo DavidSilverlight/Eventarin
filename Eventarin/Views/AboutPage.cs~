@@ -21,7 +21,7 @@ namespace Eventarin
 
 			var web = new WebView {
 				WidthRequest = 300,
-				HeightRequest = 400
+				HeightRequest = 500
 			};
 			web.Source = source;
 

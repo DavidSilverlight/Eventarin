@@ -68,6 +68,8 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"Eventarin.Android.dll",
 		"Eventarin.dll",
+		"SQLite.Net.dll",
+		"SQLite.Net.Platform.XamarinAndroid.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Forms.Core.dll",
 		"Xamarin.Forms.Platform.Android.dll",
@@ -118,7 +120,6 @@ class MonoPackageManager_Resources {
 		"System.Xml.ReaderWriter.dll",
 		"System.Xml.XDocument.dll",
 		"System.Xml.XmlSerializer.dll",
-		"SQLite.Net.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

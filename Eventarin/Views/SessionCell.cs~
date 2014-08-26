@@ -21,10 +21,11 @@ namespace Eventarin
 			label.SetBinding (Label.TextProperty, "LocationDisplay");
 
 			var image = new Image ();
-			image.Source = ImageSource.FromFile ("favorite.png");
+			image.Source = ImageSource.FromFile ("star_grey45.png");
 			var fav = image;
+
 			//TODO: implement favorites
-			//fav.SetBinding (Image.IsVisibleProperty, "IsFavorite");
+			fav.SetBinding (Image.IsVisibleProperty, "IsFavorite");
 
 			var text = new StackLayout {
 				Orientation = StackOrientation.Vertical,

@@ -19,14 +19,14 @@ namespace Eventarin
 			listView = new ListView {
 				RowHeight = 40
 			};
-//			listView.ItemsSource = new Session [] { new Session {Title = "test", Location="somewhere"} };
-//			listView.ItemTemplate = new DataTemplate (typeof (SessionCell));
+			listView.ItemsSource = new Session [] { new Session {Title = "test", Location="somewhere"} };
+			listView.ItemTemplate = new DataTemplate (typeof (SessionCell));
 
 			listView.ItemSelected += (sender, e) => {
 				var session = e.SelectedItem;
-//				var sessionPage = new SessionPage();
-				//todoPage.BindingContext = todoItem;
-			//	Navigation.PushAsync(sessionPage);
+				var sessionPage = new SessionPage();
+			//	todoPage.BindingContext = todoItem;
+				Navigation.PushAsync(sessionPage);
 			};
 
 			Content = new StackLayout {

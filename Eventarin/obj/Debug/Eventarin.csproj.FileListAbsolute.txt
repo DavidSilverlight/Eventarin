@@ -15,6 +15,5 @@ D:\Dev\Eventarin\Eventarin\bin\Debug\Xamarin.Forms.Core.dll
 D:\Dev\Eventarin\Eventarin\bin\Debug\Xamarin.Forms.Xaml.dll
 D:\Dev\Eventarin\Eventarin\bin\Debug\Xamarin.Forms.Core.xml
 D:\Dev\Eventarin\Eventarin\bin\Debug\Xamarin.Forms.Xaml.xml
-D:\Dev\Eventarin\Eventarin\obj\Debug\Eventarin.csprojResolveAssemblyReference.cache
 D:\Dev\Eventarin\Eventarin\obj\Debug\Eventarin.dll
 D:\Dev\Eventarin\Eventarin\obj\Debug\Eventarin.pdb

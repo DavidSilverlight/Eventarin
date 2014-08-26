@@ -22,7 +22,7 @@ namespace Eventarin
 			// see the SessionCell implementation for how the variable row height is calculated
 			listView.HasUnevenRows = true;
 
-		//	listView.ItemsSource = App.Database.GetSessions ();
+			listView.ItemsSource = App.Database.GetSessions ();
 			listView.ItemTemplate = new DataTemplate (typeof (SessionCell));
 
 			listView.ItemSelected += (sender, e) => {

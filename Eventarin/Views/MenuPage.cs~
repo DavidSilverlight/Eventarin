@@ -29,14 +29,18 @@ namespace Eventarin
 		//	Icon = "@drawable/slideout.png";
 
 			var section = new TableSection () {
-				new MenuCell {Text = "Sessions", Host = this},
-				new MenuCell {Text = "Speakers", Host = this},
-				new MenuCell {Text = "Favorites", Host = this},
-				//new MenuCell {Text = "Room Plan", Host = this},
-				//new MenuCell {Text = "Map", Host = this},
-				//new MenuCell {Text = "About", Host = this},
-				new MenuCell {Text = "Video", Host = this},
-				new MenuCell {Text = "iBeacon", Host = this},
+				new MenuCell("tab_sessions_unselected") {Text = "Sessions", Host = this, Icon="tab_sessions_unselected"},
+				new MenuCell("tab_speakers_unselected") {Text = "Speakers", Host = this, Icon="tab_speakers_unselected"},
+				new MenuCell("tab_schedule_unselected") {Text = "Favorites", Host = this, Icon="tab_schedule_unselected"},
+				new MenuCell("tab_maps_unselected") {Text = "Room Plan", Host = this},
+				new MenuCell("tab_maps_unselected") {Text = "Map", Host = this},
+				new MenuCell("tab_maps_unselected") {Text = "The Team", Host = this},
+				new MenuCell("tab_maps_unselected") {Text = "Dashboard", Host = this},
+				new MenuCell("tab_maps_unselected") {Text = "Website", Host = this},
+				new MenuCell("tab_maps_unselected") {Text = "Videos", Host = this, Icon=""},
+			//	new MenuCell("tab_maps_unselected") {Text = "About", Host = this},
+
+			//	new MenuCell("tab_maps_unselected") {Text = "iBeacon", Host = this, Icon=""},
 			};
 
 			var root = new TableRoot () {section} ;
@@ -50,7 +54,7 @@ namespace Eventarin
 
 
 			Content = new StackLayout {
-				BackgroundColor = Color.Gray,
+				BackgroundColor = Color.White,
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				Children = {tableView}
 			};
@@ -61,8 +65,12 @@ namespace Eventarin
 		public void Selected (string item) {
 
 			switch (item) {
-			case "About":
-				master.Detail = new NavigationPage (new AboutPage ()) { BackgroundColor = App.NavTint };
+			case "Website":
+				master.Detail = new NavigationPage (new WebsitePage ()) { BackgroundColor = Color.Red };
+				break;
+
+			case "Dashboard":
+				master.Detail = new NavigationPage (new DashboardPage ()) { BackgroundColor = Color.Red };
 				break;
 
 			case "Sessions":
@@ -74,7 +82,7 @@ namespace Eventarin
 				if (speakers == null) {
 					speakers = new NavigationPage (new SpeakersPage ()) {  BackgroundColor = App.NavTint };
 					//TODO: finish WrapLayout demo
-//					speakers = new NavigationPage (new SpeakersPageWrap ()) { Tint = App.NavTint };
+					//speakers = new NavigationPage (new SpeakersPageWrap ()) { Tint = App.NavTint };
 				}
 				master.Detail = speakers;
 				break;
@@ -87,9 +95,19 @@ namespace Eventarin
 				master.Detail = new NavigationPage(new FloorplanPage()) {BackgroundColor = App.NavTint};
 				break;
 
-		//	case "Map":
-		//		master.Detail = new NavigationPage(new MapPage()) {BackgroundColor = App.NavTint};
-		//		break;
+			case "The Team":
+				master.Detail = new NavigationPage(new TheTeam()) {BackgroundColor = App.NavTint};
+				break;
+
+			case "Videos":
+				master.Detail = new NavigationPage(new VideosPage()) {BackgroundColor = App.NavTint};
+				break;
+
+
+
+			case "Map":
+				master.Detail = new NavigationPage(new LocationMapPage()) {BackgroundColor = App.NavTint};
+				break;
 
 
 

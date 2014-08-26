@@ -9,23 +9,40 @@ namespace Eventarin
 			get { return label.Text; }
 			set{ label.Text = value;} 
 		}
+
+		public string Icon { get; set;}
+
+
 		Label label;
 
 		public MenuPage Host { get; set; }
 
-		public MenuCell ()
+		public MenuCell (string icon)
 		{
 			label = new Label {
 				YAlign = TextAlignment.Center,
-				TextColor = Color.White,
+				TextColor = Color.Gray,
+				Font = Font.SystemFontOfSize(25),
 			};
 
+	
+
+
+			var image = new Image () ;
+		//	image.Width = 35;
+		//	image.Height = 35;
+			if (icon != null) {
+				image.Source = ImageSource.FromFile (icon + ".png");
+			}
+
 			var layout = new StackLayout {
-				BackgroundColor = App.HeaderTint,
+				BackgroundColor = Color.White,// App.HeaderTint,
 				Padding = new Thickness(20, 0, 0, 0),
 				Orientation = StackOrientation.Horizontal,
 				HorizontalOptions = LayoutOptions.StartAndExpand,
-				Children = {label}
+				Children = {image, label}
+
+
 			};
 			View = layout;
 		}

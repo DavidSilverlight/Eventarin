@@ -13,20 +13,22 @@ namespace Eventarin
 		public SpeakersPage ()
 		{
 			Title = "Sessions";
-			Icon = "slideout.png";
+			//Icon = "slideout.png";
 
 			NavigationPage.SetHasNavigationBar (this, true);
 
 			listView = new ListView {
 				RowHeight = 40
 			};
-		//	listView.ItemsSource = App.Database.GetSpeakers ();
-//			listView.ItemTemplate = new DataTemplate (typeof (ImageCell)){
-//				Bindings = {
-//					{ ImageCell.TextProperty, new Binding ("Name") },
-//					{ ImageCell.ImageSourceProperty, new Binding ("HeadshotUrl") }
-//				}
-//			};
+
+			listView.ItemsSource = App.Database.GetSpeakers ();
+			listView.ItemTemplate = new DataTemplate (typeof (ImageCell)){
+				Bindings = {
+					{ ImageCell.TextProperty, new Binding ("Name") },
+				{ ImageCell.ImageSourceProperty, new Binding ("HeadshotUrl") }
+				}
+			};
+
 			listView.ItemTemplate = new DataTemplate (typeof (SpeakerCell));
 
 			listView.ItemSelected += (sender, e) => {

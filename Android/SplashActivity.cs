@@ -19,6 +19,10 @@ namespace Eventarin.Android
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+
+
+			//Is this the correct place to put this?  Otherwise it skips over the app functionality
+
             Thread.Sleep(2500); // Simulate a long loading process on app startup.
             StartActivity(typeof(MainActivity));
         }

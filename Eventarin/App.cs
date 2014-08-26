@@ -10,12 +10,12 @@ namespace Eventarin
 		{
 			var md = new MasterDetailPage ();
 
-			md.Master = new MenuPage (md);
-			md.Detail = new NavigationPage(new AboutPage ());
+			md.Master = new MenuPage (md){ BackgroundColor = Color.Gray };
+			md.Detail = new NavigationPage(new DashboardPage ());
 
 			return md;
 		}
-		/*
+
 		static SQLite.Net.SQLiteConnection conn;
 		static EvolveDatabase database;
 		public static void SetDatabaseConnection (SQLite.Net.SQLiteConnection connection)
@@ -26,7 +26,7 @@ namespace Eventarin
 		public static EvolveDatabase Database {
 			get { return database; }
 		}
-*/
+
 
 		public static Color NavTint {
 			get {

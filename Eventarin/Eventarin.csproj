@@ -35,16 +35,8 @@
     <Compile Include="Views\MenuCell.cs" />
     <Compile Include="Views\MenuHeader.cs" />
     <Compile Include="Views\MenuPage.cs" />
-    <Compile Include="Views\AboutPage.cs" />
     <Compile Include="Views\FavoritesPage.cs" />
     <Compile Include="Views\FloorplanPage.cs" />
-    <Compile Include="Views\SessionCell.cs" />
-    <Compile Include="Views\SessionPage.cs" />
-    <Compile Include="Views\SessionsPage.cs" />
-    <Compile Include="Views\SpeakerCell.cs" />
-    <Compile Include="Views\SpeakerPage.cs" />
-    <Compile Include="Views\SpeakersPage.cs" />
-    <Compile Include="Views\SpeakersPageWrap.cs" />
     <Compile Include="Controls\TweetButton.cs" />
     <Compile Include="Controls\WrapLayout.cs" />
     <Compile Include="Data\EvolveDatabase.cs" />
@@ -52,6 +44,18 @@
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\SessionSpeaker.cs" />
     <Compile Include="Models\Speaker.cs" />
+    <Compile Include="Views\DashboardPage.cs" />
+    <Compile Include="Views\VideosPage.cs" />
+    <Compile Include="Views\SessionCell.cs" />
+    <Compile Include="Views\SessionPage.cs" />
+    <Compile Include="Views\SessionsPage.cs" />
+    <Compile Include="Views\SpeakerCell.cs" />
+    <Compile Include="Views\SpeakerPage.cs" />
+    <Compile Include="Views\SpeakersPage.cs" />
+    <Compile Include="Views\SpeakersPageWrap.cs" />
+    <Compile Include="Views\TheTeam.cs" />
+    <Compile Include="Views\WebsitePage.cs" />
+    <Compile Include="Views\LocationMapPage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />

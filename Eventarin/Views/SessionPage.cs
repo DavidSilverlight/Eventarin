@@ -17,7 +17,7 @@ namespace Eventarin
 
 			var title = new Label { 
 				Text = "Session",
-				Font = Font.BoldSystemFontOfSize(18)
+				Font = Font.SystemFontOfSize(18)
 			};
 			title.SetBinding (Label.TextProperty, "Title");
 
