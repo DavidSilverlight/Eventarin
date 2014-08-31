@@ -17,13 +17,13 @@ namespace Eventarin
 		}
 
 		static SQLite.Net.SQLiteConnection conn;
-		static EvolveDatabase database;
+		static EventDatabase database;
 		public static void SetDatabaseConnection (SQLite.Net.SQLiteConnection connection)
 		{
 			conn = connection;
-			database = new EvolveDatabase (conn);
+			database = new EventDatabase (conn);
 		}
-		public static EvolveDatabase Database {
+		public static EventDatabase Database {
 			get { return database; }
 		}
 

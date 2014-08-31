@@ -32,22 +32,23 @@ public final class R {
         public static final int star_gold45=0x7f020012;
         public static final int star_grey45=0x7f020013;
         public static final int tab_about=0x7f020014;
-        public static final int tab_exhibitors=0x7f020015;
-        public static final int tab_favorites=0x7f020016;
-        public static final int tab_maps=0x7f020017;
-        public static final int tab_maps_selected=0x7f020018;
-        public static final int tab_maps_unselected=0x7f020019;
-        public static final int tab_rss=0x7f02001a;
-        public static final int tab_schedule=0x7f02001b;
-        public static final int tab_schedule_selected=0x7f02001c;
-        public static final int tab_schedule_unselected=0x7f02001d;
-        public static final int tab_sessions=0x7f02001e;
-        public static final int tab_sessions_selected=0x7f02001f;
-        public static final int tab_sessions_unselected=0x7f020020;
-        public static final int tab_speakers=0x7f020021;
-        public static final int tab_speakers_selected=0x7f020022;
-        public static final int tab_speakers_unselected=0x7f020023;
-        public static final int tab_twitter=0x7f020024;
+        public static final int tab_coffee_unselected=0x7f020015;
+        public static final int tab_exhibitors=0x7f020016;
+        public static final int tab_favorites=0x7f020017;
+        public static final int tab_maps=0x7f020018;
+        public static final int tab_maps_selected=0x7f020019;
+        public static final int tab_maps_unselected=0x7f02001a;
+        public static final int tab_rss=0x7f02001b;
+        public static final int tab_schedule=0x7f02001c;
+        public static final int tab_schedule_selected=0x7f02001d;
+        public static final int tab_schedule_unselected=0x7f02001e;
+        public static final int tab_sessions=0x7f02001f;
+        public static final int tab_sessions_selected=0x7f020020;
+        public static final int tab_sessions_unselected=0x7f020021;
+        public static final int tab_speakers=0x7f020022;
+        public static final int tab_speakers_selected=0x7f020023;
+        public static final int tab_speakers_unselected=0x7f020024;
+        public static final int tab_twitter=0x7f020025;
     }
     public static final class id {
         public static final int checkBox1=0x7f070003;
@@ -58,13 +59,13 @@ public final class R {
         public static final int myButton=0x7f070002;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int test=0x7f030001;
+        public static final int dashboardlayout=0x7f030000;
+        public static final int main=0x7f030001;
+        public static final int test=0x7f030002;
     }
     public static final class raw {
-        public static final int evolvesqlite=0x7f040000;
-        public static final int itpaloozasqlite=0x7f040001;
-        public static final int phintanksqlite=0x7f040002;
+        public static final int itpaloozasqlite=0x7f040000;
+        public static final int phintanksqlite=0x7f040001;
     }
     public static final class string {
         public static final int ApplicationName=0x7f050001;

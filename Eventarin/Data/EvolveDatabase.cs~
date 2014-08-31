@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Eventarin
 {
-	public class EvolveDatabase 
+	public class EventsDatabase 
 	{
 		static object locker = new object ();
 
@@ -18,7 +18,7 @@ namespace Eventarin
 		/// <param name='path'>
 		/// Path.
 		/// </param>
-		public EvolveDatabase(SQLiteConnection conn)
+		public EventsDatabase(SQLiteConnection conn)
 		{
 			database = conn;
 			// create the tables
@@ -33,6 +33,37 @@ namespace Eventarin
 			lock (locker) {
 				var speakers = database.Query<Speaker>("SELECT * FROM [Speaker] ORDER BY [Name]");
 				return speakers.ToList();
+			}
+		}
+
+
+		public void AddSpeaker (string name, string twitterHandle, string bio, string headshotUrl, string company, string position)
+		{
+			lock (locker) {
+				Speaker newSpeaker = new Speaker ();
+				newSpeaker.Name = name;
+				newSpeaker.TwitterHandle = twitterHandle;
+				//newSpeaker.HasTwitter = false;
+				newSpeaker.Bio = bio;
+				newSpeaker.HeadshotUrl = headshotUrl;
+				database.Insert(newSpeaker);
+
+
+				//var sql = "Insert into Speaker(Name, TwitterHandle, Bio, HeadshotUrl, Company, Position) Values ('" + name + "', '" + twitterHandle + "','" + bio + "','" + headshotUrl +  "','" + company + "','"  + position + "')";
+				//var addresult = database.Query<int>(sql);
+
+				//var speakers = database.Insert(newSpeaker);
+				//database.Insert (speaker);
+			//	return database.UpdateAll (speakers);
+			//	return database.Update;
+			}
+		}
+
+		public void CommitSpeakers ()
+		{
+			lock (locker) {
+			//	var speakers = database.Query<Speaker>("SELECT * FROM [Speaker] ORDER BY [Name]");
+			//	database.UpdateAll (speakers);
 			}
 		}
 

@@ -110,52 +110,55 @@ namespace Eventarin.Android
 			public const int tab_about = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int tab_exhibitors = 2130837525;
+			public const int tab_coffee_unselected = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int tab_favorites = 2130837526;
+			public const int tab_exhibitors = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int tab_maps = 2130837527;
+			public const int tab_favorites = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int tab_maps_selected = 2130837528;
+			public const int tab_maps = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int tab_maps_unselected = 2130837529;
+			public const int tab_maps_selected = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int tab_rss = 2130837530;
+			public const int tab_maps_unselected = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int tab_schedule = 2130837531;
+			public const int tab_rss = 2130837531;
 			
 			// aapt resource value: 0x7f02001c
-			public const int tab_schedule_selected = 2130837532;
+			public const int tab_schedule = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
-			public const int tab_schedule_unselected = 2130837533;
+			public const int tab_schedule_selected = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int tab_sessions = 2130837534;
+			public const int tab_schedule_unselected = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int tab_sessions_selected = 2130837535;
+			public const int tab_sessions = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int tab_sessions_unselected = 2130837536;
+			public const int tab_sessions_selected = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int tab_speakers = 2130837537;
+			public const int tab_sessions_unselected = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int tab_speakers_selected = 2130837538;
+			public const int tab_speakers = 2130837538;
 			
 			// aapt resource value: 0x7f020023
-			public const int tab_speakers_unselected = 2130837539;
+			public const int tab_speakers_selected = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int tab_twitter = 2130837540;
+			public const int tab_speakers_unselected = 2130837540;
+			
+			// aapt resource value: 0x7f020025
+			public const int tab_twitter = 2130837541;
 			
 			static Drawable()
 			{
@@ -202,10 +205,13 @@ namespace Eventarin.Android
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int DashboardLayout = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int test = 2130903041;
+			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int test = 2130903042;
 			
 			static Layout()
 			{
@@ -221,13 +227,10 @@ namespace Eventarin.Android
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int EvolveSQLite = 2130968576;
+			public const int ITPaloozaSQLite = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int ITPaloozaSQLite = 2130968577;
-			
-			// aapt resource value: 0x7f040002
-			public const int PhinTankSQLite = 2130968578;
+			public const int PhinTankSQLite = 2130968577;
 			
 			static Raw()
 			{

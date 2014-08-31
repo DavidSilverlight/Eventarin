@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+	using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -29,15 +29,15 @@ namespace Eventarin
 		//	Icon = "@drawable/slideout.png";
 
 			var section = new TableSection () {
-				new MenuCell("tab_sessions_unselected") {Text = "Sessions", Host = this, Icon="tab_sessions_unselected"},
+				new MenuCell("tab_schedule_unselected") {Text = "Dashboard", Host = this},
 				new MenuCell("tab_speakers_unselected") {Text = "Speakers", Host = this, Icon="tab_speakers_unselected"},
-				new MenuCell("tab_schedule_unselected") {Text = "Favorites", Host = this, Icon="tab_schedule_unselected"},
-				new MenuCell("tab_maps_unselected") {Text = "Room Plan", Host = this},
-				new MenuCell("tab_maps_unselected") {Text = "Map", Host = this},
-				new MenuCell("tab_maps_unselected") {Text = "The Team", Host = this},
-				new MenuCell("tab_maps_unselected") {Text = "Dashboard", Host = this},
+				new MenuCell("tab_sessions_unselected") {Text = "Sessions", Host = this, Icon="tab_sessions_unselected"},
 				new MenuCell("tab_maps_unselected") {Text = "Website", Host = this},
-				new MenuCell("tab_maps_unselected") {Text = "Videos", Host = this, Icon=""},
+				new MenuCell("tab_coffee_unselected") {Text = "The Team", Host = this},
+				//new MenuCell("tab_schedule_unselected") {Text = "Favorites", Host = this, Icon="tab_schedule_unselected"},
+				//new MenuCell("tab_maps_unselected") {Text = "Room Plan", Host = this},
+				//new MenuCell("tab_maps_unselected") {Text = "Map", Host = this},
+				//new MenuCell("tab_maps_unselected") {Text = "Videos", Host = this, Icon=""},
 			//	new MenuCell("tab_maps_unselected") {Text = "About", Host = this},
 
 			//	new MenuCell("tab_maps_unselected") {Text = "iBeacon", Host = this, Icon=""},

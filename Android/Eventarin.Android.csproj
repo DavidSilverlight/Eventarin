@@ -60,6 +60,9 @@
     <Reference Include="SQLite.Net.Platform.XamarinAndroid">
       <HintPath>..\packages\SQLite.Net.Platform.XamarinAndroid.2.3.0\lib\MonoAndroid\SQLite.Net.Platform.XamarinAndroid.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Eventarin\Eventarin.csproj">
@@ -102,7 +105,6 @@
     <AndroidResource Include="Resources\drawable-ldpi\slideout.png" />
     <AndroidResource Include="Resources\drawable-mdpi\slideout.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\slideout.png" />
-    <AndroidResource Include="Resources\raw\EvolveSQLite.db3" />
     <AndroidResource Include="Resources\drawable\launcher.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\splash_background.xml" />
@@ -132,6 +134,8 @@
     <AndroidResource Include="Resources\raw\ITPaloozaSQLite.db3" />
     <AndroidResource Include="Resources\raw\PhinTankSQLite.db3" />
     <AndroidResource Include="Resources\drawable\FloorPlanITPalooza.png" />
+    <AndroidResource Include="Resources\layout\DashboardLayout.axml" />
+    <AndroidResource Include="Resources\drawable\tab_coffee_unselected.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />

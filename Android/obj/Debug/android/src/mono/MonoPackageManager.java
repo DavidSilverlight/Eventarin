@@ -68,6 +68,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"Eventarin.Android.dll",
 		"Eventarin.dll",
+		"Newtonsoft.Json.dll",
 		"SQLite.Net.dll",
 		"SQLite.Net.Platform.XamarinAndroid.dll",
 		"Xamarin.Android.Support.v4.dll",

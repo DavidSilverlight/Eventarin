@@ -38,13 +38,13 @@ D:\Dev\Eventarin\Eventarin\Android\obj\Debug\res\drawable-mdpi\slideout.png
 D:\Dev\Eventarin\Eventarin\Android\obj\Debug\res\drawable-xxhdpi\slideout.png
 D:\Dev\Eventarin\Eventarin\Android\bin\Debug\SQLite.Net.dll
 D:\Dev\Eventarin\Eventarin\Android\obj\Debug\res\raw\evolvesqlite.db3
-D:\Dev\Eventarin\Android\obj\Debug\Eventarin.Android.csprojResolveAssemblyReference.cache
 D:\Dev\Eventarin\Android\bin\Debug\Eventarin.Android.dll
 D:\Dev\Eventarin\Android\bin\Debug\Eventarin.Android.pdb
 D:\Dev\Eventarin\Android\bin\Debug\Eventarin.Android.dll.mdb
 D:\Dev\Eventarin\Android\bin\Debug\ITPalooza.ITPalooza.apk
 D:\Dev\Eventarin\Android\bin\Debug\ITPalooza.ITPalooza-Signed.apk
 D:\Dev\Eventarin\Android\bin\Debug\Eventarin.dll
+D:\Dev\Eventarin\Android\bin\Debug\Newtonsoft.Json.dll
 D:\Dev\Eventarin\Android\bin\Debug\SQLite.Net.dll
 D:\Dev\Eventarin\Android\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
 D:\Dev\Eventarin\Android\bin\Debug\Xamarin.Android.Support.v4.dll
@@ -55,6 +55,8 @@ D:\Dev\Eventarin\Android\bin\Debug\Eventarin.pdb
 D:\Dev\Eventarin\Android\bin\Debug\Eventarin.dll.mdb
 D:\Dev\Eventarin\Android\bin\Debug\Xamarin.Forms.Core.xml
 D:\Dev\Eventarin\Android\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\Dev\Eventarin\Android\bin\Debug\Newtonsoft.Json.xml
+D:\Dev\Eventarin\Android\obj\Debug\Eventarin.Android.csprojResolveAssemblyReference.cache
 D:\Dev\Eventarin\Android\obj\Debug\Eventarin.Android.dll
 D:\Dev\Eventarin\Android\obj\Debug\Eventarin.Android.pdb
 D:\Dev\Eventarin\Android\obj\Debug\android\bin\ITPalooza.ITPalooza.apk
@@ -76,7 +78,6 @@ D:\Dev\Eventarin\Android\obj\Debug\res\drawable-hdpi\slideout.png
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable-ldpi\slideout.png
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable-mdpi\slideout.png
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable-xxhdpi\slideout.png
-D:\Dev\Eventarin\Android\obj\Debug\res\raw\evolvesqlite.db3
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable\launcher.png
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable\splash.png
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable\splash_background.xml
@@ -106,5 +107,7 @@ D:\Dev\Eventarin\Android\obj\Debug\res\drawable\tab_twitter.png
 D:\Dev\Eventarin\Android\obj\Debug\res\raw\itpaloozasqlite.db3
 D:\Dev\Eventarin\Android\obj\Debug\res\raw\phintanksqlite.db3
 D:\Dev\Eventarin\Android\obj\Debug\res\drawable\floorplanitpalooza.png
+D:\Dev\Eventarin\Android\obj\Debug\res\layout\dashboardlayout.xml
+D:\Dev\Eventarin\Android\obj\Debug\res\drawable\tab_coffee_unselected.png
 D:\Dev\Eventarin\Android\obj\Debug\R.cs.flag
 D:\Dev\Eventarin\Android\obj\Debug\uploadflags.txt
