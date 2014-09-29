@@ -11,7 +11,7 @@
 			<views:PullToRefreshListView HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
 				<ListView.ItemTemplate>
 					<DataTemplate>
-						<ViewCell>
+						<views:EventarinCell>
 							<StackLayout Orientation="Horizontal" HeightRequest="80" BackgroundColor="Transparent" HorizontalOptions="Center">
 								<StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10" HorizontalOptions="EndAndExpand">
 									<StackLayout Orientation="Vertical" WidthRequest="250">
@@ -22,7 +22,7 @@
 									<Button BackgroundColor="Transparent" Image="{Binding FavoriteImage}"></Button>
 								</StackLayout>
 							</StackLayout>
-						</ViewCell>
+						</views:EventarinCell>
 					</DataTemplate>
 				</ListView.ItemTemplate>
 			</views:PullToRefreshListView>
