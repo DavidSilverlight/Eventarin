@@ -15,6 +15,7 @@ namespace Eventarin.Core.Pages
 			InitializeComponent ();
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
 			BindingContext = viewModel;
+			viewModel.RefreshCommand.Execute(null);
 		}
 	}
 }

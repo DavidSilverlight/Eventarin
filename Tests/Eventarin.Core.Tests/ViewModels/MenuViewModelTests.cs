@@ -32,9 +32,9 @@ namespace Eventarin.Core.Tests.ViewModels
 			// Assert
 			viewModel.ShouldImplement(typeof(BaseViewModel));
 		}
-
+			
 		[Test]
-		public void DashboardClicked_Should_Navigate_To_SpeakersPage()
+		public void Speakerslicked_Should_Navigate_To_SpeakersPage()
 		{
 			// Arrange
 
@@ -46,7 +46,7 @@ namespace Eventarin.Core.Tests.ViewModels
 		}
 
 		[Test]
-		public void DashboardClicked_Should_Navigate_To_SessionsPage()
+		public void SessionsClicked_Should_Navigate_To_SessionsPage()
 		{
 			// Arrange
 
@@ -70,7 +70,7 @@ namespace Eventarin.Core.Tests.ViewModels
 		}
 
 		[Test]
-		public void DashboardClicked_Should_Navigate_To_WebsitePage()
+		public void WebsiteClicked_Should_Navigate_To_WebsitePage()
 		{
 			// Arrange
 
@@ -82,7 +82,7 @@ namespace Eventarin.Core.Tests.ViewModels
 		}
 
 		[Test]
-		public void DashboardClicked_Should_Navigate_To_AboutPage()
+		public void AboutClicked_Should_Navigate_To_AboutPage()
 		{
 			// Arrange
 

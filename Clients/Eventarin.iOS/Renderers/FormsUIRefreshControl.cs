@@ -47,6 +47,7 @@ namespace Eventarin.iOS.Renderers
 			get { return isRefreshing;}
 			set
 			{ 
+
 				isRefreshing = value; 
 				if (isRefreshing)
 					BeginRefreshing();

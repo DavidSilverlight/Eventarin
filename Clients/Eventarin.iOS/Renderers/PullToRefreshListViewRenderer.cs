@@ -58,6 +58,11 @@ namespace Eventarin.iOS.Renderers
 			if (e.PropertyName == PullToRefreshListView.IsRefreshingProperty.PropertyName) 
 			{
 				refreshControl.IsRefreshing = pullToRefreshListView.IsRefreshing;
+				if (refreshControl.IsRefreshing)
+				{
+					// This will generate a pull if refreshing programatically
+					this.Control.SetContentOffset(new System.Drawing.PointF(0.0f, -refreshControl.Frame.Size.Height), true);
+				}
 			} 
 			else if (e.PropertyName == PullToRefreshListView.MessageProperty.PropertyName) 
 			{
