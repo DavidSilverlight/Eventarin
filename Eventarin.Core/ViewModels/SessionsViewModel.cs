@@ -15,6 +15,7 @@ namespace Eventarin.Core.ViewModels
 		{
 			_webService = webService;
 			PageTitle = "Sessions";
+			GetSessions();
 		}
 
 		private ObservableCollection<Session> sessions;

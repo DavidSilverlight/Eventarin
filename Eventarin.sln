@@ -88,6 +88,6 @@ Global
 		{4E3E8EC7-C811-4419-9DA9-A077111EDD99} = {B8E93189-F09C-4A7D-B452-6C47634157D9}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Clients\Eventarin.Android\Eventarin.Android.csproj
+		StartupItem = Clients\Eventarin.iOS\Eventarin.iOS.csproj
 	EndGlobalSection
 EndGlobal
