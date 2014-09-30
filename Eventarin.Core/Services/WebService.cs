@@ -18,7 +18,7 @@ namespace Eventarin.Core.Services
 			Client = client;
 			Client.BaseAddress = new Uri(baseUrl);
 		}
-
+			
 		public async Task<ServiceResult<IEnumerable<Session>>> GetSessions()
 		{
 			var result = new ServiceResult<IEnumerable<Session>>();
