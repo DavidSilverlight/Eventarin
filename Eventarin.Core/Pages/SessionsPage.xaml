@@ -7,25 +7,35 @@
 		     Title="{Binding PageTitle}"
 		     BackgroundColor="#E1E1E1">
 	<ContentPage.Content>
-		<StackLayout VerticalOptions="FillAndExpand">
-			<views:PullToRefreshListView HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
-				<ListView.ItemTemplate>
-					<DataTemplate>
-						<views:EventarinCell>
-							<StackLayout Orientation="Horizontal" HeightRequest="80" BackgroundColor="Transparent" HorizontalOptions="Center">
-								<StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10" HorizontalOptions="EndAndExpand">
-									<StackLayout Orientation="Vertical" WidthRequest="250">
-										<Label YAlign="Center" TextColor="Blue" Text="{Binding Title}" LineBreakMode="NoWrap" x:Name="title"></Label>
-										<Label YAlign="Start" TextColor="Black" Text="{Binding Summary}" Font="12"></Label>
-										<Label YAlign="Center" TextColor="Black" Font="10" Text="{Binding Location}"></Label>
+		<RelativeLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<StackLayout VerticalOptions="FillAndExpand">
+				<views:PullToRefreshListView HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<views:EventarinCell>
+								<StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center">
+									<StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10" HorizontalOptions="EndAndExpand">
+										<StackLayout Orientation="Vertical" WidthRequest="250">
+											<Label YAlign="Center" TextColor="Blue" Text="{Binding Title}" x:Name="title"></Label>
+											<Label YAlign="Start" TextColor="Black" Text="{Binding Summary}" Font="12"></Label>
+											<Label YAlign="Center" TextColor="Black" Font="10" Text="{Binding Location}"></Label>
+										</StackLayout>
+										<Button BackgroundColor="Transparent" Image="{Binding FavoriteImage}"></Button>
 									</StackLayout>
-									<Button BackgroundColor="Transparent" Image="{Binding FavoriteImage}"></Button>
 								</StackLayout>
-							</StackLayout>
-						</views:EventarinCell>
-					</DataTemplate>
-				</ListView.ItemTemplate>
-			</views:PullToRefreshListView>
-		</StackLayout>
+							</views:EventarinCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</views:PullToRefreshListView>
+			</StackLayout>
+			<ActivityIndicator IsEnabled="true" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+					RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}"
+                   	RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}" />
+		</RelativeLayout>
+
 	</ContentPage.Content>
+<!--	<ContentPage.ToolBarItems>
+		<ToolbarItem Name="Refresh" Command="{Binding RefreshCommand}" 
+        Order="Primary" Priority="0"/>
+	</ContentPage.ToolBarItems>-->
 </pages:BaseContentPage>
