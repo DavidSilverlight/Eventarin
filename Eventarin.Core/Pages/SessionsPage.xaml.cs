@@ -15,13 +15,6 @@ namespace Eventarin.Core.Pages
 			InitializeComponent ();
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
 			BindingContext = viewModel;
-			//this.Appearing += HandleAppearing;
-		}
-
-		void HandleAppearing (object sender, EventArgs e)
-		{
-			var task = Task.Run(() => { viewModel.RefreshCommand.Execute(null); });
-			task.Wait();
 		}
 	}
 }
