@@ -21,7 +21,7 @@
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<views:EventarinCell>
-							<Grid Padding="10" HorizontalOptions="StartAndExpand">
+							<Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="*" />
 									<ColumnDefinition Width="80" />
