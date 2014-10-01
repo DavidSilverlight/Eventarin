@@ -139,7 +139,7 @@ namespace Eventarin.iOS.Renderers
 		{
 			var top = GetTop(cell);
 			var bottom = GetBottom(cell);
-			Debug.WriteLine(top + " " + bottom);
+			//Debug.WriteLine(top + " " + bottom);
 			return bottom - top + 20.0f;
 		}
 			

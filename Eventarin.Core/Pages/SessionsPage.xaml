@@ -3,15 +3,21 @@
 		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
 			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
+			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
 		     x:Class="Eventarin.Core.Pages.SessionsPage"
 		     Title="{Binding PageTitle}"
 		     BackgroundColor="#E1E1E1">
+ 	<ContentPage.Resources>
+		<ResourceDictionary>
+			<converters:OppositeConverter x:Key="oppositeConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
 	<ContentPage.Content>
-		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
 			<Grid.RowDefinitions>
       			<RowDefinition Height="*" />
       		</Grid.RowDefinitions>
-			<views:PullToRefreshListView Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
+			<views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<views:EventarinCell>
