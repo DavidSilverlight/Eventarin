@@ -7,7 +7,30 @@
 		     Title="{Binding PageTitle}"
 		     BackgroundColor="#E1E1E1">
 	<ContentPage.Content>
-		<RelativeLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<Grid.RowDefinitions>
+      			<RowDefinition Height="*" />
+      		</Grid.RowDefinitions>
+			<views:PullToRefreshListView Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<views:EventarinCell>
+							<StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center">
+								<StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10" HorizontalOptions="EndAndExpand">
+									<StackLayout Orientation="Vertical" WidthRequest="250">
+										<Label YAlign="Center" TextColor="Blue" Text="{Binding Title}" x:Name="title"></Label>
+										<Label YAlign="Start" TextColor="Black" Text="{Binding Summary}" Font="12"></Label>
+										<Label YAlign="Center" TextColor="Black" Font="10" Text="{Binding Location}"></Label>
+									</StackLayout>
+									<Button BackgroundColor="Transparent" Image="{Binding FavoriteImage}"></Button>
+								</StackLayout>
+							</StackLayout>
+						</views:EventarinCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</views:PullToRefreshListView>
+		</Grid>
+<!--		<RelativeLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 			<StackLayout VerticalOptions="FillAndExpand">
 				<views:PullToRefreshListView HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
 					<ListView.ItemTemplate>
@@ -31,7 +54,7 @@
 			<ActivityIndicator IsEnabled="true" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
 					RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}"
                    	RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}" />
-		</RelativeLayout>
+		</RelativeLayout>-->
 
 	</ContentPage.Content>
 <!--	<ContentPage.ToolBarItems>

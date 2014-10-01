@@ -33,24 +33,7 @@ namespace Eventarin.Core.ViewModels
 				}
 			}
 		}
-
-		private bool isBusy;
-		public bool IsBusy
-		{
-			get
-			{
-				return isBusy;
-			}
-			set
-			{
-				if (isBusy != value)
-				{
-					isBusy = value;
-					RaisePropertyChanged(() => IsBusy);
-				}
-			}
-		}
-			
+					
 		public ICommand RefreshCommand
 		{
 			get 

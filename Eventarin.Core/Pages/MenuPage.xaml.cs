@@ -7,10 +7,11 @@ namespace Eventarin.Core.Pages
 {	
 	public partial class MenuPage : BaseContentPage
 	{	
-		public MenuPage ()
+		public MenuPage () : base()
 		{
 			InitializeComponent ();
 			BindingContext = App.SimpleIoC.Resolve<MenuViewModel>();
+			IncludeActivityIndicator = false;
 		}
 	}
 }
