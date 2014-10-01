@@ -55,17 +55,23 @@ namespace Eventarin.iOS.Renderers
 			}
 
 
-			if (e.PropertyName == PullToRefreshListView.IsRefreshingProperty.PropertyName) 
+			if (e.PropertyName == PullToRefreshListView.IsRefreshingProperty.PropertyName)
 			{
 				refreshControl.IsRefreshing = pullToRefreshListView.IsRefreshing;
-			} 
-			else if (e.PropertyName == PullToRefreshListView.MessageProperty.PropertyName) 
+			}
+			else if (e.PropertyName == PullToRefreshListView.MessageProperty.PropertyName)
 			{
 				refreshControl.Message = pullToRefreshListView.Message;
-			} 
-			else if (e.PropertyName == PullToRefreshListView.RefreshCommandProperty.PropertyName) 
+			}
+			else if (e.PropertyName == PullToRefreshListView.RefreshCommandProperty.PropertyName)
 			{
 				refreshControl.RefreshCommand = pullToRefreshListView.RefreshCommand;
+			}
+			else if (e.PropertyName == PullToRefreshListView.ItemsSourceProperty.PropertyName)
+			{
+				// The ItemsSource changed, which means there could be new items
+				// therefore the cached heights might be wrong. Reset them.
+				((CustomDatasource)Control.Source).ResetHeights();
 			}
 		}
 
@@ -75,6 +81,12 @@ namespace Eventarin.iOS.Renderers
 	public class CustomDatasource : UITableViewSource
 	{
 		private readonly UITableViewSource underlyingTableSource;
+		Dictionary<NSIndexPath, float> heights = new Dictionary<NSIndexPath, float>();
+
+		public void ResetHeights()
+		{
+			heights.Clear();
+		}
 
 		public CustomDatasource(UITableViewSource underlyingTableSource)
 		{
@@ -123,18 +135,22 @@ namespace Eventarin.iOS.Renderers
 
 		public override float GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
 		{
+			if (heights.ContainsKey(indexPath))
+			{
+				return heights[indexPath];
+			}
+
 			var uiCell = this.GetCellInternal(tableView, indexPath);
 
 			uiCell.SetNeedsLayout();
 			uiCell.LayoutIfNeeded();
 
-			//var viewCell = GetPropertyValue<ViewCell>(uiCell, uiCell.GetType(), "ViewCell");
-
-			//TODO: get the actual height here! How do we calculate it?
-			return CalculateHeight(uiCell);
+			// Cache it
+			var height = CalculateHeight(uiCell);
+			heights.Add(indexPath, height);
+			return height;
 		}
 
-		//TODO: this is wrong! It is very jumpy as you scroll the table up and down
 		private float CalculateHeight(UITableViewCell cell)
 		{
 			var top = GetTop(cell);
