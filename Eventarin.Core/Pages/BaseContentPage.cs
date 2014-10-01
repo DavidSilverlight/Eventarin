@@ -20,12 +20,12 @@ namespace Eventarin.Core.Pages
 
 		public BaseContentPage()
 		{
-			Appearing += HandleAppearing;
 			IncludeActivityIndicator = true;
 		}
 
-		void HandleAppearing (object sender, EventArgs e)
+		protected override void OnAppearing()
 		{
+			base.OnAppearing();
 			var layout = this.Content as Layout<View>;
 			if (layout != null && ActivityIndicator == null)
 			{

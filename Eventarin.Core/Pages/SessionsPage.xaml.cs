@@ -15,12 +15,17 @@ namespace Eventarin.Core.Pages
 			InitializeComponent ();
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
 			BindingContext = viewModel;
-			viewModel.RefreshCommand.Execute(null);
 
 			this.ToolbarItems.Add(new ToolbarItem {
 				Name = "Refresh",
 				Command = viewModel.RefreshCommand
 			});
+		}
+
+		protected override void OnParentSet()
+		{
+			base.OnParentSet();
+			viewModel.RefreshCommand.Execute(null);
 		}
 	}
 }
