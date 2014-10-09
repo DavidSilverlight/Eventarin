@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Eventarin.Core.Pages.SessionDetailContentView">
+     <ContentView.Content>
+          <Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="65" />
+               </Grid.ColumnDefinitions>
+               <Image  Source="{Binding HeadshotDisplayUrl}" Grid.Column="0"  />
+               <StackLayout Orientation="Vertical"  Grid.Column="1" HeightRequest="30" >
+                    <Label TextColor="Blue" Text="{Binding Title}" x:Name="title"></Label>
+                    <Label TextColor="Black" Text="{Binding Summary}" Font="10"></Label>
+                    <Label TextColor="Black" Font="10" Text="{Binding Location}"></Label>
+               </StackLayout>
+               <Button Grid.Column="2" BackgroundColor="Transparent" Image="{Binding FavoriteImage}"></Button>
+          </Grid>
+     </ContentView.Content>
+</ContentView>

@@ -5,10 +5,16 @@ namespace Eventarin.Core.Models
 {
 	public class Session
 	{
+
 		public Session()
 		{
 		}
 
+        public int Id
+        {
+            get;
+            set;
+        }
 		public string Title
 		{
 			get;
@@ -33,6 +39,7 @@ namespace Eventarin.Core.Models
 			set;
 		}
 
+        
 		public ImageSource FavoriteImage
 		{
 			get
@@ -45,6 +52,14 @@ namespace Eventarin.Core.Models
 				{
 					return ImageSource.FromFile("star_grey45.png");
 				}
+			}
+		}
+
+        public ImageSource HeadshotDisplayUrl
+		{
+			get
+			{
+					return ImageSource.FromFile("NoAvatar.png");
 			}
 		}
 

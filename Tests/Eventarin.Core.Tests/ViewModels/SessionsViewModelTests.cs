@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using Eventarin.Core.Models;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Eventarin.Core.Tests.ViewModels
 {
@@ -43,6 +44,8 @@ namespace Eventarin.Core.Tests.ViewModels
 			// Arrange
 			var sessions = new List<Session>{ new Session(), new Session() } ;
 			var result = new ServiceResult<IEnumerable<Session>> { Success = true, Data = sessions };
+
+            ObservableCollection<Session> x = new ObservableCollection<Session>(result);
 			_webService.Setup(x => x.GetSessions()).ReturnsAsync(result);
 
 			// Act
@@ -50,7 +53,7 @@ namespace Eventarin.Core.Tests.ViewModels
 
 			// Assert
 			_webService.Verify(x => x.GetSessions(), Times.Once);
-			viewModel.Sessions.Count.ShouldEqual(sessions.Count);
+			viewModel.Sessions.Count.ShouldEqual(x.Count);
 		}
 
 		[Test]

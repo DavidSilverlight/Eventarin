@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Linq;
 using Eventarin.Core.Services;
 using System.Net.Http;
+using Eventarin.Core.Data;
 
 namespace Eventarin.Core
 {
@@ -66,6 +67,27 @@ namespace Eventarin.Core
 				return simpleIoC;
 			}
 		}
-	}
+
+        #region "Database"
+
+        static SQLite.Net.SQLiteConnection conn;
+        static EventDatabase database;
+        public static void SetDatabaseConnection(SQLite.Net.SQLiteConnection connection)
+        {
+            conn = connection;
+            database = new EventDatabase(conn);
+        }
+
+
+
+
+        public static EventDatabase Database
+        {
+            get { return database; }
+        }
+
+        #endregion
+
+    }
 }
 

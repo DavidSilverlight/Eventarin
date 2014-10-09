@@ -1,11 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
-		     x:Class="Eventarin.Core.Pages.DashboardPage">
-	<ContentPage.Content>
-		<StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
-			<Label Text="Dashboard"></Label>
+			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
+			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
+                xmlns:CustomCell="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
+		      x:Class="Eventarin.Core.Pages.DashboardPage"
+		     Title="{Binding PageTitle}"
+		     BackgroundColor="#E1E1E1">
+     <ContentPage.Resources>
+          <ResourceDictionary>
+               <converters:OppositeConverter x:Key="oppositeConverter" />
+          </ResourceDictionary>
+     </ContentPage.Resources>
+     <ContentPage.Content>
+
+          <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
+               <Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                         <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
+                         <ListView.ItemTemplate>
+                              <DataTemplate>
+                                   <views:EventarinCell>
+                                        <CustomCell:SessionDetailContentView />
+                                   </views:EventarinCell>
+                              </DataTemplate>
+                         </ListView.ItemTemplate>
+                    </views:PullToRefreshListView>
+               </Grid>                        
 		</StackLayout>
-	</ContentPage.Content>
+          
+          
+          
+     </ContentPage.Content>
 </pages:BaseContentPage>
+

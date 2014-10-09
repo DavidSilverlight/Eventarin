@@ -57,6 +57,7 @@ namespace Eventarin.Core.ViewModels
 				return new Command(() =>
 				{
 					_navigationService.Navigate<WebsitePage>();
+            //        _navigationService.Navigate<WebsiteCodePage>();
 				});
 			}
 		}
@@ -71,6 +72,17 @@ namespace Eventarin.Core.ViewModels
 				});
 			}
 		}
+
+        public ICommand TeamClicked
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    //_navigationService.Navigate<TeamPage>();
+                });
+            }
+        }
 	}
 
 	public class Menu

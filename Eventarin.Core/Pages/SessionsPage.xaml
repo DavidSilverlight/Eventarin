@@ -4,9 +4,10 @@
 			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
 			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
 			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
-		     x:Class="Eventarin.Core.Pages.SessionsPage"
-		     Title="{Binding PageTitle}"
-		     BackgroundColor="#E1E1E1">
+                xmlns:CustomCell="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
+		      x:Class="Eventarin.Core.Pages.SessionsPage"
+		      Title="{Binding PageTitle}"
+ 		      BackgroundColor="White">
  	<ContentPage.Resources>
 		<ResourceDictionary>
 			<converters:OppositeConverter x:Key="oppositeConverter" />
@@ -21,18 +22,7 @@
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<views:EventarinCell>
-							<Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White">
-								<Grid.ColumnDefinitions>
-									<ColumnDefinition Width="*" />
-									<ColumnDefinition Width="80" />
-								</Grid.ColumnDefinitions>
-								<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-									<Label TextColor="Blue" Text="{Binding Title}" x:Name="title"></Label>
-									<Label TextColor="Black" Text="{Binding Summary}" Font="12"></Label>
-									<Label TextColor="Black" Font="10" Text="{Binding Location}"></Label>
-								</StackLayout>
-								<Button Grid.Column="1" BackgroundColor="Transparent" Image="{Binding FavoriteImage}"></Button>
-							</Grid>
+                                   <CustomCell:SessionDetailContentView />
 						</views:EventarinCell>
 					</DataTemplate>
 				</ListView.ItemTemplate>

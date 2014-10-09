@@ -5,6 +5,8 @@ using Eventarin.Core.Models;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using System.Collections.Generic;
+using Eventarin.Core.Data;
 
 namespace Eventarin.Core.ViewModels
 {
@@ -17,28 +19,26 @@ namespace Eventarin.Core.ViewModels
 			PageTitle = "Sessions";
 		}
 
-		private ObservableCollection<Session> sessions;
-		public ObservableCollection<Session> Sessions
+        public ObservableCollection<Session> Sessions
 		{
 			get
 			{
-				return sessions;
+                return EventRepository.GetSessions();
 			}
 			set
 			{
-				if (sessions != value)
-				{
-					sessions = value;
+
+                    EventRepository.SaveSessions(value);
 					RaisePropertyChanged(() => Sessions);
-				}
 			}
 		}
 					
 		public ICommand RefreshCommand
 		{
 			get 
-			{ 
-				return new Command (async () => await GetSessions()); 
+			{
+               // return null;
+		        return new Command (async () => await GetSessions()); 
 			}
 
 		}
@@ -51,11 +51,16 @@ namespace Eventarin.Core.ViewModels
 			}
 
 			IsBusy = true;
+
 			var result = await _webService.GetSessions();
-			if (result.Success)
-			{
-				Sessions = new ObservableCollection<Session>(result.Data);
-			}
+            //ObservableCollection<Session> sessionCollection = new ObservableCollection<Session>(result);
+            //Todo : Merge result  back into Database Sessions
+            
+            var fakeResult = EventRepository.GetSessions();
+            var refreshedSessions = EventRepository.MergeSessions(fakeResult);
+            
+            RaisePropertyChanged(() => Sessions);
+			
 			IsBusy = false;
 
 		}

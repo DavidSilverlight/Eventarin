@@ -7,7 +7,7 @@ namespace Eventarin.Core.Pages
 	{
 		public SplashPage()
 		{
-			BackgroundColor = Color.Red;
+			BackgroundColor = Color.Blue;
 			this.Title = "Eventarin";
 		}
 	}

@@ -1,12 +1,60 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
-			x:Class="Eventarin.Core.Pages.SpeakersPage">
-	<ContentPage.Content>
-		<StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
-			<Label Text="Speakers"></Label>
-		</StackLayout>
-	</ContentPage.Content>
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
+			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
+			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
+		     x:Class="Eventarin.Core.Pages.SpeakersPage"
+		     Title="{Binding PageTitle}"
+                       Icon="nav_refresh_png"
+		     BackgroundColor="#E1E1E1">
+     <ContentPage.Resources>
+          <ResourceDictionary>
+               <converters:OppositeConverter x:Key="oppositeConverter" />
+          </ResourceDictionary>
+     </ContentPage.Resources>
+     <ContentPage.Content>
+          <Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+               <Grid.RowDefinitions>
+                    <RowDefinition Height="*"  />
+               </Grid.RowDefinitions>
+               <ListView ItemsSource="{Binding Speakers}" RowHeight="100"    >
+                    <ListView.ItemTemplate>
+                         <DataTemplate>
+                              <views:EventarinCell>
+                                   <Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
+                                        <Grid.ColumnDefinitions>
+                                             <ColumnDefinition Width="65" />
+                                             <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image  Source="{Binding HeadshotDisplayUrl}"  />
+                                        <StackLayout Orientation="Vertical"  Grid.Column="1" HeightRequest="30" >
+                                             <Label TextColor="Blue" Text="{Binding Name}" x:Name="title"></Label>
+                                             <Label TextColor="Black" Font="10" Text="{Binding BioSummary}" ></Label>
+                                             <Label TextColor="Black" Font="10" Text="{Binding Company}"></Label>
+
+                                             <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand"  >
+                                                  <!--<Image HeightRequest="15" WidthRequest="15" Source="{x:static icon_social_facebook"  /> 
+                                                  //use x:static for better performance improvements - massive performance improvements-->
+                                                  <Image HeightRequest="15" WidthRequest="15" Source="icon_social_facebook"  />
+                                                  
+                                                  <Image HeightRequest="15" WidthRequest="15" Source="icon_social_linkedin"  />
+                                                  <Image HeightRequest="15" WidthRequest="15" Source="icon_social_twitter"  />
+                                             </StackLayout>
+
+
+                                             </StackLayout>
+
+                                   </Grid>
+                              </views:EventarinCell>
+                         </DataTemplate>
+                    </ListView.ItemTemplate>
+               </ListView>
+          </Grid>
+     </ContentPage.Content>
+     <!--	<ContentPage.ToolBarItems>
+		<ToolbarItem Name="Refresh" Command="{Binding RefreshCommand}" 
+        Order="Primary" Priority="0"/>
+	</ContentPage.ToolBarItems>-->
 </pages:BaseContentPage>
-	
+
