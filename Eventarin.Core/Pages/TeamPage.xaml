@@ -2,10 +2,110 @@
 <pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
-			x:Class="Eventarin.Core.Pages.TeamPage">
+			x:Class="Eventarin.Core.Pages.TeamPage"
+               Title="{Binding PageTitle}"
+               BackgroundColor="White">
+     
 	<ContentPage.Content>
-		<StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
-			<Label Text="The Eventarin Team"></Label>
-		</StackLayout>
+
+          <StackLayout Orientation="Vertical"  VerticalOptions="FillAndExpand"  >
+               <Label TextColor="White"  Font="14" Text="The Eventarin Team" BackgroundColor="Blue" />
+
+
+               <Label TextColor="Black"   Font="12"  Text="This application was developed as a community project by a team of developers to show off some of the latest Xamarin technologies for mobile development. It began as an effort by members of the South Florida Xamarin Users Group, but is open for other members to join in on the fun to get some real world experience and/or show off their development skills." />
+               
+               <Label TextColor="White"  Font="14" Text="Project Contributors" BackgroundColor="Blue" />
+               <StackLayout  VerticalOptions="FillAndExpand"  Padding="10" >
+
+                    <StackLayout  Orientation="Horizontal"  >
+
+                              <Grid>
+                                   <Image  Source="DavidSilverlight.jpg"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                                   <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                              </Grid>
+                              <StackLayout  Orientation="Vertical" >
+                              <Label TextColor="Black"   Font="12" Text="David Silverlight - Technical Team Lead" />
+                              <Label TextColor="Black"   Font="12" Text="Website: abc.com" />
+                         </StackLayout>
+                    </StackLayout>
+                    
+                    <StackLayout  Orientation="Horizontal"  >
+                         <Grid>
+                              <Image  Source="JonasStawski.jpg"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                         </Grid>
+                         <StackLayout  Orientation="Vertical" >
+                              <Label TextColor="Black"   Font="12" Text="Jonas Stawski - Architecture and Best Practices" />
+                              <Label TextColor="Black"   Font="12" Text="Website: abc.com" />
+                         </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal"  >
+                         <Grid>
+                              <Image  Source="MirMaheed.jpg"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                         </Grid>
+                         <StackLayout  Orientation="Vertical" >
+                              <Label TextColor="Black"   Font="12" Text="Mir Majeed" />
+                              <Label TextColor="Black"   Font="12" Text="Website: abc.com" />
+                         </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal"  >
+                         <Grid>
+                              <Image  Source="NoPerson.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                         </Grid>
+                         <StackLayout  Orientation="Vertical" >
+                              <Label TextColor="Black"   Font="12" Text="Paul Pleasant" />
+                              <Label TextColor="Black"   Font="12" Text="Website: abc.com" />
+                         </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal"  >
+                         <Grid>
+                              <Image  Source="NoPerson.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                         </Grid>
+                         <StackLayout  Orientation="Vertical" >
+                              <Label TextColor="Black"   Font="12" Text="Carlos Macias" />
+                              <Label TextColor="Black"   Font="12" Text="Website: abc.com" />
+                         </StackLayout>
+                    </StackLayout>
+               </StackLayout>
+
+               <Label TextColor="White"  Font="14" Text="Xamarin Supporting the dev community" BackgroundColor="Blue" />
+               <StackLayout  VerticalOptions="FillAndExpand"  Padding="10" Visibility="Collapsed" >
+
+                    <StackLayout  Orientation="Horizontal"  >
+                         <Grid>
+                              <Image  Source="RussFustino.jpg"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                         </Grid>
+                         <StackLayout  Orientation="Vertical" >
+                              <Label TextColor="Black"   Font="12" Text="Russ Fustino - Developer Evangelist" />
+                              <Label TextColor="Black"   Font="12" Text="Website: Xamarin.com" />
+                         </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal"  >
+                         <Grid>
+                              <Image  Source="NoPerson.jpg"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                         </Grid>
+                         <StackLayout  Orientation="Vertical" >
+                              <Label TextColor="Black"   Font="12" Text="Craig Dunn" />
+                              <Label TextColor="Black"   Font="12" Text="Website: Xamarin.com" />
+                         </StackLayout>
+                    </StackLayout>
+               </StackLayout>
+               
+               
+                    <Label TextColor="White"  Font="14" Text="Shameless Self Promotion" BackgroundColor="Blue" />
+               <StackLayout  VerticalOptions="FillAndExpand"  Padding="10" >
+                    <Label TextColor="Black"   Font="12" Text="The developers on this team are all active consultants who love what they do.  If you are looking for a sharp developer to join in on your project, please do not hesitate to reach out to them at their contact information." />
+               </StackLayout>
+
+          </StackLayout>
 	</ContentPage.Content>
 </pages:BaseContentPage>

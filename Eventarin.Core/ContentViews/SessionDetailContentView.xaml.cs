@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eventarin.Core.Pages
+namespace Eventarin.Core.ContentViews
 {
     public partial class SessionDetailContentView
     {

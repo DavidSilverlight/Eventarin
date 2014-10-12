@@ -2,7 +2,7 @@
 <ContentView
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Eventarin.Core.Pages.SpeakerDetailContentView">
+    x:Class="Eventarin.Core.ContentViews.SpeakerDetailContentView">
      <ContentView.Content>
           <Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
                <Grid.ColumnDefinitions>

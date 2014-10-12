@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Eventarin.Core.ContentViews.SessionCellContentView">
+     <ContentView.Content>         
+
+          <Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand" >
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="*" />
+               </Grid.ColumnDefinitions>
+               <Image  Source="{Binding HeadshotDisplayUrl}" Grid.Column="0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" />
+               <StackLayout Spacing="5" Grid.Column="1" Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" >
+                    <Label TextColor="Blue" Text="{Binding Title}" x:Name="title"></Label>
+                    <StackLayout Orientation="Horizontal"   >
+                         <Label TextColor="Blue"    Font="10" Text="{Binding Track}"></Label>                         
+                         <Label TextColor="Black"  Font="10" Text="{Binding Begins, StringFormat='{0:t}'}" />
+                         <Label TextColor="Black"  Font="10" Text="-" />
+                         <Label TextColor="Black"  Font="10" Text="{Binding Ends, StringFormat='{0:t}'}" />
+                    </StackLayout>
+                    <Label TextColor="Black" Font="10" Text="{Binding Location}"></Label>
+               </StackLayout>
+
+          </Grid>
+     </ContentView.Content>
+</ContentView>

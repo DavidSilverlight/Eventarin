@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eventarin.Core.Pages
+namespace Eventarin.Core.ContentViews
 {
-    public partial class X_WebsitePage
+    public partial class SessionCellCompactContentView
     {
-        public X_WebsitePage()
+        public SessionCellCompactContentView()
         {
             InitializeComponent();
         }

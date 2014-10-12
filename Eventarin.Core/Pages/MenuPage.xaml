@@ -37,7 +37,7 @@
 						<views:EventarinCell Command="{Binding AboutClicked}">
 							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
 								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_about.png" />
-								<Label YAlign="Center" TextColor="Gray" Text="About" Font="25" />
+								<Label YAlign="Center" TextColor="Gray" Text="Directions" Font="25" />
 							</StackLayout>
 						</views:EventarinCell>
                               <views:EventarinCell Command="{Binding TeamClicked}">
