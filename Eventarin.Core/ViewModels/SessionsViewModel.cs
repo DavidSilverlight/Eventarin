@@ -19,6 +19,14 @@ namespace Eventarin.Core.ViewModels
 			PageTitle = "Sessions";
 		}
 
+        private string _categoryFilter = "mobile";
+        public string CategoryFilter { 
+            get {
+                return _categoryFilter;
+            } 
+      
+        }
+
         public ObservableCollection<Session> Sessions
 		{
 			get
@@ -37,8 +45,9 @@ namespace Eventarin.Core.ViewModels
 		{
 			get 
 			{
-               // return null;
-		        return new Command (async () => await GetSessions()); 
+            //    return EventRepository.GetSessions;
+                 return new Command (async () => Sessions = EventRepository.GetSessions()); 
+		       // return new Command (async () => await GetSessions()); 
 			}
 
 		}

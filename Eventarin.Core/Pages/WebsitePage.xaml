@@ -2,10 +2,9 @@
 <pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
-			x:Class="Eventarin.Core.Pages.WebsitePage">
+			x:Class="Eventarin.Core.Pages.WebsitePage"
+               Title="{Binding PageTitle}" >
 	<ContentPage.Content>
-          
-               <WebView Source="http://ITPalooza.com"    ></WebView>
-          
+          <WebView Source="http://ITPalooza.com"  />
 	</ContentPage.Content>
 </pages:BaseContentPage>

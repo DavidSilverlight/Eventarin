@@ -15,12 +15,13 @@
      </ContentPage.Resources>
      <ContentPage.Content>
 
-          <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
+          <StackLayout Orientation="Vertical"   BackgroundColor="White" VerticalOptions="FillAndExpand"  >
+               <Label TextColor="Blue"  Font="10" Text="Favorite Sessions" />
                <Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
                          <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading...">
+                    <views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading..."  RowHeight="120" >
                          <ListView.ItemTemplate>
                               <DataTemplate>
                                    <views:EventarinCell>
@@ -30,7 +31,7 @@
                          </ListView.ItemTemplate>
                     </views:PullToRefreshListView>
                </Grid>                        
-		</StackLayout>
+          </StackLayout>
           
           
           

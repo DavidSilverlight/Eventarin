@@ -79,7 +79,7 @@ namespace Eventarin.Core.ViewModels
             {
                 return new Command(() =>
                 {
-                    //_navigationService.Navigate<TeamPage>();
+                    _navigationService.Navigate<TeamPage>();
                 });
             }
         }

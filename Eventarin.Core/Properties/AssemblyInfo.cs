@@ -5,13 +5,15 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("Eventarin.Core")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Eventarin")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("South Florida Xamarin Users Group")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("jstawski")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+
+
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
 // The form "{Major}.{Minor}.*" will automatically update the build and revision,
@@ -20,11 +22,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyVersion("1.1.*")]
 
 
-//#if DEBUG
-//[assembly: Application(Debuggable=true)]
-//#else
-//[assembly: Application(Debuggable = false)]
-//#endif
+//[assembly: Application(Icon = "@drawable/icon")]
 
 // The following attributes are used to specify the signing key for the assembly,
 // if desired. See the Mono documentation for more information about signing.

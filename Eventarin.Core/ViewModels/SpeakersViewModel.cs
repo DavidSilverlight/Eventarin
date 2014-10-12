@@ -17,7 +17,7 @@ namespace Eventarin.Core.ViewModels
         {
             _webService = webService;
             PageTitle = "Speakers";
-            GetSpeakers();
+            GetSpeakers();  //according to the compiler, we should use async wait
         }
 
 

@@ -21,7 +21,7 @@ namespace Eventarin.Core.Services
 				md = new MasterDetailPage();
 			}
 			md.Master = _pageCachingService.GetPage<MenuPage>();
-			md.Detail = _pageCachingService.GetPage<SplashPage>();
+			md.Detail = _pageCachingService.GetPage<DashboardPage>();
 
 			return md;
 		}

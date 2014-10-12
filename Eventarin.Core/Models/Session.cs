@@ -21,6 +21,13 @@ namespace Eventarin.Core.Models
 			set;
 		}
 
+        public string Abstract
+        {
+            get;
+            set;
+        }
+
+
 		public string Summary
 		{
 			get;
@@ -32,6 +39,26 @@ namespace Eventarin.Core.Models
 			get;
 			set;
 		}
+
+        public string Track
+        {
+            get;
+            set;
+        }
+
+        public DateTime Begins
+        {
+            get;
+            set;
+        }
+
+        public DateTime Ends
+        {
+            get;
+            set;
+        }
+
+    
 
 		public bool IsFavorite
 		{

@@ -37,8 +37,8 @@ namespace Eventarin.Core.ViewModels
         {
             get
             {
-                // return null;
-                return new Command(async () => await GetSessions());
+                return new Command(async () => Sessions = EventRepository.GetMySessions()); 
+              //  return new Command(async () => await GetSessions());
             }
 
         }
