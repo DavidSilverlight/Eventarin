@@ -74,31 +74,7 @@
                     </StackLayout>
                </StackLayout>
 
-               <Label TextColor="White"  Font="14" Text="Xamarin Supporting the dev community" BackgroundColor="Blue" />
-               <StackLayout  VerticalOptions="FillAndExpand"  Padding="10" Visibility="Collapsed" >
 
-                    <StackLayout  Orientation="Horizontal"  >
-                         <Grid>
-                              <Image  Source="RussFustino.jpg"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
-                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
-                         </Grid>
-                         <StackLayout  Orientation="Vertical" >
-                              <Label TextColor="Black"   Font="12" Text="Russ Fustino - Developer Evangelist" />
-                              <Label TextColor="Black"   Font="12" Text="Website: Xamarin.com" />
-                         </StackLayout>
-                    </StackLayout>
-
-                    <StackLayout  Orientation="Horizontal"  >
-                         <Grid>
-                              <Image  Source="NoPerson.jpg"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
-                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
-                         </Grid>
-                         <StackLayout  Orientation="Vertical" >
-                              <Label TextColor="Black"   Font="12" Text="Craig Dunn" />
-                              <Label TextColor="Black"   Font="12" Text="Website: Xamarin.com" />
-                         </StackLayout>
-                    </StackLayout>
-               </StackLayout>
                
                
                     <Label TextColor="White"  Font="14" Text="Shameless Self Promotion" BackgroundColor="Blue" />
