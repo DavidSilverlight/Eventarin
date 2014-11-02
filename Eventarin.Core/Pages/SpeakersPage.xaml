@@ -36,10 +36,9 @@
                                              <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand"  >
                                                   <!--<Image HeightRequest="15" WidthRequest="15" Source="{x:static icon_social_facebook"  /> 
                                                   //use x:static for better performance improvements - massive performance improvements-->
-                                                  <Image HeightRequest="15" WidthRequest="15" Source="icon_social_facebook"  />
-                                                  
+                                                  <!--<Image HeightRequest="15" WidthRequest="15" Source="icon_social_facebook"  />
                                                   <Image HeightRequest="15" WidthRequest="15" Source="icon_social_linkedin"  />
-                                                  <Image HeightRequest="15" WidthRequest="15" Source="icon_social_twitter"  />
+                                                  <Image HeightRequest="15" WidthRequest="15" Source="icon_social_twitter"  />-->
                                              </StackLayout>
 
 
