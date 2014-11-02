@@ -52,32 +52,30 @@
                     </StackLayout>
 
                     <StackLayout  Orientation="Horizontal"  >
-                         <Grid>
-                              <Image  Source="NoPerson.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
-                              <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
-                         </Grid>
-                         <StackLayout  Orientation="Vertical" >
-                              <Label TextColor="Black"   Font="12" Text="Paul Pleasant" />
-                              <Label TextColor="Black"   Font="12" Text="Website: abc.com" />
-                         </StackLayout>
+                      <Grid>
+                        <Image  Source="CarlosMacias.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                        <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
+                      </Grid>
+                      <StackLayout  Orientation="Vertical" >
+                        <Label TextColor="Black"   Font="12" Text="Carlos Macias" />
+                        <Label TextColor="Black"   Font="12" Text="Website: abc.com" />
+                      </StackLayout>
                     </StackLayout>
 
                     <StackLayout  Orientation="Horizontal"  >
-                         <Grid>
+                          <Grid>
                               <Image  Source="NoPerson.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
                               <Image  Source="roundmask2.png"  WidthRequest="45" HeightRequest="45"  Grid.Row="0" Grid.Column="0" />
-                         </Grid>
-                         <StackLayout  Orientation="Vertical" >
-                              <Label TextColor="Black"   Font="12" Text="Carlos Macias" />
+                          </Grid>
+                          <StackLayout  Orientation="Vertical" >
+                              <Label TextColor="Black"   Font="12" Text="Paul Pleasant" />
                               <Label TextColor="Black"   Font="12" Text="Website: abc.com" />
-                         </StackLayout>
+                          </StackLayout>
                     </StackLayout>
+                
                </StackLayout>
-
-
                
-               
-                    <Label TextColor="White"  Font="14" Text="Shameless Self Promotion" BackgroundColor="Blue" />
+               <Label TextColor="White"  Font="14" Text="Shameless Self Promotion" BackgroundColor="Blue" />
                <StackLayout  VerticalOptions="FillAndExpand"  Padding="10" >
                     <Label TextColor="Black"   Font="12" Text="The developers on this team are all active consultants who love what they do.  If you are looking for a sharp developer to join in on your project, please do not hesitate to reach out to them at their contact information." />
                </StackLayout>
