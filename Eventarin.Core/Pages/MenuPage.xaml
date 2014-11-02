@@ -10,22 +10,24 @@
 			<TableView Intent="Menu">
 				<TableRoot>
 					<TableSection>
-						<views:EventarinCell Command="{Binding DashboardClicked}">
+
+	
+						<views:EventarinCell Command="{Binding SessionsClicked}">
 							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_dashboard.png" />
-								<Label YAlign="Center" TextColor="Gray" Text="Dashboard" Font="25" />
+								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_session.png" />
+								<Label YAlign="Center" TextColor="Gray" Text="Sessions" Font="25" />
 							</StackLayout>
 						</views:EventarinCell>
-						<views:EventarinCell Command="{Binding SpeakersClicked}">
+					  <views:EventarinCell Command="{Binding SpeakersClicked}">
 							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
 								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_speaker.png" />
 								<Label YAlign="Center" TextColor="Gray" Text="Speakers" Font="25" />
 							</StackLayout>
 						</views:EventarinCell>
-						<views:EventarinCell Command="{Binding SessionsClicked}">
+            <views:EventarinCell Command="{Binding DashboardClicked}">
 							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_session.png" />
-								<Label YAlign="Center" TextColor="Gray" Text="Sessions" Font="25" />
+								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_dashboard.png" />
+								<Label YAlign="Center" TextColor="Gray" Text="Favorites" Font="25" />
 							</StackLayout>
 						</views:EventarinCell>
 						<views:EventarinCell Command="{Binding WebsiteClicked}">
@@ -40,13 +42,14 @@
 								<Label YAlign="Center" TextColor="Gray" Text="Directions" Font="25" />
 							</StackLayout>
 						</views:EventarinCell>
-                              <views:EventarinCell Command="{Binding TeamClicked}">
-                                   <StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                                        <Image WidthRequest="35" HeightRequest="35" Source="icon_menu_team.png" />
-                                        <Label YAlign="Center" TextColor="Gray" Text="Team" Font="25" />
-                                   </StackLayout>
-                              </views:EventarinCell>
-                         </TableSection>
+            <views:EventarinCell Command="{Binding TeamClicked}">
+              <StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Image WidthRequest="35" HeightRequest="35" Source="icon_menu_team.png" />
+                <Label YAlign="Center" TextColor="Gray" Text="Team" Font="25" />
+              </StackLayout>
+            </views:EventarinCell>
+          
+          </TableSection>
 				</TableRoot>
 			</TableView>
 		</StackLayout>
