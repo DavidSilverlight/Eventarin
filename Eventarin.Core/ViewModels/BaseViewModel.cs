@@ -48,7 +48,7 @@ namespace Eventarin.Core.ViewModels
 			}
 		}
 
-		protected void RaisePropertyChanged<t>(Expression<Func<t>> propertyExpression)
+		protected void RaisePropertyChanged<T>(Expression<Func<T>> propertyExpression)
 		{
 			if (PropertyChanged != null)
 			{

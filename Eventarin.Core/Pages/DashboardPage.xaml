@@ -16,20 +16,31 @@
      <ContentPage.Content>
 
           <StackLayout Orientation="Vertical"   BackgroundColor="White" VerticalOptions="FillAndExpand"  >
-               <Label TextColor="White"  Font="14" Text="Favorite Sessions" BackgroundColor="Blue" />
-               <Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+            
+            <Label TextColor="White"  Font="14" Text="Favorite Sessions" BackgroundColor="Blue" />
+               
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+                    
                     <Grid.RowDefinitions>
                          <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" Grid.Row="0" HasUnevenRows="false" RowHeight="70" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading..."  >
-                         <ListView.ItemTemplate>
-                              <DataTemplate>
-                                   <views:EventarinCell>
-                                        <ContentViews:SessionCellCompactContentView />
-                                   </views:EventarinCell>
-                              </DataTemplate>
-                         </ListView.ItemTemplate>
-                    </views:PullToRefreshListView>
+
+              <Label Text="To mark a Session as a Favorite, click on the star in Session Details." IsVisible="{Binding NoFavorites}"></Label>
+
+              <StackLayout Orientation="Vertical" BackgroundColor="White" VerticalOptions="FillAndExpand" IsVisible="{Binding HasFavorites}" >
+
+                <views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}"  x:Name="ListSessions" Grid.Row="0" HasUnevenRows="false" RowHeight="70" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}" Message="Loading..."  >
+                  <ListView.ItemTemplate>
+                    <DataTemplate>
+                      <views:EventarinCell  Command="{Binding SessionItemClicked}">
+                        <ContentViews:SessionCellCompactContentView />
+                      </views:EventarinCell>
+                    </DataTemplate>
+                  </ListView.ItemTemplate>
+                </views:PullToRefreshListView>
+                
+              </StackLayout>
+                 
                </Grid>                        
           </StackLayout>
           

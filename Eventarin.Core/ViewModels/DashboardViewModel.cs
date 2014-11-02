@@ -7,17 +7,35 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Collections.Generic;
 using Eventarin.Core.Data;
+using Eventarin.Core.Pages;
 
 namespace Eventarin.Core.ViewModels
 {
     public class DashboardViewModel : BaseViewModel
     {
+
         readonly IWebService _webService;
-        public DashboardViewModel(IWebService webService)
+        readonly INavigationService _navigationService;
+
+        public DashboardViewModel(IWebService webService, INavigationService navigationService)
         {
             _webService = webService;
+            _navigationService = navigationService;
             PageTitle = "Dashboard";
         }
+
+
+        public ICommand SessionItemClicked
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    _navigationService.Navigate<SessionsPage>();
+                });
+            }
+        }
+
 
         public ObservableCollection<Session> Sessions
         {
@@ -37,8 +55,8 @@ namespace Eventarin.Core.ViewModels
         {
             get
             {
-                return new Command(async () => Sessions = EventRepository.GetMySessions()); 
-              //  return new Command(async () => await GetSessions());
+                return new Command(async () => Sessions = EventRepository.GetMySessions());
+                //  return new Command(async () => await GetSessions());
             }
 
         }
@@ -65,7 +83,22 @@ namespace Eventarin.Core.ViewModels
 
         }
 
+        public bool HasFavorites()
+        {
+            var sessions = Sessions;
+            bool hasFavorites = false;
 
+            if (sessions != null)
+            {
+                hasFavorites = (sessions.Count > 0);
+            }
+            return hasFavorites;
+        }
+
+        public bool NoFavorites()
+        {
+            return !HasFavorites();
+        }
     }
 }
 

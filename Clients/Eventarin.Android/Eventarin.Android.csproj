@@ -106,6 +106,7 @@
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <AndroidResource Include="Resources\drawable\CarlosMacias.png" />
     <AndroidResource Include="Resources\raw\Eventarin.db3" />
   </ItemGroup>
   <ItemGroup>

@@ -22,6 +22,11 @@ namespace Eventarin.Core.Pages
                 Icon = "nav_refresh.png",
 				Command = viewModel.RefreshCommand
 			});
+
+            ListSessions.ItemSelected += (sender, e) =>
+            {
+
+            };
 		}
 
 		protected override void OnParentSet()

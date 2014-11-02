@@ -18,7 +18,7 @@
 			<Grid.RowDefinitions>
       			<RowDefinition Height="*" />
       		</Grid.RowDefinitions>
-			<views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading...">
+			<views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading...">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<views:EventarinCell>
