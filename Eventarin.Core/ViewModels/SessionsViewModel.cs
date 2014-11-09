@@ -7,14 +7,20 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Collections.Generic;
 using Eventarin.Core.Data;
+using System.Linq;
+using Eventarin.Core.Pages;
+
 
 namespace Eventarin.Core.ViewModels
 {
 	public class SessionsViewModel : BaseViewModel
 	{
 		readonly IWebService _webService;
-		public SessionsViewModel(IWebService webService)
+		readonly INavigationService _navigationService;
+
+		public SessionsViewModel(IWebService webService, INavigationService navigationService)
 		{
+			_navigationService = navigationService;
 			_webService = webService;
 			PageTitle = "Sessions";
 		}
@@ -40,7 +46,27 @@ namespace Eventarin.Core.ViewModels
 					RaisePropertyChanged(() => Sessions);
 			}
 		}
-					
+
+		private Session _currentSession = null;
+		public Session CurrentSession
+		{
+			get
+			{
+				if (_currentSession == null)
+				{
+					_currentSession = EventRepository.GetSessions().FirstOrDefault();
+				}
+				return _currentSession;
+			}
+			set
+			{
+				_currentSession = value;
+				RaisePropertyChanged(() => CurrentSession);
+			}
+		}
+
+
+
 		public ICommand RefreshCommand
 		{
 			get 
@@ -51,6 +77,18 @@ namespace Eventarin.Core.ViewModels
 			}
 
 		}
+
+		public ICommand SessionItemClicked
+		{
+			get
+			{
+				return new Command(() =>
+					{
+						_navigationService.Navigate<SessionPage>();
+					});
+			}
+		}
+
 
 		private async Task GetSessions()
 		{
@@ -73,6 +111,8 @@ namespace Eventarin.Core.ViewModels
 			IsBusy = false;
 
 		}
+
+
 
 
 	}

@@ -5,7 +5,7 @@
     x:Class="Eventarin.Core.ContentViews.SessionCellContentView">
      <ContentView.Content>         
 
-          <Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand" >
+          <Grid  Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand" >
                <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="65" />
                     <ColumnDefinition Width="*" />

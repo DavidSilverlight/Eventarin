@@ -7,10 +7,10 @@ using System.Diagnostics;
 
 namespace Eventarin.Core.Pages
 {	
-	public partial class SessionsPage : BaseContentPage
+	public partial class SessionPage : BaseContentPage
 	{	
 		SessionsViewModel viewModel;
-		public SessionsPage ()
+		public SessionPage ()
 		{
 			InitializeComponent ();
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
@@ -23,16 +23,13 @@ namespace Eventarin.Core.Pages
 				Command = viewModel.RefreshCommand
 			});
 
-            ListSessions.ItemSelected += (sender, e) =>
-            {
-				viewModel.SessionItemClicked.Execute(null);
-            };
+
 		}
 
 		protected override void OnParentSet()
 		{
 			base.OnParentSet();
-			viewModel.RefreshCommand.Execute(null);
+	//		viewModel.RefreshCommand.Execute(null);
 		}
 	}
 }

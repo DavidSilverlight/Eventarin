@@ -108,6 +108,8 @@
     </None>
     <AndroidResource Include="Resources\drawable\CarlosMacias.png" />
     <AndroidResource Include="Resources\raw\Eventarin.db3" />
+    <AndroidResource Include="Resources\drawable\SessionBackground.png" />
+    <AndroidResource Include="Resources\drawable\SessionBackground1.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Icon.png" />

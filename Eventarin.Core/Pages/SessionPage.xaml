@@ -1,9 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Eventarin.Core.ContentViews.SessionDetailContentView">
-     <ContentView.Content>
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
+			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
+			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
+		     x:Class="Eventarin.Core.Pages.SessionPage"
+		     Title="{Binding PageTitle}"
+ 		     BackgroundColor="White">
+ 	<ContentPage.Resources>
+		<ResourceDictionary>
+			<converters:OppositeConverter x:Key="oppositeConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
  		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand"  >
 			<Grid.RowDefinitions>
       			<RowDefinition Height="*" />
@@ -14,7 +23,7 @@
 		   		 <StackLayout  Orientation="Horizontal" HorizontalOptions="Start"     >
 		              <Grid>
 		      				<Image  Source="SessionBackground1.png" HorizontalOptions="Start"      />
-							<StackLayout Orientation="Vertical">	
+							<StackLayout Orientation="Vertical" Padding="10">	
 								<Label TextColor="White" Text="{Binding CurrentSession.Title}" Font="20"  />	
 								<Label TextColor="White" Text="By John Smith" Font="20"  />	
 							</StackLayout>
@@ -24,8 +33,9 @@
   			
 				<Image   Source="{Binding CurrentSession.HeadshotDisplayUrl}"  WidthRequest="80" HeightRequest="80" VerticalOptions="Start"  />	
 
+				<StackLayout Orientation="Vertical" Padding="25" >  
 				<Label Font="16" Text="When and Where" /> 
-	            <StackLayout Orientation="Horizontal"   >    
+	            <StackLayout Orientation="Horizontal"  >    
 	              	<Label TextColor="Black"  Font="14" Text="{Binding CurrentSession.Begins, StringFormat='{0:t}'}" />
 	                <Label TextColor="Black"  Font="14" Text="-" />
 	                <Label TextColor="Black"  Font="14" Text="{Binding CurrentSession.Ends, StringFormat='{0:t}'}" />
@@ -36,8 +46,8 @@
 	           	<Label Font="16" Text="Details" /> 
 	            <Label TextColor="Black"  Font="12" Text="{Binding CurrentSession.Abstract}" /> 
 
-	  
+	  </StackLayout>
       		</StackLayout>
 		</Grid>
-     </ContentView.Content>
-</ContentView>
+	</ContentPage.Content>
+</pages:BaseContentPage>

@@ -31,7 +31,7 @@ namespace Eventarin.Core.ViewModels
             {
                 return new Command(() =>
                 {
-                    _navigationService.Navigate<SessionsPage>();
+                    _navigationService.Navigate<SessionPage>();
                 });
             }
         }
