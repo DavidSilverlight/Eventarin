@@ -75,7 +75,7 @@ namespace Eventarin.Android
             
           App.SetDatabaseConnection(conn);
 
-            //RefreshLocalData ();
+            RefreshLocalData ();
 
 
         }
@@ -83,8 +83,9 @@ namespace Eventarin.Android
 
         public void RefreshLocalData()
         {
-     //       EventJSONData.RefreshLocalSpeakers();
-     //       EventJSONData.RefreshLocalSessions();
+            EventJSONData.RefreshLocalSpeakers();
+            EventJSONData.RefreshLocalSessions();
+		//	EventJSONData.GetSessionDetail (3519);
         }
 
 	}

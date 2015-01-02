@@ -32,6 +32,22 @@ namespace Eventarin.Android
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::Eventarin.Android.Resource.String.Hello;
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int planets_array = 2131034112;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -172,58 +188,64 @@ namespace Eventarin.Android
 			public const int PhilipSchwartz = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int RichieGoldman = 2130837545;
+			public const int reload = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int RickReguiera = 2130837546;
+			public const int RichieGoldman = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int roundmask = 2130837547;
+			public const int RickReguiera = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int roundmask2 = 2130837548;
+			public const int roundmask = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int RussFustino = 2130837549;
+			public const int roundmask2 = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int SayedAli = 2130837550;
+			public const int RussFustino = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
-			public const int SessionBackground = 2130837551;
+			public const int SayedAli = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int SessionBackground1 = 2130837552;
+			public const int SessionBackground = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int SilkaGonzalez = 2130837553;
+			public const int SessionBackground1 = 2130837553;
 			
 			// aapt resource value: 0x7f020032
-			public const int splash = 2130837554;
+			public const int SilkaGonzalez = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int splashITP = 2130837555;
+			public const int splash = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int star_gold45 = 2130837556;
+			public const int splashITP = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int star_grey45 = 2130837557;
+			public const int squaremask2 = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int SteveEarle = 2130837558;
+			public const int star_gold45 = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int tab_schedule_unselected = 2130837559;
+			public const int star_grey45 = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int WalterQuesada = 2130837560;
+			public const int SteveEarle = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int WilliamValez = 2130837561;
+			public const int tab_schedule_unselected = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int ZacharyWeiner = 2130837562;
+			public const int WalterQuesada = 2130837562;
+			
+			// aapt resource value: 0x7f02003b
+			public const int WilliamValez = 2130837563;
+			
+			// aapt resource value: 0x7f02003c
+			public const int ZacharyWeiner = 2130837564;
 			
 			static Drawable()
 			{
@@ -260,6 +282,15 @@ namespace Eventarin.Android
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
 			
+			// aapt resource value: 0x7f040003
+			public const int app_name = 2130968579;
+			
+			// aapt resource value: 0x7f040002
+			public const int hello = 2130968578;
+			
+			// aapt resource value: 0x7f040004
+			public const int planet_prompt = 2130968580;
+			
 			static String()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -273,8 +304,8 @@ namespace Eventarin.Android
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int Theme_Splash = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int Theme_Splash = 2131099648;
 			
 			static Style()
 			{

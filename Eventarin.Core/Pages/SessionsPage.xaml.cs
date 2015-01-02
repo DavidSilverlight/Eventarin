@@ -16,18 +16,31 @@ namespace Eventarin.Core.Pages
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
 			BindingContext = viewModel;
 
+			ListSessions.ItemSelected += (sender, e) => {
+				viewModel.CurrentSession = (Eventarin.Core.Models.Session)e.SelectedItem;
+				var sessionID = 0;
+				{
+					if (viewModel.CurrentSession != null) {
+						sessionID = viewModel.CurrentSession.Id;
+						viewModel.SessionItemClicked.Execute (sessionID);
+					}
+				}
+
+			};
+
+
+
 
 			this.ToolbarItems.Add(new ToolbarItem {
                 Name = "Refresh",
-                Icon = "nav_refresh.png",
+				Icon = "reload.png",
 				Command = viewModel.RefreshCommand
 			});
 
-            ListSessions.ItemSelected += (sender, e) =>
-            {
-				viewModel.SessionItemClicked.Execute(null);
-            };
+		
+            
 		}
+
 
 		protected override void OnParentSet()
 		{

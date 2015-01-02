@@ -21,7 +21,10 @@ namespace Eventarin.Core.ViewModels
         {
             _webService = webService;
             _navigationService = navigationService;
-            PageTitle = "Dashboard";
+            PageTitle = "My Schedule";
+
+		//	RaisePropertyChanged<bool>(() => HasFavorites);
+			RaisePropertyChanged(() => Sessions);
         }
 
 
@@ -48,6 +51,7 @@ namespace Eventarin.Core.ViewModels
 
                 EventRepository.SaveSessions(value);
                 RaisePropertyChanged(() => Sessions);
+				RaisePropertyChanged<bool>(() => HasFavorites);
             }
         }
 
@@ -57,6 +61,7 @@ namespace Eventarin.Core.ViewModels
             {
                 return new Command(async () => Sessions = EventRepository.GetMySessions());
                 //  return new Command(async () => await GetSessions());
+				RaisePropertyChanged(() => Sessions);
             }
 
         }
@@ -83,8 +88,10 @@ namespace Eventarin.Core.ViewModels
 
         }
 
-        public bool HasFavorites()
+        public bool HasFavorites
         {
+			get
+			{
             var sessions = Sessions;
             bool hasFavorites = false;
 
@@ -93,11 +100,13 @@ namespace Eventarin.Core.ViewModels
                 hasFavorites = (sessions.Count > 0);
             }
             return hasFavorites;
+			}
+
         }
 
         public bool NoFavorites()
         {
-            return !HasFavorites();
+            return !HasFavorites;
         }
     }
 }

@@ -12,14 +12,17 @@
                </Grid.ColumnDefinitions>
                <Image  Source="{Binding HeadshotDisplayUrl}" Grid.Column="0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" />
                <StackLayout Spacing="5" Grid.Column="1" Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" >
-                    <Label TextColor="Blue" Text="{Binding Title}" x:Name="title"></Label>
-                    <StackLayout Orientation="Horizontal"   >
-                         <Label TextColor="Blue"    Font="10" Text="{Binding Track}"></Label>                         
+                    <Label TextColor="Blue" Text="{Binding Title}" x:Name="title"  />
+                    <Label TextColor="Blue"    Font="10" Text="{Binding Track}" />    
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start"  >
+                                              
                          <Label TextColor="Black"  Font="10" Text="{Binding Begins, StringFormat='{0:t}'}" />
                          <Label TextColor="Black"  Font="10" Text="-" />
                          <Label TextColor="Black"  Font="10" Text="{Binding Ends, StringFormat='{0:t}'}" />
+                         <Label TextColor="Black" Font="10" Text="{Binding Location}"></Label>
                     </StackLayout>
-                    <Label TextColor="Black" Font="10" Text="{Binding Location}"></Label>
+
+                    <Label TextColor="Black" Font="10" Text="{Binding Speakers}"></Label>
                </StackLayout>
 
           </Grid>

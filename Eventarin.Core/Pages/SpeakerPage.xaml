@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
+			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
+			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
+		     x:Class="Eventarin.Core.Pages.SpeakerPage"
+		     Title="{Binding PageTitle}"
+ 		     BackgroundColor="White">
+ 	<ContentPage.Resources>
+		<ResourceDictionary>
+			<converters:OppositeConverter x:Key="oppositeConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+ 		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand"  >
+			<Grid.RowDefinitions>
+      			<RowDefinition Height="*" />
+      		</Grid.RowDefinitions>
+      		<StackLayout VerticalOptions="StartAndExpand">
+
+
+		   		 <StackLayout  Orientation="Horizontal" HorizontalOptions="Start"    >
+		   		 	<Grid>
+						<Grid>
+							<Image  Source="SessionBackground1.png" HorizontalOptions="Start"       />
+							<StackLayout Orientation="Vertical" Padding="10">	
+								<Label TextColor="White" Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
+								<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Company}" Font="16" VerticalOptions="End"  />	
+								<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Position}" Font="16" VerticalOptions="End" />	
+							</StackLayout>
+						</Grid>
+
+						<Grid Padding="0,100,0,0" HorizontalOptions="Center" >
+							<Image Source="{Binding CurrentSpeaker.HeadshotDisplayUrl}"  WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+							<Image  Source="squaremask2.png"  WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+						</Grid>
+
+
+
+		   		 	</Grid>
+
+		        </StackLayout> 
+		         
+
+				<Label TextColor="Black" Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
+
+
+				<StackLayout Orientation="Vertical" Padding="25" >  
+
+		            <StackLayout Orientation="Horizontal"  >   
+		            	<Label Font="16" Text="About" />  
+		              	<Label TextColor="Black"  Font="14" Text="{Binding CurrentSpeaker.BioSummary}" />
+		           	</StackLayout>
+		              	
+	           	
+		           	<Label Font="16" Text="Background" /> 
+		            <Label TextColor="Black"  Font="12" Text="{Binding CurrentSpeaker.Bio}" /> 
+
+	  </StackLayout>
+      		</StackLayout>
+		</Grid>
+	</ContentPage.Content>
+</pages:BaseContentPage>

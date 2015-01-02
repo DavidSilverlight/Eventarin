@@ -7,10 +7,31 @@ namespace Eventarin.Core.Pages
 {	
 	public partial class SpeakersPage : BaseContentPage
 	{	
+		SpeakersViewModel viewModel;
+
 		public SpeakersPage ()
 		{
 			InitializeComponent ();
-			BindingContext = App.SimpleIoC.Resolve<SpeakersViewModel>();
+			viewModel = App.SimpleIoC.Resolve<SpeakersViewModel>();
+			BindingContext = viewModel;
+
+
+			ListSpeakers.ItemSelected += (sender, e) => {
+				viewModel.CurrentSpeaker = (Eventarin.Core.Models.Speaker)e.SelectedItem;
+				var speakerID = 0;
+				{
+					if (viewModel.CurrentSpeaker != null) {
+						speakerID = viewModel.CurrentSpeaker.Id;
+						viewModel.SpeakerItemClicked.Execute (speakerID);
+					}
+				}
+
+			};
+
+
+
+
+
 		}
 	}
 }

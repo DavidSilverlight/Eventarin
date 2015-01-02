@@ -14,8 +14,6 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
-	<StackLayout Orientation="Vertical" >
-
 		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
 			<Grid.RowDefinitions>
       			<RowDefinition Height="*" />
@@ -30,6 +28,5 @@
 				</ListView.ItemTemplate>
 			</views:PullToRefreshListView>
 		</Grid>
-</StackLayout>
 	</ContentPage.Content>
 </pages:BaseContentPage>

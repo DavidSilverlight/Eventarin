@@ -7,10 +7,10 @@ using System.Diagnostics;
 
 namespace Eventarin.Core.Pages
 {	
-	public partial class SessionPage : BaseContentPage
+	public partial class SessionsPage : BaseContentPage
 	{	
 		SessionsViewModel viewModel;
-		public SessionPage ()
+		public SessionsPage ()
 		{
 			InitializeComponent ();
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
@@ -19,17 +19,21 @@ namespace Eventarin.Core.Pages
 
 			this.ToolbarItems.Add(new ToolbarItem {
                 Name = "Refresh",
-				Icon = "reload.png",
+                Icon = "nav_refresh.png",
 				Command = viewModel.RefreshCommand
 			});
 
-
+            ListSessions.ItemSelected += (sender, e) =>
+            {
+				viewModel.CurrentSession = (Eventarin.Core.Models.Session)e.SelectedItem;
+				viewModel.SessionItemClicked.Execute(viewModel.CurrentSession.Id);
+            };
 		}
 
 		protected override void OnParentSet()
 		{
 			base.OnParentSet();
-	//		viewModel.RefreshCommand.Execute(null);
+			viewModel.RefreshCommand.Execute(null);
 		}
 	}
 }

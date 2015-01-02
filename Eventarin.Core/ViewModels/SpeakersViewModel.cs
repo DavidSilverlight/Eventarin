@@ -7,15 +7,20 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Collections.Generic;
 using Eventarin.Core.Data;
+using System.Linq;
+using Eventarin.Core.Pages;
 
 namespace Eventarin.Core.ViewModels
 {
     public class SpeakersViewModel : BaseViewModel
     {
         readonly IWebService _webService;
-        public SpeakersViewModel(IWebService webService)
+		readonly INavigationService _navigationService;
+
+		public SpeakersViewModel(IWebService webService, INavigationService navigationService)
         {
             _webService = webService;
+			_navigationService = navigationService;
             PageTitle = "Speakers";
             GetSpeakers();  //according to the compiler, we should use async wait
         }
@@ -41,6 +46,37 @@ namespace Eventarin.Core.ViewModels
             }
 
         }
+
+
+		public ICommand SpeakerItemClicked
+		{
+			get
+			{
+				return new Command(() =>
+					{
+
+						_navigationService.Navigate<SpeakerPage>();
+					});
+			}
+		}
+		private Speaker _currentSpeaker = null;
+		public Speaker CurrentSpeaker
+		{
+			get
+			{
+				if (_currentSpeaker == null)
+				{
+					_currentSpeaker = EventRepository.GetSpeakers().FirstOrDefault();
+				}
+				return _currentSpeaker;
+			}
+			set
+			{
+				_currentSpeaker = value;
+				RaisePropertyChanged(() => CurrentSpeaker);
+			}
+		}
+
 
         private async Task GetSpeakers()
         {

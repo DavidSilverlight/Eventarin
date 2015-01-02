@@ -9,6 +9,10 @@ using System.Collections.Generic;
 using Eventarin.Core.Data;
 using System.Linq;
 using Eventarin.Core.Pages;
+using System.Net;
+using System.Net.Http;
+
+
 
 
 namespace Eventarin.Core.ViewModels
@@ -47,6 +51,22 @@ namespace Eventarin.Core.ViewModels
 			}
 		}
 
+
+		public ObservableCollection<Session> MySessions
+		{
+			get
+			{
+				return EventRepository.GetMySessions();
+			}
+			set
+			{
+
+				//EventRepository.SaveSessions(value);
+				RaisePropertyChanged(() => Sessions);
+			}
+		}
+
+
 		private Session _currentSession = null;
 		public Session CurrentSession
 		{
@@ -78,14 +98,31 @@ namespace Eventarin.Core.ViewModels
 
 		}
 
+
+
 		public ICommand SessionItemClicked
 		{
 			get
 			{
 				return new Command(() =>
 					{
+
 						_navigationService.Navigate<SessionPage>();
 					});
+			}
+		}
+
+		public ICommand FavoriteStarClicked
+		{
+			get
+			{
+				return new Command(() =>
+					{
+						CurrentSession.IsFavorite = true;
+						EventRepository.SaveSession(CurrentSession);
+					
+					});
+
 			}
 		}
 
@@ -111,6 +148,8 @@ namespace Eventarin.Core.ViewModels
 			IsBusy = false;
 
 		}
+
+
 
 
 

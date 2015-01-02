@@ -38,7 +38,9 @@ namespace Eventarin.Core.Models
             {
             //    if (IsFavorite)
             //    {
-                    return ImageSource.FromFile(this.HeadshotUrl);
+                    //return ImageSource.FromFile(this.HeadshotUrl);
+				System.Uri headshotUrl = new System.Uri (this.HeadshotUrl);
+				return ImageSource.FromUri (headshotUrl);
             //    }
             ///    else
             //    {

@@ -161,8 +161,8 @@ namespace Eventarin.Core.Data
 		public ObservableCollection<Session> GetMySessions () 
 		{
 			lock (locker) {
-                var query = (from i in database.Table<Session>() select i).Take(3);
-                                  //  .Where(select => select.IsFavorite).Take(5);
+                var query = (from i in database.Table<Session>() select i)
+					.Where(select => select.IsFavorite);
                
                 return (new ObservableCollection<Session>(query.ToList()));
 			}

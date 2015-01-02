@@ -7,13 +7,13 @@ using System.Diagnostics;
 
 namespace Eventarin.Core.Pages
 {	
-	public partial class SessionPage : BaseContentPage
+	public partial class SpeakerPage : BaseContentPage
 	{	
-		SessionsViewModel viewModel;
-		public SessionPage ()
+		SpeakersViewModel viewModel;
+		public SpeakerPage ()
 		{
 			InitializeComponent ();
-			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
+			viewModel = App.SimpleIoC.Resolve<SpeakersViewModel>();
 			BindingContext = viewModel;
 
 
@@ -29,7 +29,7 @@ namespace Eventarin.Core.Pages
 		protected override void OnParentSet()
 		{
 			base.OnParentSet();
-	//		viewModel.RefreshCommand.Execute(null);
+			viewModel.RefreshCommand.Execute(null);
 		}
 	}
 }

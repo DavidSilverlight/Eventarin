@@ -9,7 +9,7 @@ namespace Eventarin.Core.Models
 		public Session()
 		{
 		}
-
+		[SQLite.Net.Attributes.PrimaryKey]
         public int Id
         {
             get;
@@ -45,6 +45,29 @@ namespace Eventarin.Core.Models
             get;
             set;
         }
+
+
+		public string Sponsor
+		{
+			get;
+			set;
+		}
+
+
+		public string Speakers
+		{
+			get;
+			set;
+		}
+
+		public string Speaker_Id
+		{
+			get;
+			set;
+		}
+
+
+
 
         public DateTime Begins
         {

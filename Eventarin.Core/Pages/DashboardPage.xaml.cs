@@ -20,7 +20,7 @@ namespace Eventarin.Core.Pages
             this.ToolbarItems.Add(new ToolbarItem
             {
                 Name = "Refresh",
-                Icon = "nav_refresh.png",
+                Icon = "reload.png",
                 Command = viewModel.RefreshCommand
             });
 

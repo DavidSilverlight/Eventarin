@@ -92,12 +92,19 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\..\packages\Xamarin.Forms.1.2.3.6257\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Data\EventJSONData.cs" />
+    <Compile Include="Data\SessionJSONData.cs" />
+    <Compile Include="Data\SpeakerJSONData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -110,6 +117,9 @@
     <AndroidResource Include="Resources\raw\Eventarin.db3" />
     <AndroidResource Include="Resources\drawable\SessionBackground.png" />
     <AndroidResource Include="Resources\drawable\SessionBackground1.png" />
+    <AndroidResource Include="Resources\drawable\reload.png" />
+    <AndroidResource Include="Resources\drawable\squaremask2.png" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Icon.png" />
@@ -127,6 +137,7 @@
   <ItemGroup>
     <Folder Include="Renderers\" />
     <Folder Include="Resources\layout\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="sqlite-net">

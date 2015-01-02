@@ -6,7 +6,7 @@
      <ContentView.Content>
           <Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="150" />
                     <ColumnDefinition Width="*" />
                </Grid.ColumnDefinitions>
                <Image  Source="{Binding HeadshotDisplayUrl}"  />
@@ -15,7 +15,14 @@
                     <Label TextColor="Black" Font="10" Text="{Binding BioSummary}" ></Label>
                     <Label TextColor="Black" Font="10" Text="{Binding Company}"></Label>
 
-                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand"  >
+
+				<StackLayout Orientation="Vertical" Padding="10">	
+					<Label TextColor="White" Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
+					<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Company}" Font="16" VerticalOptions="End"  />	
+					<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Position}" Font="16" VerticalOptions="End" />	
+				</StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" IsVisible="false"  >
                          <!--<Image HeightRequest="15" WidthRequest="15" Source="{x:static icon_social_facebook"  /> 
                                                   //use x:static for better performance improvements - massive performance improvements-->
                          <Image HeightRequest="15" WidthRequest="15" Source="icon_social_facebook"  />

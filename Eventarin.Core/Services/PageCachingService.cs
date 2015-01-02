@@ -36,7 +36,7 @@ namespace Eventarin.Core.Services
 				var constructorInfo = type.GetTypeInfo().DeclaredConstructors.First();
 				var parms = constructorInfo.GetParameters().Select(parameter => App.SimpleIoC.Resolve(parameter.ParameterType)).ToArray();
 				page = Activator.CreateInstance(type, parms) as t;
-				RegisteredPages.Add(type, page);
+		//DS Causing an exception when accessing cached pages		RegisteredPages.Add(type, page);
 			}
 			else
 			{
