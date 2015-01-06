@@ -16,6 +16,7 @@ namespace Eventarin.Android.Data.Sessions
 		public string sponsor { get; set; }
 		public string speakers { get; set; }
 		public string speaker_id { get; set; }
+		public string content { get; set; }
 
 	}
 

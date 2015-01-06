@@ -42,22 +42,16 @@
 
 		        </StackLayout> 
 		         
-
-				<Label TextColor="Black" Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
-
-
 				<StackLayout Orientation="Vertical" Padding="25" >  
 
 		            <StackLayout Orientation="Horizontal"  >   
-		            	<Label Font="16" Text="About" />  
-		              	<Label TextColor="Black"  Font="14" Text="{Binding CurrentSpeaker.BioSummary}" />
+		            	<Label Font="20" Text="About " />  
+		            	<Label Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
 		           	</StackLayout>
 		              	
-	           	
-		           	<Label Font="16" Text="Background" /> 
-		            <Label TextColor="Black"  Font="12" Text="{Binding CurrentSpeaker.Bio}" /> 
+		            <Label TextColor="Black"  Font="14" Text="{Binding CurrentSpeaker.BioExcerpt}" /> 
 
-	  </StackLayout>
+	  			</StackLayout>
       		</StackLayout>
 		</Grid>
 	</ContentPage.Content>

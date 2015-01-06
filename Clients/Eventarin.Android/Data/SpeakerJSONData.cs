@@ -15,6 +15,7 @@ namespace Eventarin.Android.Data.Speakers
 		public string website_url  { get; set; }
 		public string company_name { get; set; }
 		public string linkedin_url { get; set; }
+		public string bio { get; set; }
 
 
 	}

@@ -46,7 +46,7 @@
  
                     <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand"  >
                               <Grid>
-                                   <Image  Source="DavidSilverlight.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+                                   <Image  Source="TeamDavidSilverlight.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                                    <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                               </Grid>
                               <StackLayout  Orientation="Vertical" >
@@ -58,7 +58,7 @@
 
                     <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand"  >
                               <Grid>
-                                   <Image  Source="JonasStawski.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+                                   <Image  Source="TeamJonasStawski.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                                    <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                               </Grid>
                               <StackLayout  Orientation="Vertical" >
@@ -70,7 +70,7 @@
 
                     <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
                               <Grid>
-                                   <Image  Source="MirMaheed.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+                                   <Image  Source="TeamMirMaheed.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                                    <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                               </Grid>
                               <StackLayout  Orientation="Vertical" >
@@ -84,7 +84,7 @@
                     <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
                               <Grid>
                                    <Image  Source="NoPerson.png"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-                                   <Image  Source="ZacharyWeiner.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+                                   <Image  Source="TeamZacharyWeiner.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                               </Grid>
                               <StackLayout  Orientation="Vertical" >
                               		<Label TextColor="Black"   Font="12" Text="Zachary Weiner" />
@@ -97,7 +97,7 @@
 
                     <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
                               <Grid>
-                                   <Image  Source="CarlosMacias.png"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+                                   <Image  Source="TeamCarlosMacias.png"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                                    <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
                               </Grid>
                               <StackLayout  Orientation="Vertical" >
@@ -117,7 +117,16 @@
                          	  </StackLayout>
                     </StackLayout>
 
-       
+                    <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
+                              <Grid>
+                                   <Image  Source="AdamHeller.jpg"   	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+                                   <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
+                              </Grid>
+                              <StackLayout  Orientation="Vertical" >
+                              		<Label TextColor="Black"   Font="12" Text="Adam Heller" />
+                              		<Label TextColor="Black"   Font="12" Text="Lead Interaction Design" />
+                         	  </StackLayout>
+                    </StackLayout>  
                
 	               
 

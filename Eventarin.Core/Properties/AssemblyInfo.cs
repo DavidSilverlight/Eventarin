@@ -14,6 +14,11 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyCulture("")]
 
 
+#if DEBUG
+//[assembly: Application(Debuggable=true)]
+#else
+//[assembly: this.Application(Debuggable=false)]
+#endif
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
 // The form "{Major}.{Minor}.*" will automatically update the build and revision,

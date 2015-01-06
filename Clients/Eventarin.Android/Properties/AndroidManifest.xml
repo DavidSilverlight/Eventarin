@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.4" package="com.Eventarin.Android" android:installLocation="auto" android:versionCode="4">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.Eventarin.Android" android:installLocation="auto" android:versionName="2.0" android:versionCode="5">
 	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17" />
-	<application android:label="Eventarin" android:icon="@drawable/Icon"></application>
+	<application android:label="Eventarin" android:icon="@drawable/icon">
+	</application>
 	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

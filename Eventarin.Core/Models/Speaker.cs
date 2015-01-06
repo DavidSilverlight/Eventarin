@@ -24,6 +24,18 @@ namespace Eventarin.Core.Models
         public string Position { get; set; }
         public string HeadshotUrl { get; set; }
 
+
+
+
+
+		public string BioExcerpt
+		{
+			get
+			{
+				return Bio.Substring (0, 450) + "...";
+			}
+		}
+
         //public string HeadshotDisplayUrl
         //{
         //    get

@@ -70,6 +70,7 @@ namespace Eventarin.Android
 					newSession.Begins =  sessionJSON.start;
 					newSession.Ends = sessionJSON.end;
 					newSession.Location = sessionJSON.location;
+					newSession.Abstract = sessionJSON.content;
 
 
 					newSession.Track = sessionJSON.track;
@@ -110,7 +111,7 @@ namespace Eventarin.Android
 					newSpeaker.HeadshotUrl = speakerJSON.avatar;
 					newSpeaker.Position = speakerJSON.position;
 					newSpeaker.BioSummary = "";
-					newSpeaker.Bio = "";
+					newSpeaker.Bio = speakerJSON.bio;
 					//newSpeaker.Website = speakerJSON.website_url;
 					newSpeaker.Company = speakerJSON.company_name;
 					//newSpeaker.LinkedIn = speakerJSON.linkedin_url;
