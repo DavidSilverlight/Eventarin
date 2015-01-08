@@ -18,13 +18,11 @@
 
 			<Grid HeightRequest="130" >
 				<Image  Source="SessionBackground1.png" HorizontalOptions="Start" VerticalOptions="Start"     />
-				<StackLayout Orientation="Vertical" VerticalOptions="Start" >
+				<StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="10" >
 
-					<StackLayout Orientation="Horizontal" Padding="10">
-						<Label TextColor="White" Text="{Binding CurrentSession.Title}" Font="20"   />
-					</StackLayout>
-
-					<StackLayout Orientation="Horizontal" Padding="10">	
+					<Label TextColor="White" Text="{Binding CurrentSession.Title}" Font="20"   />
+				
+					<StackLayout Orientation="Horizontal" >	
 						<Label TextColor="White" Text="By:" Font="20"  />	
 						<Label TextColor="White" Text="{Binding CurrentSession.Speakers}" Font="20"  />	
 					</StackLayout>

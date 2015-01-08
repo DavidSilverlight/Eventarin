@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.Eventarin.Android" android:installLocation="auto" android:versionName="2.01" android:versionCode="6">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.Eventarin.Android" android:installLocation="auto" android:versionName="2.07" android:versionCode="7">
 	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19" />
 	<application android:label="Eventarin" android:icon="@drawable/icon">
 	</application>
