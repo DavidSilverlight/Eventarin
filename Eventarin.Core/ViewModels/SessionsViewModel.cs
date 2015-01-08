@@ -118,9 +118,11 @@ namespace Eventarin.Core.ViewModels
 			{
 				return new Command(() =>
 					{
-						CurrentSession.IsFavorite = true;
+						CurrentSession.IsFavorite = !CurrentSession.IsFavorite;
 						EventRepository.SaveSession(CurrentSession);
-					
+
+
+						RaisePropertyChanged(() => CurrentSession);
 					});
 
 			}

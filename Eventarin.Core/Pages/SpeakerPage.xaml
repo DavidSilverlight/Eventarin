@@ -13,46 +13,38 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
- 		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand"  >
-			<Grid.RowDefinitions>
-      			<RowDefinition Height="*" />
-      		</Grid.RowDefinitions>
-      		<StackLayout VerticalOptions="StartAndExpand">
+
+		<StackLayout VerticalOptions="Start" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+		<Grid>
+
+			<Grid HeightRequest="130" >
+				<Image  Source="SessionBackground1.png" HorizontalOptions="Start" VerticalOptions="Start"     />
+
+				<StackLayout Orientation="Vertical" Padding="10">	
+					<Label TextColor="White" Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
+					<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Company}" Font="16" VerticalOptions="End"  />	
+					<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Position}" Font="16" VerticalOptions="End" />	
+				</StackLayout>
+			</Grid>
+
+			<Grid Padding="0,100,0,0" HorizontalOptions="Center" >
+				<Image Source="{Binding CurrentSpeaker.HeadshotDisplayUrl}"  WidthRequest="100" HeightRequest="100"   />
+				<Image  Source="squaremask2.png"  WidthRequest="100" HeightRequest="100"   />
+			</Grid>
 
 
-		   		 <StackLayout  Orientation="Horizontal" HorizontalOptions="Start"    >
-		   		 	<Grid>
-						<Grid>
-							<Image  Source="SessionBackground1.png" HorizontalOptions="Start"       />
-							<StackLayout Orientation="Vertical" Padding="10">	
-								<Label TextColor="White" Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
-								<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Company}" Font="16" VerticalOptions="End"  />	
-								<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Position}" Font="16" VerticalOptions="End" />	
-							</StackLayout>
-						</Grid>
-
-						<Grid Padding="0,100,0,0" HorizontalOptions="Center" >
-							<Image Source="{Binding CurrentSpeaker.HeadshotDisplayUrl}"  WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-							<Image  Source="squaremask2.png"  WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-						</Grid>
-
-
-
-		   		 	</Grid>
-
-		        </StackLayout> 
-		         
-				<StackLayout Orientation="Vertical" Padding="25" >  
-
-		            <StackLayout Orientation="Horizontal"  >   
-		            	<Label Font="20" Text="About " />  
-		            	<Label Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
-		           	</StackLayout>
-		              	
-		            <Label TextColor="Black"  Font="14" Text="{Binding CurrentSpeaker.BioExcerpt}" /> 
-
-	  			</StackLayout>
-      		</StackLayout>
 		</Grid>
+
+			<StackLayout Orientation="Vertical" Padding="25" >  
+
+	            <StackLayout Orientation="Horizontal"  >   
+	            	<Label Font="20" Text="About " />  
+	            	<Label Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
+	           	</StackLayout>
+	              	
+	            <Label TextColor="Black"  Font="14" Text="{Binding CurrentSpeaker.BioExcerpt}" /> 
+
+			</StackLayout>
+		</StackLayout>
 	</ContentPage.Content>
 </pages:BaseContentPage>

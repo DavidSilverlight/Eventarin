@@ -13,61 +13,46 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
- 		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand"  >
-			<Grid.RowDefinitions>
-      			<RowDefinition Height="*" />
-      		</Grid.RowDefinitions>
-      		<StackLayout VerticalOptions="StartAndExpand">
+ 
+		<StackLayout VerticalOptions="Start" Orientation="Vertical">
 
+			<Grid HeightRequest="130" >
+				<Image  Source="SessionBackground1.png" HorizontalOptions="Start" VerticalOptions="Start"     />
+				<StackLayout Orientation="Vertical" VerticalOptions="Start" >
 
-		   		 <StackLayout  Orientation="Horizontal" HorizontalOptions="Start"    >
-		              <Grid>
-		      				<Image  Source="SessionBackground1.png" HorizontalOptions="Start"      />
-							<StackLayout Orientation="Vertical">
+					<StackLayout Orientation="Horizontal" Padding="10">
+						<Label TextColor="White" Text="{Binding CurrentSession.Title}" Font="20"   />
+					</StackLayout>
 
-								<StackLayout Orientation="Horizontal" Padding="10">
-									<Label TextColor="White" Text="{Binding CurrentSession.Title}" Font="20"  />
-								</StackLayout>
-
-								<StackLayout Orientation="Horizontal" Padding="10">	
-									<Label TextColor="White" Text="By:" Font="20"  />	
-									<Label TextColor="White" Text="{Binding CurrentSession.Speakers}" Font="20"  />	
-								</StackLayout>
-
-							</StackLayout>
-
-
-		              </Grid>
-		        </StackLayout> 
-
-  			
-	
-				<StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand">
-					<Button Image="star_gold45" BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50" Command="{Binding FavoriteStarClicked}"  />
-					<Label YAlign="Center" TextColor="Gray" Text="Add to Favorites" Font="25" />
+					<StackLayout Orientation="Horizontal" Padding="10">	
+						<Label TextColor="White" Text="By:" Font="20"  />	
+						<Label TextColor="White" Text="{Binding CurrentSession.Speakers}" Font="20"  />	
+					</StackLayout>
 				</StackLayout>
-	
+			</Grid>
+			<StackLayout Padding="10" Orientation="Vertical" VerticalOptions="StartAndExpand">
+
+				<StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand" VerticalOptions="Start" HeightRequest="50"  >
+					<Button Image="{Binding CurrentSession.FavoriteImage}" BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50" Command="{Binding FavoriteStarClicked}"  />
+					<Label YAlign="Center" TextColor="Gray" Text="{Binding CurrentSession.FavoriteMessage}" Font="25"  />
+				</StackLayout>
+
+				<Label Font="16" Text="When and Where" /> 
+		        <StackLayout Orientation="Horizontal"  >    
+		          	<Label TextColor="Black"  Font="14" Text="{Binding CurrentSession.Begins, StringFormat='{0:t}'}" />
+		            <Label TextColor="Black"  Font="14" Text="-" />
+		            <Label TextColor="Black"  Font="14" Text="{Binding CurrentSession.Ends, StringFormat='{0:t}'}" />
+		       	</StackLayout>
+		    	           	
+		   		<Label Font="16" Text="Location:" /> 
+		    	<Label TextColor="Black"  Font="12" Text="{Binding CurrentSession.Location}" /> 
+		   	
+		   		<Label Font="16" Text="Details" /> 
+		    	<Label TextColor="Black"  Font="12" Text="{Binding CurrentSession.Abstract}" /> 
+			</StackLayout>
+
+		</StackLayout>
 
 
-
-
-
-				<StackLayout Orientation="Vertical" Padding="10,0,0,0" >  
-					<Label Font="16" Text="When and Where" /> 
-		            <StackLayout Orientation="Horizontal"  >    
-		              	<Label TextColor="Black"  Font="14" Text="{Binding CurrentSession.Begins, StringFormat='{0:t}'}" />
-		                <Label TextColor="Black"  Font="14" Text="-" />
-		                <Label TextColor="Black"  Font="14" Text="{Binding CurrentSession.Ends, StringFormat='{0:t}'}" />
-		           	</StackLayout>
-	            	           	
-	           		<Label Font="16" Text="Location:" /> 
-	            	<Label TextColor="Black"  Font="12" Text="{Binding CurrentSession.Location}" /> 
-	           	
-	           		<Label Font="16" Text="Details" /> 
-	            	<Label TextColor="Black"  Font="12" Text="{Binding CurrentSession.Abstract}" /> 
-
-  				</StackLayout>
-	  		</StackLayout>
-		</Grid>
 	</ContentPage.Content>
 </pages:BaseContentPage>

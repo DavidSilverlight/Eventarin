@@ -16,6 +16,7 @@ namespace Eventarin.Core.Pages
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
 			BindingContext = viewModel;
 
+			//DS 010715 CodeSmell - Use Commanding
 			ListSessions.ItemSelected += (sender, e) => {
 				viewModel.CurrentSession = (Eventarin.Core.Models.Session)e.SelectedItem;
 				var sessionID = 0;
@@ -32,7 +33,7 @@ namespace Eventarin.Core.Pages
 
 
 			this.ToolbarItems.Add(new ToolbarItem {
-                Name = "Refresh",
+                Text = "Refresh",
 				Icon = "reload.png",
 				Command = viewModel.RefreshCommand
 			});

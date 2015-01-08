@@ -89,6 +89,21 @@ namespace Eventarin.Core.Models
 			set;
 		}
 
+		public string FavoriteMessage
+		{
+			get
+			{
+				if (IsFavorite)
+				{
+					return "Saved as a Favorite";
+				}
+				else
+				{
+					return "Add to Favorites";
+				}
+			}
+		}
+
         
 		public ImageSource FavoriteImage
 		{
@@ -96,11 +111,11 @@ namespace Eventarin.Core.Models
 			{
 				if (IsFavorite)
 				{
-					return ImageSource.FromFile("star_gold45.png");
+					return ImageSource.FromFile("star_gold45");
 				}
 				else
 				{
-					return ImageSource.FromFile("star_grey45.png");
+					return ImageSource.FromFile("star_grey45");
 				}
 			}
 		}
