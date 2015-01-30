@@ -27,6 +27,7 @@ namespace Eventarin.Core.Pages
 		{
 			base.OnAppearing();
 			var layout = this.Content as Layout<View>;
+
 			if (layout != null && ActivityIndicator == null)
 			{
 				ActivityIndicator = new ActivityIndicator();

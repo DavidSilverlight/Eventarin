@@ -48,6 +48,8 @@ namespace Eventarin.Core
 			return navigationService.GetMainPage();
 		}
 
+
+
 		private static volatile SimpleIoC simpleIoC;
 		private static object syncRoot = new Object();
 

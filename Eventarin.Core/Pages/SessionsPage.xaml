@@ -14,22 +14,28 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
-	<StackLayout Orientation="Vertical" >
+		<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" >
 
-		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
-			<Grid.RowDefinitions>
-      			<RowDefinition Height="*" />
-      		</Grid.RowDefinitions>
-			<views:PullToRefreshListView IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading...">
-				<ListView.ItemTemplate>
-					<DataTemplate>
-						<views:EventarinCell  Command="{Binding SessionItemClicked}">
-                             <ContentViews:SessionCellContentView />
-						</views:EventarinCell>
-					</DataTemplate>
-				</ListView.ItemTemplate>
-			</views:PullToRefreshListView>
-		</Grid>
-</StackLayout>
+			<Image  Source="Sessions_header.png"  VerticalOptions="Start" />
+		
+
+			<Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+				<Grid.RowDefinitions>
+	      			<RowDefinition Height="*" />
+	      		</Grid.RowDefinitions>
+
+				<views:PullToRefreshListView  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading...">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<views:EventarinCell  Command="{Binding SessionItemClicked}">
+								<StackLayout Padding="20" >
+	                            	<ContentViews:SessionCellContentView2  />
+	                            </StackLayout>
+							</views:EventarinCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</views:PullToRefreshListView>
+			</Grid>
+		</StackLayout>
 	</ContentPage.Content>
 </pages:BaseContentPage>

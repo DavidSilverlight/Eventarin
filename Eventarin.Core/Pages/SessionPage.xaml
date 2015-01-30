@@ -16,23 +16,29 @@
  
 		<StackLayout VerticalOptions="Start" Orientation="Vertical">
 
-			<Grid HeightRequest="130" >
-				<Image  Source="SessionBackground1.png" HorizontalOptions="Start" VerticalOptions="Start"     />
-				<StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="10" >
+			<Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
 
-					<Label TextColor="White" Text="{Binding CurrentSession.Title}" Font="20"   />
-				
-					<StackLayout Orientation="Horizontal" >	
+	           	<Image  Source="{Binding CurrentSession.SessionSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"  />
+
+	           	<StackLayout Padding="5,15,0,0"  >
+	           		<StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand"  />
+	           	</StackLayout>
+
+	           	<StackLayout Padding="5,115,0,0"  >
+	           		<Label Text="{Binding CurrentSession.Title}" 	 Font="16" TextColor="Black"    />  
+	           		<StackLayout Orientation="Horizontal" >	
 						<Label TextColor="White" Text="By:" Font="20"  />	
 						<Label TextColor="White" Text="{Binding CurrentSession.Speakers}" Font="20"  />	
 					</StackLayout>
-				</StackLayout>
-			</Grid>
+	           	</StackLayout>
+
+	        </Grid>
+
+
 			<StackLayout Padding="10" Orientation="Vertical" VerticalOptions="StartAndExpand">
 
 				<StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand" VerticalOptions="Start" HeightRequest="50"  >
-					<Button Image="{Binding CurrentSession.FavoriteImage}" BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50" Command="{Binding FavoriteStarClicked}"  />
-					<Label YAlign="Center" TextColor="Gray" Text="{Binding CurrentSession.FavoriteMessage}" Font="25"  />
+					<Button Image="{Binding CurrentSession.FavoriteImage}" BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="200" HeightRequest="30" Command="{Binding FavoriteStarClicked}"  />
 				</StackLayout>
 
 				<Label Font="16" Text="When and Where" /> 

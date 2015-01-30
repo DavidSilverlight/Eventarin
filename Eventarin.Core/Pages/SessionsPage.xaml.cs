@@ -32,14 +32,31 @@ namespace Eventarin.Core.Pages
 
 
 
-			this.ToolbarItems.Add(new ToolbarItem {
-                Text = "Refresh",
-				Icon = "reload.png",
-				Command = viewModel.RefreshCommand
-			});
+//			this.ToolbarItems.Add(new ToolbarItem {
+//                Text = "Refresh",
+//				Icon = "reload.png",
+//				Command = viewModel.RefreshCommand
+//			});
+			//this.ToolbarItems.Clear ();
+//			var hamburgerItem = new ToolbarItem ();
+//			hamburgerItem.Order = ToolbarItemOrder.Primary;
+//			hamburgerItem.Priority = 0;
+//			hamburgerItem.Text = "Back to sessions";
+//		
 
-		
-            
+			//(TextCell = "Sessions", "hamburger_menu_icon.png", Action.Combine, ToolbarItemOrder.Primary, 0);
+		//	this.ToolbarItems.Add (hamburgerItem);
+//			this.ToolbarItems.Add(new ToolbarItem {
+//				Text = "",
+//			
+//				Icon = "hamburger_menu_icon.png",
+//
+//				Command = viewModel.RefreshCommand
+//
+//			});
+			//
+
+			this.BackgroundColor = Color.White;    
 		}
 
 

@@ -5,53 +5,50 @@
 						xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
 						x:Class="Eventarin.Core.Pages.MenuPage" 
 						Title="{Binding PageTitle}">
-	<ContentPage.Content>
-		<StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
-			<TableView Intent="Menu">
-				<TableRoot>
-					<TableSection>
-
 	
-						<views:EventarinCell Command="{Binding SessionsClicked}">
-							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_session.png" />
-								<Label YAlign="Center" TextColor="Gray" Text="Sessions" Font="25" />
-							</StackLayout>
-						</views:EventarinCell>
-					  <views:EventarinCell Command="{Binding SpeakersClicked}">
-							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_speaker.png" />
-								<Label YAlign="Center" TextColor="Gray" Text="Speakers" Font="25" />
-							</StackLayout>
-						</views:EventarinCell>
-            <views:EventarinCell Command="{Binding DashboardClicked}">
-							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_dashboard.png" />
-								<Label YAlign="Center" TextColor="Gray" Text="Favorites" Font="25" />
-							</StackLayout>
-						</views:EventarinCell>
-						<views:EventarinCell Command="{Binding WebsiteClicked}">
-							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_website.png" />
-								<Label YAlign="Center" TextColor="Gray" Text="Website" Font="25" />
-							</StackLayout>
-						</views:EventarinCell>
-<!--						<views:EventarinCell Command="{Binding AboutClicked}"  >
-							<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand" IsVisible="false" >
-								<Image WidthRequest="35" HeightRequest="35" Source="icon_menu_about.png" />
-								<Label YAlign="Center" TextColor="Gray" Text="Directions" Font="25" />
-							</StackLayout>
-						</views:EventarinCell>-->
-            <views:EventarinCell Command="{Binding TeamClicked}">
-              <StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                <Image WidthRequest="35" HeightRequest="35" Source="icon_menu_team.png" />
-                <Label YAlign="Center" TextColor="Gray" Text="Team" Font="25" />
-              </StackLayout>
-            </views:EventarinCell>
-          
-          </TableSection>
-				</TableRoot>
-			</TableView>
-		</StackLayout>
+	<ContentPage.Content>
+		<StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand" Orientation="Vertical"  >
+			<Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+				<Image  Source="SessionBackground1.png" HeightRequest="130" VerticalOptions="Start" />
+				<StackLayout Padding="0,75,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+					<TableView Intent="Menu" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  HeightRequest="400">
+						<TableRoot>
+							<TableSection>	
+								<views:EventarinCell Command="{Binding SessionsClicked}">
+									<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+										<Label YAlign="Center" TextColor="White" Text="Sessions" Font="20" />
+									</StackLayout>
+								</views:EventarinCell>
+	 						  	<views:EventarinCell Command="{Binding SpeakersClicked}">
+									<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+										<Label YAlign="Center" TextColor="White" Text="Speakers" Font="20" />
+									</StackLayout>
+								</views:EventarinCell>
+		            			<views:EventarinCell Command="{Binding DashboardClicked}">
+									<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+										<Label YAlign="Center" TextColor="White" Text="Favorites" Font="20" />
+									</StackLayout>
+								</views:EventarinCell>
+								<views:EventarinCell Command="{Binding WebsiteClicked}">
+									<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+										<Label YAlign="Center" TextColor="White" Text="Website" Font="20" />
+									</StackLayout>
+								</views:EventarinCell>
+					            <views:EventarinCell Command="{Binding TeamClicked}">
+					              <StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+					                <Label YAlign="Center" TextColor="White" Text="Team" Font="20" />
+					              </StackLayout>
+					            </views:EventarinCell>
+		          			</TableSection>
+						</TableRoot>
+					</TableView>
+				</StackLayout>
+				<StackLayout Padding="10,30,0,0" Orientation="Vertical">
+					<Label Text="CodeCamp 2015" TextColor="White" Font="18" />
+					<Label Text="An Amazing Technical Experience" TextColor="White" />
+				</StackLayout>
+
+			</Grid>
+			</StackLayout>
 	</ContentPage.Content>
 </pages:BaseContentPage>

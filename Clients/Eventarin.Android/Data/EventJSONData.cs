@@ -2,6 +2,12 @@
 using Eventarin.Core.Models;
 using System.Net;
 using Eventarin.Android.Data.Sessions;
+using System.IO;
+using System.Xml;
+using System.Linq.Expressions;
+using System.Linq;
+using System.Xml.Serialization;
+using System.Text;
 
 namespace Eventarin.Android
 {
@@ -87,6 +93,66 @@ namespace Eventarin.Android
 
 			wc.DownloadStringAsync (getUrl);
 		}
+
+		public static void RefreshLocalSpeakersXML()
+		{
+
+
+
+
+			Eventarin.Core.App.Database.ClearExistingSpeakers ();
+			var url = "http://www.fladotnet.com/flanetdata/api/ccspeakers";
+
+
+			string content;
+
+
+			XmlDocument doc = new XmlDocument ();
+			doc.Load (url);
+
+			int c = 0;
+
+			foreach (XmlNode item in doc.DocumentElement.ChildNodes) {
+				var speakerID = item.ChildNodes [0].InnerText;
+				var speakerName =  item.ChildNodes [1].InnerText;
+				var speakerImageURL = "";// "http://media.licdn.com/mpr/mpr/shrink_200_200/p/4/000/130/2c7/3c886aa.jpg";// item.ChildNodes [2].InnerText;
+
+
+				try {
+					speakerImageURL = item.ChildNodes [2].InnerText;
+
+				}
+				catch(Exception exc) {
+					speakerImageURL = "";
+
+				}
+
+
+
+
+
+
+				Speaker newSpeaker = new Speaker();
+				newSpeaker.Id = int.Parse(speakerID);
+				newSpeaker.Name = speakerName ;
+				newSpeaker.HeadshotUrl = speakerImageURL;
+				newSpeaker.Position = "";
+				newSpeaker.BioSummary = "";
+				newSpeaker.Bio = "";
+				//newSpeaker.Website = speakerJSON.website_url;
+				newSpeaker.Company = "";
+				//newSpeaker.LinkedIn = speakerJSON.linkedin_url;
+				Eventarin.Core.App.Database.AddSpeaker(newSpeaker);
+				//App.Database.AddSession(newSession);
+				//	Eventarin.Core.App.Database.SaveSession(newSession);
+
+
+
+				c++;
+			}
+
+		}
+
 
 
 		public static void RefreshLocalSpeakers()

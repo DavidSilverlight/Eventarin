@@ -26,7 +26,7 @@ namespace Eventarin.Core.ViewModels
 		{
 			_navigationService = navigationService;
 			_webService = webService;
-			PageTitle = "Sessions";
+			PageTitle = "";
 		}
 
         private string _categoryFilter = "mobile";
@@ -107,7 +107,8 @@ namespace Eventarin.Core.ViewModels
 				return new Command(() =>
 					{
 
-						_navigationService.Navigate<SessionPage>();
+					//	_navigationService.Navigate<SessionPage>();
+						_navigationService.NavigateModal<SessionPage>();
 					});
 			}
 		}

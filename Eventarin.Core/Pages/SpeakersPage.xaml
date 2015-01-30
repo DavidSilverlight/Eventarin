@@ -1,57 +1,42 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
 			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
 			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
+             xmlns:ContentViews="clr-namespace:Eventarin.Core.ContentViews;assembly=Eventarin.Core"
 		     x:Class="Eventarin.Core.Pages.SpeakersPage"
 		     Title="{Binding PageTitle}"
-                       Icon="reload"
-		     BackgroundColor="#E1E1E1">
-     <ContentPage.Resources>
-          <ResourceDictionary>
-               <converters:OppositeConverter x:Key="oppositeConverter" />
-          </ResourceDictionary>
-     </ContentPage.Resources>
-     <ContentPage.Content>
-          <Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
-               <Grid.RowDefinitions>
-                    <RowDefinition Height="*"  />
-               </Grid.RowDefinitions>
-               <ListView ItemsSource="{Binding Speakers}" RowHeight="100" x:Name="ListSpeakers" >
-                    <ListView.ItemTemplate>
-                         <DataTemplate>
-                              <views:EventarinCell>
-                                   <Grid Padding="10" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
-                                        <Grid.ColumnDefinitions>
-                                             <ColumnDefinition Width="125" />
-                                             <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
+ 		     BackgroundColor="White">
+ 	<ContentPage.Resources>
+		<ResourceDictionary>
+			<converters:OppositeConverter x:Key="oppositeConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" >
 
+			<Image  Source="Speakers_header.png"  VerticalOptions="Start" />
+		
 
-                                        <Grid>
-		                                   <Image Source="{Binding HeadshotDisplayUrl}"  WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-		                                   <Image  Source="roundmask2.png"  WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-		                              	</Grid>
+			<Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+				<Grid.RowDefinitions>
+	      			<RowDefinition Height="*" />
+	      		</Grid.RowDefinitions>
 
-
-
-                                        <StackLayout Orientation="Vertical"  Grid.Column="1" HeightRequest="30" >
-                                            <Label TextColor="Blue" Text="{Binding Name}" x:Name="title"></Label>
-                                            <Label TextColor="Black" Font="10" Text="{Binding Company}"></Label>                                             							
-											<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Position}" Font="16" VerticalOptions="End" />	
-                                       </StackLayout>
-
-                                   </Grid>
-                              </views:EventarinCell>
-                         </DataTemplate>
-                    </ListView.ItemTemplate>
-               </ListView>
-          </Grid>
-     </ContentPage.Content>
-     <!--	<ContentPage.ToolBarItems>
-		<ToolbarItem Name="Refresh" Command="{Binding RefreshCommand}" 
-        Order="Primary" Priority="0"/>
-	</ContentPage.ToolBarItems>-->
+				<views:PullToRefreshListView  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSpeakers" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Speakers}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading...">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<views:EventarinCell  Command="{Binding SpeakerItemClicked}">
+								<StackLayout Padding="20" >
+	                            	<ContentViews:SpeakerCellContentView2  />
+	                            </StackLayout>
+							</views:EventarinCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</views:PullToRefreshListView>
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
 </pages:BaseContentPage>
-
+	

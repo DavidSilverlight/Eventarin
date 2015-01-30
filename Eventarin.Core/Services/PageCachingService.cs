@@ -28,22 +28,32 @@ namespace Eventarin.Core.Services
 		{
 			var type = typeof(t);
 			t page = default(t);
-			if (!RegisteredPages.ContainsKey(type))
+			try
 			{
+
+
+			//DS if (!RegisteredPages.ContainsKey(type))
+				//DS{
 				// If the page hasn't been cached, cache it
 
 				// Get the constructors
 				var constructorInfo = type.GetTypeInfo().DeclaredConstructors.First();
 				var parms = constructorInfo.GetParameters().Select(parameter => App.SimpleIoC.Resolve(parameter.ParameterType)).ToArray();
 				page = Activator.CreateInstance(type, parms) as t;
-		//DS Causing an exception when accessing cached pages		RegisteredPages.Add(type, page);
-			}
-			else
-			{
-				// Get it from cache
-				page = RegisteredPages[type] as t;
-			}
 
+
+		//DS Causing an exception when accessing cached pages		RegisteredPages.Add(type, page);
+				//DS		}
+				//DSelse
+				//DS{
+				// Get it from cache
+				//DS page = RegisteredPages[type] as t;
+				//DS}
+			}
+			catch(Exception exc)
+			{
+				//DS Show exception message
+			}
 			return page;
 		}
 

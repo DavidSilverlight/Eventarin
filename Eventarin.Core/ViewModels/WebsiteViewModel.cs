@@ -7,7 +7,7 @@ namespace Eventarin.Core.ViewModels
 
 		public WebsiteViewModel()
 		{
-            			PageTitle = "ITPalooza.com Website";
+            			PageTitle = "";
 		}
 	}
 }

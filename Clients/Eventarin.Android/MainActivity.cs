@@ -11,6 +11,8 @@ using Eventarin.Core;
 using Android.Content.PM;
 using System.IO;
 using SQLite;
+using ImageCircle.Forms.Plugin.Droid;
+
 
 namespace Eventarin.Android
 {
@@ -22,6 +24,8 @@ namespace Eventarin.Android
 			base.OnCreate (bundle);
 
 			Xamarin.Forms.Forms.Init (this, bundle);
+		//	Xamarin.Forms.Init();//platform specific init
+			ImageCircleRenderer.Init();
             
             //Initialize database
             InitializeDatabase();
@@ -84,6 +88,7 @@ namespace Eventarin.Android
         public void RefreshLocalData()
         {
             EventJSONData.RefreshLocalSpeakers();
+		//	EventJSONData.RefreshLocalSpeakersXML ();
             EventJSONData.RefreshLocalSessions();
 		//	EventJSONData.GetSessionDetail (3519);
         }

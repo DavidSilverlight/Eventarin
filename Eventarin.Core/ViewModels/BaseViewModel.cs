@@ -52,9 +52,19 @@ namespace Eventarin.Core.ViewModels
 		{
 			if (PropertyChanged != null)
 			{
-				var propertyName = GetPropertyName(propertyExpression);
-				var e = new PropertyChangedEventArgs(propertyName);
-				PropertyChanged(this, e);
+
+				try
+				{
+					var propertyName = GetPropertyName(propertyExpression);
+					var e = new PropertyChangedEventArgs(propertyName);
+					PropertyChanged(this, e);
+				}
+				catch ( Exception exc) {
+					//Do nothing
+				}
+
+
+
 			}
 		}
 

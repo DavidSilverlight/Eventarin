@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Eventarin.Core.ContentViews.SpeakerCellContentView2">
+	<ContentView.Content>         
+    
+		<StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
+			<Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
+
+	           	<Image  Source="{Binding SpeakerSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"  />
+
+	           	<StackLayout Padding="5,15,0,0"  >
+	           		<StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand"  />
+	           	</StackLayout>
+
+	           	<StackLayout Padding="5,115,0,0"  >
+	           		<Label Text="{Binding Name}" FontFamily="Open Sans"	 Font="30" TextColor="Black"    />  
+	           	</StackLayout>
+
+	        </Grid>
+		           	
+            <StackLayout Padding="10" Orientation="Vertical"	BackgroundColor="White" HeightRequest="150" WidthRequest="360" >
+                <Label Text="{Binding Company}" 	Font="12" FontAttributes="Bold" TextColor="Black"  WidthRequest="380" VerticalOptions="Start"   />
+            	<Label Text="{Binding Position}" 	Font="10" TextColor="Black"  WidthRequest="380"  VerticalOptions="Start" HorizontalOptions="Start"  />
+            	<Label Text="{Binding BioExcerpt}" 	Font="10" TextColor="Black"  WidthRequest="380" VerticalOptions="StartAndExpand" HorizontalOptions="Start" />
+			</StackLayout>
+
+		</StackLayout>
+
+
+     </ContentView.Content>
+</ContentView>

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Eventarin.Core.ViewModels;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
 
 namespace Eventarin.Core.Pages
 {	
@@ -33,6 +36,18 @@ namespace Eventarin.Core.Pages
 
 
 		}
+
+
+
+
+
+		protected override void OnParentSet()
+		{
+			base.OnParentSet();
+	//		viewModel.RefreshCommand.Execute(null);
+		}
+
+
 	}
 }
 

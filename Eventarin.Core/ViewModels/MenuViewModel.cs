@@ -14,7 +14,7 @@ namespace Eventarin.Core.ViewModels
 		public MenuViewModel(INavigationService navigationService)
 		{
 			_navigationService = navigationService;
-			PageTitle = "Eventarin";
+			PageTitle = " ";
 		}
 
 		public ICommand DashboardClicked

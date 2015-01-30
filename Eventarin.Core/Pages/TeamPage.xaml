@@ -20,11 +20,6 @@
 	        		<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
 	            		<StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="10">
 	      
-
-							<Label Font="18" TextColor="Blue" Text="About Eventarin and the ITPalooza Team"  /> 
-				            <Label TextColor="Black"   Font="12"  Text="This application was developed as a community project by a team of developers to show off some of the latest Xamarin technologies for mobile development. It began as an effort by members of the South Florida Xamarin Users Group, but is open for other members to join in on the fun to get some real world experience and/or show off their development skills." />
-				       
-
 				       		<Label Font="18" TextColor="Blue" Text="Project Contributors"  /> 
 				            <Label TextColor="Black"   Font="12"  Text="This application was developed as a community project by a team of developers to show off some of the latest Xamarin technologies for mobile development. It began as an effort by members of the South Florida Xamarin Users Group, but is open for other members to join in on the fun to get some real world experience and/or show off their development skills." />
 			         

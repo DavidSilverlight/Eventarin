@@ -17,10 +17,20 @@ namespace Eventarin.Core.Pages
 			BindingContext = viewModel;
 
 
+//			this.ToolbarItems.Add(new ToolbarItem {
+//                Text = "Refresh",
+//				Icon = "reload.png",
+//				Command = viewModel.RefreshCommand
+//			});
+
+
+//
 			this.ToolbarItems.Add(new ToolbarItem {
-                Text = "Refresh",
-				Icon = "reload.png",
+				Text = "",
+
+			//	Icon = "hamburger_menu_icon.png",
 				Command = viewModel.RefreshCommand
+
 			});
 
 

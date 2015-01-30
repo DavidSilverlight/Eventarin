@@ -4,6 +4,7 @@
 			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
 			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
 			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
+			 xmlns:ContentViews="clr-namespace:Eventarin.Core.ContentViews;assembly=Eventarin.Core"
 		     x:Class="Eventarin.Core.Pages.SpeakerPage"
 		     Title="{Binding PageTitle}"
  		     BackgroundColor="White">
@@ -14,37 +15,30 @@
 	</ContentPage.Resources>
 	<ContentPage.Content>
 
-		<StackLayout VerticalOptions="Start" HorizontalOptions="StartAndExpand" Orientation="Vertical">
-			<Grid>
+		<StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
+			<Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
 
-				<Grid HeightRequest="130" >
-					<Image  Source="SessionBackground1.png" HorizontalOptions="Start" VerticalOptions="Start"     />
+	           	<Image  Source="{Binding CurrentSpeaker.SpeakerSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"  />
 
-					<StackLayout Orientation="Vertical" Padding="10">	
-						<Label TextColor="White" Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
-						<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Company}" Font="16" VerticalOptions="End"  />	
-						<Label TextColor="Silver" Text="{Binding CurrentSpeaker.Position}" Font="16" VerticalOptions="End" />	
-					</StackLayout>
-				</Grid>
-
-				<Grid Padding="0,100,0,0" HorizontalOptions="Center" >
-					<Image Source="{Binding CurrentSpeaker.HeadshotDisplayUrl}"  WidthRequest="100" HeightRequest="100"   />
-					<Image  Source="squaremask2.png"  WidthRequest="100" HeightRequest="100"   />
-				</Grid>
-
-
-			</Grid>
-
-			<StackLayout Orientation="Vertical" Padding="25" >  
-
-	            <StackLayout Orientation="Horizontal"  >   
-	            	<Label Font="20" Text="About " />  
-	            	<Label Text="{Binding CurrentSpeaker.Name}" Font="20"  />	
+	           	<StackLayout Padding="5,15,0,0"  >
+	           		<StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand"  />
 	           	</StackLayout>
-	              	
-	            <Label TextColor="Black"  Font="14" Text="{Binding CurrentSpeaker.BioExcerpt}" /> 
 
+	           	<StackLayout Padding="5,115,0,0"  >
+	           		<Label Text="{Binding CurrentSpeaker.Name}" FontFamily="Open Sans"	 Font="30" TextColor="Black"    />  
+	           	</StackLayout>
+
+	        </Grid>
+		           	
+            <StackLayout Padding="10" Orientation="Vertical"	BackgroundColor="White" HeightRequest="150" WidthRequest="360" >
+                <Label Text="{Binding CurrentSpeaker.Company}" 	Font="12" FontAttributes="Bold" TextColor="Black"  WidthRequest="380" VerticalOptions="Start"   />
+            	<Label Text="{Binding CurrentSpeaker.Position}" 	Font="10" TextColor="Black"  WidthRequest="380"  VerticalOptions="Start" HorizontalOptions="Start"  />
+            	<Label Text="{Binding CurrentSpeaker.Bio}" 	Font="10" TextColor="Black"  WidthRequest="380" VerticalOptions="StartAndExpand" HorizontalOptions="Start" />
 			</StackLayout>
+
 		</StackLayout>
+
+
+
 	</ContentPage.Content>
 </pages:BaseContentPage>

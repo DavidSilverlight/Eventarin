@@ -21,7 +21,7 @@ namespace Eventarin.Core.ViewModels
         {
             _webService = webService;
             _navigationService = navigationService;
-            PageTitle = "My Schedule";
+            PageTitle = "";
 
 		//	RaisePropertyChanged<bool>(() => HasFavorites);
 			RaisePropertyChanged(() => Sessions);
