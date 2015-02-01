@@ -23,7 +23,7 @@ namespace Eventarin.Core.ViewModels
 			{
 				return new Command(() =>
 				{
-					_navigationService.Navigate<DashboardPage>();
+					_navigationService.Navigate<ItineraryPage>();
 				});
 			}
 		}
@@ -34,7 +34,8 @@ namespace Eventarin.Core.ViewModels
 			{
 				return new Command(() =>
 				{
-					_navigationService.Navigate<SpeakersPage>();
+				//		NavigationPage.Navigation.PushAsync(new SpeakersPage());
+						_navigationService.NavigateToSpeakers<SpeakersPage>();
 				});
 			}
 		}

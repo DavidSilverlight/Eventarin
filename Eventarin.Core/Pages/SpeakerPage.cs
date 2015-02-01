@@ -48,7 +48,7 @@ namespace Eventarin.Core.Pages
 //			});
 
 			this.ToolbarItems.Add(new ToolbarItem {
-				Text = "",
+				Text = "Return to Speakers",
 
 				//Icon = "hamburger_menu_icon.png",
 				Command = viewModel.RefreshCommand

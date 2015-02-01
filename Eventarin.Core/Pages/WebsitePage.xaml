@@ -5,6 +5,8 @@
 			x:Class="Eventarin.Core.Pages.WebsitePage"
                Title="{Binding PageTitle}" >
 	<ContentPage.Content>
-          <WebView Source="http://ITPalooza.com"  />
+
+ <WebView Source="http://www.fladotnet.com/codecamp/"  />
+         
 	</ContentPage.Content>
 </pages:BaseContentPage>

@@ -25,9 +25,15 @@ namespace Eventarin.Core.Services
 		//	md.Detail = _pageCachingService.GetPage<TeamPage> ();
 
 		md.Master = new MenuPage ();
-			md.Detail = new TeamPage ();
+			md.Detail = new ItineraryPage ();
 			return md;
 		}
+
+
+
+
+
+
 
 		public void NavigateModal<t>() where t : BaseContentPage
 		{
@@ -47,37 +53,77 @@ namespace Eventarin.Core.Services
 
 		public void Navigate<t>() where t : BaseContentPage
 		{
-			t page = _pageCachingService.GetPage<t>();
+			//t page = _pageCachingService.GetPage<t>();
 			// TODO: This works for now because the parents are always NavigationPage, 
 			// but that not might be the case in the future.
 			// Figure out the right way to remove the parent.
 
-			NavigationPage np;
+		//	NavigationPage np = new  NavigationPage<t>();
 
-			if (page == null) {
+			Page page = _pageCachingService.GetPage<t>();
 
-				np = new  NavigationPage(page);
-			}
+
+
+//			t page;//= new Page<t> ();
+//
+//			if (page == null) {
+//
+//				np = new  NavigationPage(page);
+//			}
+//		
+//			np = page.Parent as NavigationPage;
+//			if (np == null)
+//			{
+//				np = new  NavigationPage(page);
+//				np.BarBackgroundColor = Color.White;
+//				np.BarTextColor = Color.Black;
+//
+//			}
+
 		
-			np = page.Parent as NavigationPage;
-			if (np == null)
-			{
-				np = new  NavigationPage(page);
-				np.BarBackgroundColor = Color.White;
-				np.BarTextColor = Color.Black;
+			if (page != null) {
 
+				md.Detail = page;
 			}
-
-		
-
-
-		///	md.Detail = page;
 
 		//	md.Detail.Navigation.PushAsync(page);
-			md.Detail = np;
+		//	md.Detail = np;
 			md.BackgroundColor = Color.White;
 			md.IsPresented = false;  // close the slide-out
 		}
+
+
+
+
+		public void NavigateToSpeakers<t>() where t : BaseContentPage
+		{
+			//t page = _pageCachingService.GetPage<t>();
+			// TODO: This works for now because the parents are always NavigationPage, 
+			// but that not might be the case in the future.
+			// Figure out the right way to remove the parent.
+
+			//	NavigationPage np = new  NavigationPage<t>();
+
+			Page page = new SpeakersPage ();
+
+
+
+				md.Detail = new SpeakersPage();
+
+			//	md.Detail.Navigation.PushAsync(page);
+			//	md.Detail = np;
+			md.BackgroundColor = Color.White;
+			md.IsPresented = false;  // close the slide-out
+		}
+
+
+
+
+
+
+
+
+
 	}
 }
 

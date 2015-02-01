@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
+			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
+			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
+             xmlns:ContentViews="clr-namespace:Eventarin.Core.ContentViews;assembly=Eventarin.Core"
+		     x:Class="Eventarin.Core.Pages.ItineraryPage"
+		     Title="{Binding PageTitle}"
+ 		     BackgroundColor="White">
+ 	<ContentPage.Resources>
+		<ResourceDictionary>
+			<converters:OppositeConverter x:Key="oppositeConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+
+    	<ScrollView Orientation="Vertical" HeightRequest="500" VerticalOptions="FillAndExpand" >
+			<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand">
+  	    		<Image  Source="Itinerary_Header.png"  VerticalOptions="Start"  />	
+
+
+				<views:PullToRefreshListView  VerticalOptions="FillAndExpand"  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions"  HasUnevenRows="true" ItemsSource="{Binding MySessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading..." HeightRequest="100000"  >
+					<ListView.ItemTemplate>
+
+						<DataTemplate>
+							<views:EventarinCell  Command="{Binding SessionItemClicked}">
+								<StackLayout Padding="20" >
+	                            	<ContentViews:SessionCellContentView2  />
+	                            </StackLayout>
+							</views:EventarinCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</views:PullToRefreshListView>
+			</StackLayout>
+
+	</ScrollView>
+	</ContentPage.Content>
+</pages:BaseContentPage>

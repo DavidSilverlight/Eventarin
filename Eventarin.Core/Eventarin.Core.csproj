@@ -91,14 +91,20 @@
     <Compile Include="Pages\SpeakerPage.cs">
       <DependentUpon>SpeakerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DashboardPage.xaml.cs">
-      <DependentUpon>DashboardPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ContentViews\SessionCellContentView2.xaml.cs">
       <DependentUpon>SessionCellContentView2.xaml</DependentUpon>
     </Compile>
     <Compile Include="ContentViews\SpeakerCellContentView2.xaml.cs">
       <DependentUpon>SpeakerCellContentView2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DashboardPage.xaml.cs">
+      <DependentUpon>DashboardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ItineraryPage.xaml.cs">
+      <DependentUpon>ItineraryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentViews\SpeakerImageContentView.xaml.cs">
+      <DependentUpon>SpeakerImageContentView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -154,14 +160,21 @@
     <EmbeddedResource Include="Pages\SpeakerPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashboardPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="ContentViews\SessionCellContentView2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="ContentViews\SpeakerCellContentView2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\DashboardPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ItineraryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentViews\SpeakerImageContentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

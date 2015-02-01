@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using Eventarin.Core.Data;
 using System.Linq;
 using Eventarin.Core.Pages;
-using ImageCircle.Forms.Plugin.Abstractions;
+
 
 namespace Eventarin.Core.ViewModels
 {
@@ -79,28 +79,7 @@ namespace Eventarin.Core.ViewModels
 			}
 		}
 
-		public ImageSource CurrentSpeakerImage {
-			get {
 
-				var photo = new CircleImage {
-					BorderColor = Color.White,
-					BorderThickness = 3,
-					HeightRequest = 75,
-					WidthRequest = 75,
-					Aspect = Aspect.AspectFill,
-					HorizontalOptions = LayoutOptions.Center,
-					Source = UriImageSource.FromFile ("TeamMirMaheed")
-					//Source = UriImageSource.FromUri (new Uri ("http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG"))
-
-				};
-				return photo.Source;
-			//	photo.Source;
-			//	stackCircles.Children.Clear ();
-			//	stackCircles.Children.Add (photo);
-
-				//	photo.SetBinding(Image.SourceProperty, s => s.Image);
-			}
-		}
 
         private async Task GetSpeakers()
         {

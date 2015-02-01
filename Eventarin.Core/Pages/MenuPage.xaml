@@ -9,7 +9,7 @@
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand" Orientation="Vertical"  >
 			<Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
-				<Image  Source="SessionBackground1.png" HeightRequest="130" VerticalOptions="Start" />
+				<Image  Source="SessionBackground1.png" HeightRequest="120" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" />
 				<StackLayout Padding="0,75,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
 					<TableView Intent="Menu" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  HeightRequest="400">
 						<TableRoot>
@@ -26,9 +26,20 @@
 								</views:EventarinCell>
 		            			<views:EventarinCell Command="{Binding DashboardClicked}">
 									<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-										<Label YAlign="Center" TextColor="White" Text="Favorites" Font="20" />
+										<Label YAlign="Center" TextColor="White" Text="Itinerary" Font="20" />
 									</StackLayout>
 								</views:EventarinCell>
+		          			</TableSection>
+						</TableRoot>
+					</TableView>
+				</StackLayout>
+
+
+
+				<StackLayout Padding="0,375,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+					<TableView Intent="Menu" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  HeightRequest="400">
+						<TableRoot>
+							<TableSection>	
 								<views:EventarinCell Command="{Binding WebsiteClicked}">
 									<StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
 										<Label YAlign="Center" TextColor="White" Text="Website" Font="20" />
@@ -36,13 +47,14 @@
 								</views:EventarinCell>
 					            <views:EventarinCell Command="{Binding TeamClicked}">
 					              <StackLayout Padding="20,0,0,0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-					                <Label YAlign="Center" TextColor="White" Text="Team" Font="20" />
+					                <Label YAlign="Center" TextColor="White" Text="Credits" Font="20" />
 					              </StackLayout>
 					            </views:EventarinCell>
 		          			</TableSection>
 						</TableRoot>
 					</TableView>
 				</StackLayout>
+
 				<StackLayout Padding="10,30,0,0" Orientation="Vertical">
 					<Label Text="CodeCamp 2015" TextColor="White" Font="18" />
 					<Label Text="An Amazing Technical Experience" TextColor="White" />

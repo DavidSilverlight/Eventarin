@@ -6,19 +6,18 @@
 	<ContentView.Content>         
     
 		<StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
-			<Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
+			<Grid HeightRequest="100" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
 
-	           	<Image  Source="{Binding SpeakerSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"  />
+	           	<Image  Source="subheader_1_100x400.png"  VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  />
 
-	           	<StackLayout Padding="5,15,0,0"  >
-	           		<StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand"  />
-	           	</StackLayout>
-
-	           	<StackLayout Padding="5,115,0,0"  >
-	           		<Label Text="{Binding Name}" FontFamily="Open Sans"	 Font="30" TextColor="Black"    />  
+	           	<StackLayout Padding="10,5,20,15" Orientation="Horizontal"  >
+	           		<StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  />	
+	           		<Label Text="{Binding Name}" FontFamily="Open Sans"	 Font="16" TextColor="Black"  VerticalOptions="CenterAndExpand"   />  
 	           	</StackLayout>
 
 	        </Grid>
+
+
 		           	
             <StackLayout Padding="10" Orientation="Vertical"	BackgroundColor="White" HeightRequest="150" WidthRequest="360" >
                 <Label Text="{Binding Company}" 	Font="12" FontAttributes="Bold" TextColor="Black"  WidthRequest="380" VerticalOptions="Start"   />

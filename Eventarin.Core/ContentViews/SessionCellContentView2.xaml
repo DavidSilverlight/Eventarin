@@ -6,15 +6,11 @@
 	<ContentView.Content>   
 
 		<StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
-			<Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
+			<Grid HeightRequest="100" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White"  >
 
-	           	<Image  Source="{Binding SessionSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"  />
+	           	<Image  Source="subheader_1_100x400.png"  VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  />
 
-	           	<StackLayout Padding="5,15,0,0"  >
-	           		<StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand"  />
-	           	</StackLayout>
-
-	           	<StackLayout Padding="5,115,0,0"  >
+	           	<StackLayout Padding="5,25,0,0"  >
 	           		<Label Text="{Binding Title}" 	 Font="16" TextColor="Black"    />  
 	           	</StackLayout>
 
@@ -22,22 +18,22 @@
 		      
 		    <StackLayout Spacing="1"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >   
 		      	
-	            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="40" >
+	            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25" Padding="20,0,0,0" >
 	                <Label Text="Speaker:" 				TextColor="Black"  WidthRequest="100" VerticalOptions="Center"  />
-	                <Label Text="{Binding Speakers}" 	TextColor="Black"  WidthRequest="300" VerticalOptions="Center"  />
+	                <Label Text="{Binding Speakers}" 	TextColor="Black"  VerticalOptions="Center"  />
 	            </StackLayout>
 
-	            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="40"  >
+	            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25"  Padding="20,0,0,0"  >
 	                <Label Text="Location:" 	TextColor="Black" 	WidthRequest="100" VerticalOptions="Center" />
-	               	<Label Text="{Binding Location}" 	TextColor="Black"  	WidthRequest="300"  VerticalOptions="Center"   />
+	               	<Label Text="{Binding Location}" 	TextColor="Black"    VerticalOptions="Center"   />
 	            </StackLayout>    
 	                
-	            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="40"  >
+	            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25"  Padding="20,0,0,0"  >
 					<Label Text="Track:" 			TextColor="Black"   WidthRequest="100"  VerticalOptions="Center"    />
 					<Label Text="{Binding Track}" 	TextColor="Black"  	WidthRequest="300"  VerticalOptions="Center"   />
 				</StackLayout> 
 					
-	            <StackLayout Orientation="Horizontal" BackgroundColor="White"  HeightRequest="40"  >
+	            <StackLayout Orientation="Horizontal" BackgroundColor="White"  HeightRequest="25"  Padding="20,0,0,0"  >
 	                <Label Text="Time:" TextColor="Black" WidthRequest="100"  VerticalOptions="Center"  />
 
 	               	<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" WidthRequest="300"  >    

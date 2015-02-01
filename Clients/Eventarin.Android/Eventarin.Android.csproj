@@ -141,6 +141,8 @@
     <AndroidResource Include="Resources\drawable\NoAvatarProfile.jpg" />
     <AndroidResource Include="Resources\drawable\MenuBackground.png" />
     <AndroidResource Include="Resources\drawable\splash3.png" />
+    <AndroidResource Include="Resources\drawable\subheader_1_100x400.png" />
+    <AndroidResource Include="Resources\drawable\Itinerary_Header.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Icon.png" />

@@ -87,9 +87,10 @@ namespace Eventarin.Android
 
         public void RefreshLocalData()
         {
-            EventJSONData.RefreshLocalSpeakers();
-		//	EventJSONData.RefreshLocalSpeakersXML ();
-            EventJSONData.RefreshLocalSessions();
+        //    EventJSONData.RefreshLocalSpeakers();
+			EventJSONData.RefreshLocalSpeakersXML ();
+           // EventJSONData.RefreshLocalSessions();
+			EventJSONData.RefreshLocalSessionsXML();
 		//	EventJSONData.GetSessionDetail (3519);
         }
 

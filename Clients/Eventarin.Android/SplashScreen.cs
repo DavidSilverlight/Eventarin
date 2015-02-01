@@ -9,7 +9,7 @@ https://forums.xamarin.com/discussion/19362/xamarin-forms-splashscreen-in-androi
 */
 namespace Eventarin.Android
 {
-    [Activity(Label = "ITPalooza", MainLauncher = true, NoHistory = true, Theme = "@style/Theme.Splash",
+    [Activity(Label = "CodeCamp 2015", MainLauncher = true, NoHistory = true, Theme = "@style/Theme.Splash",
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class SplashScreen : Activity
     {

@@ -12,11 +12,11 @@ using Eventarin.Core.Models;
 
 namespace Eventarin.Core.ContentViews
 {
-	public partial class SpeakerCellContentView2
+	public partial class SpeakerImageContentView
     {
 
 //		SpeakersViewModel viewModel;
-		public SpeakerCellContentView2()
+		public SpeakerImageContentView()
 		{
 			InitializeComponent ();
 	//		viewModel = App.SimpleIoC.Resolve<SpeakersViewModel>();

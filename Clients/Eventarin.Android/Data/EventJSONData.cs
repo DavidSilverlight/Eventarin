@@ -97,15 +97,10 @@ namespace Eventarin.Android
 		public static void RefreshLocalSpeakersXML()
 		{
 
-
-
-
 			Eventarin.Core.App.Database.ClearExistingSpeakers ();
-			var url = "http://www.fladotnet.com/flanetdata/api/ccspeakers";
-
+			var url = "http://www.fladotnet.com/flanetdata/api/ccspeakerdetails";
 
 			string content;
-
 
 			XmlDocument doc = new XmlDocument ();
 			doc.Load (url);
@@ -117,7 +112,6 @@ namespace Eventarin.Android
 				var speakerName =  item.ChildNodes [1].InnerText;
 				var speakerImageURL = "";// "http://media.licdn.com/mpr/mpr/shrink_200_200/p/4/000/130/2c7/3c886aa.jpg";// item.ChildNodes [2].InnerText;
 
-
 				try {
 					speakerImageURL = item.ChildNodes [2].InnerText;
 
@@ -126,8 +120,11 @@ namespace Eventarin.Android
 					speakerImageURL = "";
 
 				}
-
-
+				var speakerJobTitle = item.ChildNodes [3].InnerText;
+				var speakerBIO = item.ChildNodes [4].InnerText;
+				var speakerCompany = item.ChildNodes [5].InnerText;
+				var speakderCompanyLogo = item.ChildNodes [6].InnerText;
+				var speakderCompanyWebsite = item.ChildNodes [7].InnerText;
 
 
 
@@ -136,11 +133,11 @@ namespace Eventarin.Android
 				newSpeaker.Id = int.Parse(speakerID);
 				newSpeaker.Name = speakerName ;
 				newSpeaker.HeadshotUrl = speakerImageURL;
-				newSpeaker.Position = "";
+				newSpeaker.Position = speakerJobTitle;
+				newSpeaker.Bio = speakerBIO;
 				newSpeaker.BioSummary = "";
-				newSpeaker.Bio = "";
 				//newSpeaker.Website = speakerJSON.website_url;
-				newSpeaker.Company = "";
+				newSpeaker.Company = speakerCompany;
 				//newSpeaker.LinkedIn = speakerJSON.linkedin_url;
 				Eventarin.Core.App.Database.AddSpeaker(newSpeaker);
 				//App.Database.AddSession(newSession);
@@ -153,6 +150,60 @@ namespace Eventarin.Android
 
 		}
 
+
+
+		public static void RefreshLocalSessionsXML()
+		{
+
+			Eventarin.Core.App.Database.ClearExistingSessions ();
+			var url = "http://www.fladotnet.com/flanetdata/api/ccsessions";
+
+			string content;
+
+			XmlDocument doc = new XmlDocument ();
+			doc.Load (url);
+
+			int c = 0;
+
+			foreach (XmlNode item in doc.DocumentElement.ChildNodes) {
+				var sessionID = item.ChildNodes [0].InnerText;
+				var speakerID = item.ChildNodes [1].InnerText;
+				var sessionTitle =  item.ChildNodes [2].InnerText;
+				var	sessionDesc = item.ChildNodes [3].InnerText;
+				var trackID = item.ChildNodes [4].InnerText;
+
+
+
+				Session newSession = new Session();
+				newSession.Id = int.Parse(sessionID);
+				newSession.Speaker_Id = speakerID;
+				newSession.Title = sessionTitle;
+				newSession.Abstract = sessionDesc;
+				newSession.Begins = DateTime.Now;//  sessionJSON.start;
+				newSession.Ends = DateTime.Now;// sessionJSON.end;
+				newSession.Location = " ";  //sessionJSON.location;
+
+
+
+				newSession.Track =" ";  //sessionJSON.track;
+				newSession.Sponsor = " "; //sessionJSON.sponsor;
+				newSession.Speakers = " "; //sessionJSON.speakers;
+
+				var speaker = Eventarin.Core.App.Database.GetSpeaker (int.Parse(newSession.Speaker_Id));
+				if (speaker != null) {
+					newSession.Speakers = speaker.Name;
+				}
+				Eventarin.Core.App.Database.AddSession(newSession);
+				//App.Database.AddSession(newSession);
+				//	Eventarin.Core.App.Database.SaveSession(newSession);
+
+
+
+
+				c++;
+			}
+
+		}
 
 
 		public static void RefreshLocalSpeakers()

@@ -33,7 +33,7 @@ namespace Eventarin.Core.Pages
 		
 			this.ToolbarItems.Clear ();
 		//	this.ToolbarItems.Add(settings);
-			this.Icon = "hamburger_menu_icon";
+		//	this.Icon = "hamburger_menu_icon";
 			this.UpdateChildrenLayout ();
 		}
 

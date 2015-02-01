@@ -119,115 +119,121 @@ namespace Eventarin.Android
 			public const int icon_social_twitter = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int MenuBackground = 2130837522;
+			public const int Itinerary_Header = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int nav_refresh = 2130837523;
+			public const int MenuBackground = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int NoAvatar = 2130837524;
+			public const int nav_refresh = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int NoAvatarProfile = 2130837525;
+			public const int NoAvatar = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int NoPerson = 2130837526;
+			public const int NoAvatarProfile = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int NotFavorite = 2130837527;
+			public const int NoPerson = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int reload = 2130837528;
+			public const int NotFavorite = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int roundmask = 2130837529;
+			public const int reload = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int roundmask2 = 2130837530;
+			public const int roundmask = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int SessionBackground = 2130837531;
+			public const int roundmask2 = 2130837531;
 			
 			// aapt resource value: 0x7f02001c
-			public const int SessionBackground1 = 2130837532;
+			public const int SessionBackground = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
-			public const int Sessions_header = 2130837533;
+			public const int SessionBackground1 = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int SpeakerBackgroundSection1 = 2130837534;
+			public const int Sessions_header = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int Speakers_header = 2130837535;
+			public const int SpeakerBackgroundSection1 = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int SpeakersBackgroundHeader = 2130837536;
+			public const int Speakers_header = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int SpeakersBackGroundSection1 = 2130837537;
+			public const int SpeakersBackgroundHeader = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int splash = 2130837538;
+			public const int SpeakersBackGroundSection1 = 2130837538;
 			
 			// aapt resource value: 0x7f020023
-			public const int splash2 = 2130837539;
+			public const int splash = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int splash3 = 2130837540;
+			public const int splash2 = 2130837540;
 			
 			// aapt resource value: 0x7f020025
-			public const int splashITP = 2130837541;
+			public const int splash3 = 2130837541;
 			
 			// aapt resource value: 0x7f020026
-			public const int squaremask2 = 2130837542;
+			public const int splashITP = 2130837542;
 			
 			// aapt resource value: 0x7f020027
-			public const int star_gold45 = 2130837543;
+			public const int squaremask2 = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int star_grey45 = 2130837544;
+			public const int star_gold45 = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int SteveEarle = 2130837545;
+			public const int star_grey45 = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int subheader_1 = 2130837546;
+			public const int SteveEarle = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int subheader_2 = 2130837547;
+			public const int subheader_1 = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int subheader_3 = 2130837548;
+			public const int subheader_1_100x400 = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int subheader_4 = 2130837549;
+			public const int subheader_2 = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int subheader_5 = 2130837550;
+			public const int subheader_3 = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
-			public const int subheader_6 = 2130837551;
+			public const int subheader_4 = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int tab_schedule_unselected = 2130837552;
+			public const int subheader_5 = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int TeamAdamHeller = 2130837553;
+			public const int subheader_6 = 2130837553;
 			
 			// aapt resource value: 0x7f020032
-			public const int TeamCarlosMacias = 2130837554;
+			public const int tab_schedule_unselected = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int TeamDavidSilverlight = 2130837555;
+			public const int TeamAdamHeller = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int TeamJonasStawski = 2130837556;
+			public const int TeamCarlosMacias = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int TeamMirMaheed = 2130837557;
+			public const int TeamDavidSilverlight = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int TeamZacharyWeiner = 2130837558;
+			public const int TeamJonasStawski = 2130837558;
+			
+			// aapt resource value: 0x7f020037
+			public const int TeamMirMaheed = 2130837559;
+			
+			// aapt resource value: 0x7f020038
+			public const int TeamZacharyWeiner = 2130837560;
 			
 			static Drawable()
 			{

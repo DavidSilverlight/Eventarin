@@ -24,87 +24,66 @@
 				            <Label TextColor="Black"   Font="12"  Text="This application was developed as a community project by a team of developers to show off some of the latest Xamarin technologies for mobile development. It began as an effort by members of the South Florida Xamarin Users Group, but is open for other members to join in on the fun to get some real world experience and/or show off their development skills." />
 			         
 			 
-			                <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand"  >
-		                          <Grid>
-		                               <Image  Source="TeamDavidSilverlight.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-		                               <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-		                          </Grid>
+			                <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="10,20,0,20"  >
+		                          <StackLayout x:Name="stackDavidSilverlight" />
 		                          <StackLayout  Orientation="Vertical" >
-		                          		<Label TextColor="Black"   Font="12" Text="David Silverlight" />
-		                          		<Label TextColor="Black"   Font="12" Text="Technical Team Lead" />
+		                          		<Label TextColor="Black"   Font="16" Text="David Silverlight" />
+		                          		<Label TextColor="Black"   Font="16" Text="Technical Team Lead" />
 		                     	  </StackLayout>
 	                		</StackLayout>
 
 
-		            		<StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand"  >
-			                      <Grid>
-			                           <Image  Source="TeamJonasStawski.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                           <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                      </Grid>
+		            		<StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="10,0,0,20"  >
+			                      <StackLayout x:Name="stackJonasStawski" />
 			                      <StackLayout  Orientation="Vertical" >
-			                      		<Label TextColor="Black"   Font="12" Text="Jonas Stawski" />
-			                      		<Label TextColor="Black"   Font="12" Text="Architecture and Best Practices" />
+			                      		<Label TextColor="Black"   Font="16" Text="Jonas Stawski" />
+			                      		<Label TextColor="Black"   Font="16" Text="Architecture and Best Practices" />
 			                 	  </StackLayout>
 		            		</StackLayout>
 
 
-		            		<StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
-			                      <Grid>
-			                           <Image  Source="TeamMirMaheed.jpg"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                           <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                      </Grid>
+		            		<StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="10,0,0,20" >
+		            			  <StackLayout x:Name="stackMirMaheed" />
 			                      <StackLayout  Orientation="Vertical" >
-			                      		<Label TextColor="Black"   Font="12" Text="Mir Maheed" />
-			                      		<Label TextColor="Black"   Font="12" Text="Project Management, Development" />
+			                      		<Label TextColor="Black"   Font="16" Text="Mir Maheed" />
+			                      		<Label TextColor="Black"   Font="16" Text="Project Management, Development" />
 			                 	  </StackLayout>
 		            		</StackLayout>
 
 
 
-		            		<StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
-			                      <Grid>
-			                           <Image  Source="NoPerson.png"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                           <Image  Source="TeamZacharyWeiner.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                      </Grid>
+		            		<StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="10,0,0,20" >
+		            			  <StackLayout x:Name="stackZacharyWeiner" />
 			                      <StackLayout  Orientation="Vertical" >
-			                      		<Label TextColor="Black"   Font="12" Text="Zachary Weiner" />
-			                      		<Label TextColor="Black"   Font="12" Text="Mobile Developmer" />
+			                      		<Label TextColor="Black"   Font="16" Text="Zachary Weiner" />
+			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developmer" />
 			                 	  </StackLayout>
 		            		</StackLayout>
 
 
 
 
-			        	    <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
-			                      <Grid>
-			                           <Image  Source="TeamCarlosMacias.png"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                           <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                      </Grid>
+			        	    <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="10,0,0,20" >
+			        	     	<StackLayout x:Name="stackCarlosMacias" />
 			                      <StackLayout  Orientation="Vertical" >
-			                      		<Label TextColor="Black"   Font="12" Text="Carlos Macias" />
-			                      		<Label TextColor="Black"   Font="12" Text="Mobile Developmer" />
+			                      		<Label TextColor="Black"   Font="16" Text="Carlos Macias" />
+			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developmer" />
 			                 	  </StackLayout>
 			    	         </StackLayout>
 
-			       		     <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
-			                      <Grid>
-			                           <Image  Source="NoPerson.png"  	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                           <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                      </Grid>
+			       		     <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="10,0,0,20"  >
+			                     <StackLayout x:Name="stackPaulPleasant" />
 			                      <StackLayout  Orientation="Vertical" >
-			                      		<Label TextColor="Black"   Font="12" Text="Paul Pleasant" />
-			                      		<Label TextColor="Black"   Font="12" Text="Mobile Developmer" />
+			                      		<Label TextColor="Black"   Font="16" Text="Paul Pleasant" />
+			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developmer" />
 			                 	  </StackLayout>
 			            	</StackLayout>
 
-			            	<StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
-			                      <Grid>
-			                           <Image  Source="TeamAdamHeller.jpg"   	WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                           <Image  Source="roundmask2.png"  		WidthRequest="100" HeightRequest="100"  Grid.Row="0" Grid.Column="0" />
-			                      </Grid>
+			            	<StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="10,0,0,20" >
+			            	 	<StackLayout x:Name="stackAdamHeller" />
 			                      <StackLayout  Orientation="Vertical" >
-			                      		<Label TextColor="Black"   Font="12" Text="Adam Heller" />
-			                      		<Label TextColor="Black"   Font="12" Text="Lead Interaction Design" />
+			                      		<Label TextColor="Black"   Font="16" Text="Adam Heller" />
+			                      		<Label TextColor="Black"   Font="16" Text="Lead Interaction Design" />
 			                 	  </StackLayout>
 			            	</StackLayout>  
 		       

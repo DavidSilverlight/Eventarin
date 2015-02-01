@@ -14,28 +14,70 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
-		<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" >
 
-			<Image  Source="Sessions_header.png"  VerticalOptions="Start" />
-		
+    	<ScrollView Orientation="Vertical" HeightRequest="500" VerticalOptions="FillAndExpand" >
+			<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand">
+  	    		<Image  Source="Sessions_header.png"  VerticalOptions="Start"  />	
 
-			<Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
-				<Grid.RowDefinitions>
-	      			<RowDefinition Height="*" />
-	      		</Grid.RowDefinitions>
 
-				<views:PullToRefreshListView  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading...">
+				<views:PullToRefreshListView   VerticalOptions="FillAndExpand"  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions"  HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading..." HeightRequest="100000"  >
 					<ListView.ItemTemplate>
+
 						<DataTemplate>
-							<views:EventarinCell  Command="{Binding SessionItemClicked}">
+							<views:EventarinCell>
 								<StackLayout Padding="20" >
-	                            	<ContentViews:SessionCellContentView2  />
+	                            	<StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
+										<Grid HeightRequest="100" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White"  >
+
+								           	<Image  Source="subheader_1_100x400.png"  VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  />
+
+								           	<StackLayout Padding="5,25,0,0"  >
+								           		<Label Text="{Binding Title}" 	 Font="16" TextColor="Black"    />  
+								           	</StackLayout>
+
+								        </Grid>
+									      
+									    <StackLayout Spacing="1"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="400"   >   
+									      	
+								            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25" Padding="20,0,0,0" >
+								                <Label Text="Speaker:" 				TextColor="Black"  WidthRequest="200" VerticalOptions="Center"  />
+								                <Label Text="{Binding Speakers}" 	TextColor="Black"  WidthRequest="200" VerticalOptions="Center"  />
+								            </StackLayout>
+
+								            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25"  Padding="20,0,0,0"  >
+								                <Label Text="Location:" 	TextColor="Black" 	WidthRequest="200" VerticalOptions="Center" />
+								               	<Label Text="{Binding Location}" 	TextColor="Black"  WidthRequest="200"  VerticalOptions="Center"   />
+								            </StackLayout>    
+								                
+								            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25"  Padding="20,0,0,0"  >
+												<Label Text="Track:" 			TextColor="Black"   WidthRequest="200"  VerticalOptions="Center"    />
+												<Label Text="{Binding Track}" 	TextColor="Black"  	WidthRequest="200"  VerticalOptions="Center"   />
+											</StackLayout> 
+												
+								            <StackLayout Orientation="Horizontal" BackgroundColor="White"  HeightRequest="25"  Padding="20,0,0,0"  >
+								                <Label Text="Time:" TextColor="Black" WidthRequest="200"  VerticalOptions="Center"  />
+
+								               	<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" WidthRequest="200"  >    
+									          		<Label TextColor="Black"  Font="14" Text="{Binding Begins, StringFormat='{0:t}'}" />
+									            	<Label TextColor="Black"  Font="14" Text="-" />
+									            	<Label TextColor="Black"  Font="14" Text="{Binding Ends, StringFormat='{0:t}'}" />
+									       		</StackLayout>
+
+
+
+
+								            </StackLayout>
+
+							            </StackLayout>
+									</StackLayout>
+
 	                            </StackLayout>
 							</views:EventarinCell>
 						</DataTemplate>
 					</ListView.ItemTemplate>
 				</views:PullToRefreshListView>
-			</Grid>
-		</StackLayout>
+			</StackLayout>
+
+	</ScrollView>
 	</ContentPage.Content>
 </pages:BaseContentPage>

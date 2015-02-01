@@ -7,16 +7,16 @@ using System.Diagnostics;
 
 namespace Eventarin.Core.Pages
 {	
-	public partial class SessionsPage : BaseContentPage
+	public partial class ItineraryPage : BaseContentPage
 	{	
 		SessionsViewModel viewModel;
-		public SessionsPage ()
+		public ItineraryPage ()
 		{
 			InitializeComponent ();
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
 			BindingContext = viewModel;
 
-			//DS 010715 CodeSmell - Use Commanding. Research why the EventarinCell Command is always null
+			//DS 010715 CodeSmell - Use Commanding
 			ListSessions.ItemSelected += (sender, e) => {
 				viewModel.CurrentSession = (Eventarin.Core.Models.Session)e.SelectedItem;
 				var sessionID = 0;

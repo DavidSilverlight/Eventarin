@@ -9,6 +9,7 @@ namespace Eventarin.Core.Services
 	{
 		MasterDetailPage GetMainPage();
 		void Navigate<t>() where t : BaseContentPage;
+		void NavigateToSpeakers<t>() where t : BaseContentPage;
 		void NavigateModal<t> () where t : BaseContentPage;
 
 	}

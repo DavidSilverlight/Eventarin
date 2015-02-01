@@ -33,7 +33,11 @@ namespace Eventarin.Core.Models
 		{
 			get
 			{
-				return Bio.Substring (0, 450) + "...";
+				var bio = "Bio: " + Bio + "";
+				if (bio.Length > 250) {
+					bio = bio.Substring (0, 250) + "...";
+				}
+				return bio;
 			}
 		}
 
