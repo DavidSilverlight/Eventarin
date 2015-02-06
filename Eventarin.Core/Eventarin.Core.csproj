@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\R4</OutputPath>
+    <OutputPath>..\..\..\Documents\Xamarin\Eventarin\Release17</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
-    <OutputPath>..\..\R4</OutputPath>
+    <OutputPath>..\..\..\Documents\Xamarin\Eventarin\Release17</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -91,9 +91,6 @@
     <Compile Include="Pages\SpeakerPage.cs">
       <DependentUpon>SpeakerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ContentViews\SessionCellContentView2.xaml.cs">
-      <DependentUpon>SessionCellContentView2.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ContentViews\SpeakerCellContentView2.xaml.cs">
       <DependentUpon>SpeakerCellContentView2.xaml</DependentUpon>
     </Compile>
@@ -103,8 +100,12 @@
     <Compile Include="Pages\ItineraryPage.xaml.cs">
       <DependentUpon>ItineraryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Track.cs" />
     <Compile Include="ContentViews\SpeakerImageContentView.xaml.cs">
       <DependentUpon>SpeakerImageContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentViews\SessionImageContentView.xaml.cs">
+      <DependentUpon>SesssionImageContentView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -160,10 +161,6 @@
     <EmbeddedResource Include="Pages\SpeakerPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="ContentViews\SessionCellContentView2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="ContentViews\SpeakerCellContentView2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="ContentViews\SpeakerImageContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentViews\SesssionImageContentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

@@ -36,9 +36,84 @@ namespace Eventarin.Core.Data
 			// create the tables
 			database.CreateTable<Speaker>();
 			database.CreateTable<Session>();
+			database.CreateTable<Track>();
 		//	database.CreateTable<SessionSpeaker>();
 		//	database.CreateTable<Favorite>();
 		}
+
+		#region "Tracks"
+
+		public void ClearExistingTracks ()
+		{
+			lock (locker) {
+				var tracks = database.DeleteAll<Track>();
+			}
+		}
+
+
+		public ObservableCollection<Track> GetTracks () 
+		{
+			lock (locker) {
+				var query = (from i in database.Table<Track>() select i).ToList<Track>();
+				return (new ObservableCollection<Track>(query));
+			}
+		}
+
+
+		public Track GetTrack (int id)
+		{
+			lock (locker) {
+				return database.Table<Track>().FirstOrDefault(x => x.Id == id);
+			}
+		}
+
+
+		public void AddTrack (Track newTrack)
+		{
+			lock (locker) {
+				database.Insert(newTrack);
+
+			}
+		}
+
+		public void SaveTracks(ObservableCollection<Track> tracks)
+		{
+
+		}
+
+		public int SaveTrack (Track item) 
+		{
+			lock (locker) {
+				if (item.Id != 0) {
+					database.Update(item);
+					return item.Id;
+				} else {
+					return database.Insert (item);
+				}
+			}
+		}
+
+
+		public int DeleteTrack(Track track) 
+		{
+			lock (locker) {
+				return database.Delete<Track> (track.Id);
+			}
+		}
+
+		public int DeleteTracks() 
+		{
+			lock (locker) {
+				return database.DeleteAll<Track>();
+			}
+		}
+
+
+		#endregion
+
+
+
+
 
 		#region "Speakers"
 
@@ -53,7 +128,7 @@ namespace Eventarin.Core.Data
 		public ObservableCollection<Speaker> GetSpeakers () 
 		{
 			lock (locker) {
-                var query = (from i in database.Table<Speaker>() select i).ToList<Speaker>();
+				var query = (from i in database.Table<Speaker>() select i).ToList<Speaker>();
                 return (new ObservableCollection<Speaker>(query));
 			}
 		}
@@ -130,6 +205,16 @@ namespace Eventarin.Core.Data
 		{
 			lock (locker) {
 				return database.Query<Session>(sessionID.ToString()).FirstOrDefault();
+			}
+		}
+
+		public ObservableCollection<Session> GetTrackSessions () 
+		{          
+			lock (locker)
+			{
+				var query = (from i in database.Table<Session>().Where(t => t.Track == "WinPhone/Mobile") select i);
+
+				return (new ObservableCollection<Session>(query.ToList()));
 			}
 		}
 

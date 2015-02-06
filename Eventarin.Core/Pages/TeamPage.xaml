@@ -11,6 +11,7 @@
 
 		<StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
 			<Grid>
+
 				<Image  Source="SessionBackground1.png" HeightRequest="130" VerticalOptions="Start" />
 				<StackLayout Orientation="Vertical" Padding="25,15,0,0" >
 					<Label TextColor="White" Text="The Eventarin Team"  Font="20"   />

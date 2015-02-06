@@ -38,9 +38,10 @@ namespace Eventarin.Core.Pages
 					ActivityIndicator.VerticalOptions = LayoutOptions.CenterAndExpand;
 					ActivityIndicator.SetBinding(ActivityIndicator.IsRunningProperty, new Binding("IsBusy"));
 					ActivityIndicator.SetBinding(ActivityIndicator.IsVisibleProperty, new Binding("IsBusy"));
-
+					ActivityIndicator.BackgroundColor = Color.White;
 					layout.Children.Add(ActivityIndicator);
 				}
+
 			}
 		}
 	}

@@ -15,25 +15,87 @@
 	</ContentPage.Resources>
 	<ContentPage.Content>
 
-    	<ScrollView Orientation="Vertical" HeightRequest="500" VerticalOptions="FillAndExpand" >
-			<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand">
-  	    		<Image  Source="Itinerary_Header.png"  VerticalOptions="Start"  />	
+    	<ScrollView Orientation="Vertical" HeightRequest="500" >
+    		<StackLayout x:Name="stackSessions" Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand" HeightRequest="3000"  >
+  	    	
+			<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand"  >
+  	    		<Image  Source="Itinerary_Header.png"  VerticalOptions="Start" />	
 
 
-				<views:PullToRefreshListView  VerticalOptions="FillAndExpand"  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions"  HasUnevenRows="true" ItemsSource="{Binding MySessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading..." HeightRequest="100000"  >
+			    		
+	  	    	<StackLayout Padding="10" IsVisible="{Binding NoFavorites, Converter={StaticResource oppositeConverter}}" >
+	                 <Label TextColor="Black" Text="To build your Itinerary, browse through the sessions and select 'Add to Favorite' for the sessions you want wish to attend." IsVisible="{Binding NoFavorites}"></Label>
+	            </StackLayout>
+
+				<views:PullToRefreshListView   VerticalOptions="FillAndExpand"  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions"  HasUnevenRows="true" ItemsSource="{Binding MySessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading..."  >
 					<ListView.ItemTemplate>
 
 						<DataTemplate>
-							<views:EventarinCell  Command="{Binding SessionItemClicked}">
+							<views:EventarinCell>
 								<StackLayout Padding="20" >
-	                            	<ContentViews:SessionCellContentView2  />
+	                            	<StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
+										<Grid  WidthRequest="455" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White"  >
+
+								           	<Image  Source="subheader_1.png"  HeightRequest="185"  VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  />
+
+								           	<StackLayout Padding="5,25,0,0" Orientation="Vertical" >
+								           		<Label Text="{Binding Title}" 	 Font="16" TextColor="Black"    />  
+
+								           		<StackLayout  Orientation="Horizontal" >
+
+								           		<Label Text="Presenter: " FontFamily="Open Sans"	 Font="16" TextColor="Black"   />  								  				
+								           		<Label Text="{Binding Speakers}" FontFamily="Open Sans"	 Font="16" TextColor="Black" />  
+								  				</StackLayout>
+								           	</StackLayout>
+
+									        <StackLayout Padding="10,140,20,15" Orientation="Horizontal" HorizontalOptions="Center" >
+								           		<ContentViews:SessionImageContentView  />
+								           	</StackLayout>
+
+
+								        </Grid>
+									      
+									    <StackLayout Spacing="1"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="400"   >   
+									      	
+								            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25" Padding="20,0,0,0" >
+								                <Label Text="Speaker:" 				TextColor="Black"  WidthRequest="200" VerticalOptions="Center"  />
+								                <Label Text="{Binding Speakers}" 	TextColor="Black"  WidthRequest="200" VerticalOptions="Center"  />
+								            </StackLayout>
+
+								            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25"  Padding="20,0,0,0"  >
+								                <Label Text="Location:" 	TextColor="Black" 	WidthRequest="200" VerticalOptions="Center" />
+								               	<Label Text="{Binding Location}" 	TextColor="Black"  WidthRequest="200"  VerticalOptions="Center"   />
+								            </StackLayout>    
+								                
+								            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="25"  Padding="20,0,0,0"  >
+												<Label Text="Track:" 			TextColor="Black"   WidthRequest="200"  VerticalOptions="Center"    />
+												<Label Text="{Binding Track}" 	TextColor="Black"  	WidthRequest="200"  VerticalOptions="Center"   />
+											</StackLayout> 
+												
+								            <StackLayout Orientation="Horizontal" BackgroundColor="White"  HeightRequest="25"  Padding="20,0,0,0"  >
+								                <Label Text="Time:" TextColor="Black" WidthRequest="200"  VerticalOptions="Center"  />
+
+								               	<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" WidthRequest="200"  >    
+									          		<Label TextColor="Black"  Font="14" Text="{Binding Begins, StringFormat='{0:t}'}" />
+									            	<Label TextColor="Black"  Font="14" Text="-" />
+									            	<Label TextColor="Black"  Font="14" Text="{Binding Ends, StringFormat='{0:t}'}" />
+									       		</StackLayout>
+
+
+
+
+								            </StackLayout>
+
+							            </StackLayout>
+									</StackLayout>
+
 	                            </StackLayout>
 							</views:EventarinCell>
 						</DataTemplate>
 					</ListView.ItemTemplate>
 				</views:PullToRefreshListView>
 			</StackLayout>
-
+			</StackLayout>
 	</ScrollView>
 	</ContentPage.Content>
 </pages:BaseContentPage>

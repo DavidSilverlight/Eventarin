@@ -1,12 +1,9 @@
 ﻿<resources>
-  <style name="Theme.Splash"
-    parent="android:Theme">
-    <item name="android:windowBackground">@drawable/splash3</item>
+  <style name="Theme.Splash"   parent="android:Theme">
+    <item name="android:windowBackground">@drawable/splash4</item>
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowIsTranslucent">false</item>
     <item name="android:windowIsFloating">false</item>
     <item name="android:backgroundDimEnabled">true</item>
-  </style>
-    
-
+     </style>
 </resources>

@@ -25,7 +25,7 @@ namespace Eventarin.Core.Services
 		//	md.Detail = _pageCachingService.GetPage<TeamPage> ();
 
 		md.Master = new MenuPage ();
-			md.Detail = new ItineraryPage ();
+			md.Detail = new SessionsPage ();
 			return md;
 		}
 
@@ -40,19 +40,60 @@ namespace Eventarin.Core.Services
 			t page = _pageCachingService.GetPage<t>();
 		//	page = new NavigationPage(t);
 
-			if (page == null) {
+			if (page != null) {
+				md.Detail.Navigation.PushModalAsync (page);
+			}
+
+			md.BackgroundColor = Color.White;
+			md.IsPresented = false;  // close the slide-out
+			md.Title = "abc";
+
+
+//			var modalPage = new ContentPage ();
+//			await Navigation.PushModalAsync (modalPage);
+//			Debug.WriteLine ("The modal page is now on screen");
+//			var poppedPage = await Navigation.PopModalAsync ();
+//			Debug.WriteLine ("The modal page is dismissed");
+//			Debug.WriteLine (Object.ReferenceEquals (modalPage, poppedPage)); //prints "true"
+		}
+
+
+		public void NavigateModalToSpeaker<t>() where t : BaseContentPage
+		{
+			t page = _pageCachingService.GetPage<t>();
+			//	page = new NavigationPage(t);
+
 
 				md.Detail.Navigation.PushModalAsync (new SpeakerPage ());
-			}
-			else
-			{
-				md.Detail.Navigation.PushModalAsync (page);
-
-			}
 		}
+
+		public void NavigateFromSpeaker<t>() where t : BaseContentPage
+		{
+			t page = _pageCachingService.GetPage<t>();
+			//	page = new NavigationPage(t);
+
+
+			md.Detail.Navigation.PopModalAsync ();
+		}
+
+		public void NavigateFromSession<t>() where t : BaseContentPage
+		{
+			t page = _pageCachingService.GetPage<t>();
+			//	page = new NavigationPage(t);
+
+
+			md.Detail.Navigation.PopModalAsync ();
+		}
+
+
 
 		public void Navigate<t>() where t : BaseContentPage
 		{
+
+
+			try 
+			{
+
 			//t page = _pageCachingService.GetPage<t>();
 			// TODO: This works for now because the parents are always NavigationPage, 
 			// but that not might be the case in the future.
@@ -62,7 +103,7 @@ namespace Eventarin.Core.Services
 
 			Page page = _pageCachingService.GetPage<t>();
 
-
+			//page.Title = "hello";
 
 //			t page;//= new Page<t> ();
 //
@@ -71,7 +112,7 @@ namespace Eventarin.Core.Services
 //				np = new  NavigationPage(page);
 //			}
 //		
-//			np = page.Parent as NavigationPage;
+//			var np = page.Parent as NavigationPage;
 //			if (np == null)
 //			{
 //				np = new  NavigationPage(page);
@@ -86,10 +127,18 @@ namespace Eventarin.Core.Services
 				md.Detail = page;
 			}
 
-		//	md.Detail.Navigation.PushAsync(page);
-		//	md.Detail = np;
+		//	md.Detail.Navigation.PushAsync(new NavigationPage(page));
+			md.Detail = page;
 			md.BackgroundColor = Color.White;
 			md.IsPresented = false;  // close the slide-out
+			md.Title = "test 3";
+
+
+			}
+			catch ( Exception exc ) 
+			{
+				//Toast.MakeText(this, exc.Message, ToastLength.Long).Show();
+			}
 		}
 
 
@@ -97,25 +146,20 @@ namespace Eventarin.Core.Services
 
 		public void NavigateToSpeakers<t>() where t : BaseContentPage
 		{
-			//t page = _pageCachingService.GetPage<t>();
-			// TODO: This works for now because the parents are always NavigationPage, 
-			// but that not might be the case in the future.
-			// Figure out the right way to remove the parent.
-
-			//	NavigationPage np = new  NavigationPage<t>();
-
-			Page page = new SpeakersPage ();
-
-
-
-				md.Detail = new SpeakersPage();
-
-			//	md.Detail.Navigation.PushAsync(page);
-			//	md.Detail = np;
+			md.Detail = new SpeakersPage();
 			md.BackgroundColor = Color.White;
 			md.IsPresented = false;  // close the slide-out
+			md.Detail.Title = "page";
 		}
 
+
+		public void NavigateToItinerary<t>() where t : BaseContentPage
+		{
+			md.Detail = new ItineraryPage();
+			md.BackgroundColor = Color.White;
+			md.IsPresented = false;  // close the slide-out
+			md.Detail.Title = "page";
+		}
 
 
 

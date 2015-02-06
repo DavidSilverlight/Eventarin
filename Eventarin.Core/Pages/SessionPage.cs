@@ -5,41 +5,19 @@ using Eventarin.Core.ViewModels;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
+
 namespace Eventarin.Core.Pages
 {	
 	public partial class SessionPage : BaseContentPage
 	{	
 		SessionsViewModel viewModel;
+
 		public SessionPage ()
 		{
 			InitializeComponent ();
-			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
+			viewModel = App.SimpleIoC.Resolve<SessionsViewModel> ();
 			BindingContext = viewModel;
 
-
-//			this.ToolbarItems.Add(new ToolbarItem {
-//                Text = "Refresh",
-//				Icon = "reload.png",
-//				Command = viewModel.RefreshCommand
-//			});
-
-
-//
-			this.ToolbarItems.Add(new ToolbarItem {
-				Text = "",
-
-			//	Icon = "hamburger_menu_icon.png",
-				Command = viewModel.RefreshCommand
-
-			});
-
-
-		}
-
-		protected override void OnParentSet()
-		{
-			base.OnParentSet();
-	//		viewModel.RefreshCommand.Execute(null);
 		}
 	}
 }

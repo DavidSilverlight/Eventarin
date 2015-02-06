@@ -41,29 +41,7 @@ namespace Eventarin.Core.Models
 			}
 		}
 
-		public ImageSource SpeakerSubheader {
-			get {
-				var fileName = "subheader_1";
 
-
-
-				Random r = new Random();
-				int rInt = r.Next(1, 6); //for ints
-				int range = 6;
-				double rDouble = r.NextDouble()* range; //for doubles
-
-				Int32 rFileID = Convert.ToInt32 (rDouble);
-
-				if (rFileID < 1 || rFileID > 6) {
-					rFileID = 1;
-				}
-
-
-				fileName = "subheader_" + rFileID.ToString ();
-
-				return ImageSource.FromFile (fileName);
-			}
-		}
 
 
         //public string HeadshotDisplayUrl

@@ -91,81 +91,83 @@ namespace Eventarin.Core.Models
 			set;
 		}
 
-		public string FavoriteMessage
-		{
-			get
-			{
-				if (IsFavorite)
-				{
-					return "Saved as a Favorite";
-				}
-				else
-				{
-					return "Add to Favorites";
-				}
-			}
-		}
+//		public string FavoriteMessage
+//		{
+//			get
+//			{
+//				if (IsFavorite)
+//				{
+//					return "Saved as a Favorite";
+//				}
+//				else
+//				{
+//					return "Add to Favorites";
+//				}
+//			}
+//		}
 
-		public ImageSource SessionSubheader {
-			get {
-				var fileName = "subheader_1";
+//		public ImageSource SessionSubheader {
+//			get {
+//				var fileName = "subheader_1";
+//
+//
+//
+//				Random r = new Random();
+//				int rInt = r.Next(1, 6); //for ints
+//				int range = 6;
+//				double rDouble = r.NextDouble()* range; //for doubles
+//
+//				Int32 rFileID = Convert.ToInt32 (rDouble);
+//
+//				if (rFileID < 1 || rFileID > 6) {
+//					rFileID = 1;
+//				}
+//
+//
+//			 	fileName = "subheader_" + rFileID.ToString ();
+//
+//				return ImageSource.FromFile (fileName);
+//			}
+//		}
+//        
+//		public ImageSource FavoriteImage
+//		{
+//			get
+//			{
+//				if (IsFavorite)
+//				{
+//					//return ImageSource.FromFile("Favorite");
+//					return ImageSource.FromFile ("add_to itinerary42x50");
+//				}
+//				else
+//				{
+//					//return ImageSource.FromFile("NotFavorite");
+//					return ImageSource.FromFile ("add_to itinerary42x50");
+//				}
+//			}
+//		}
+//
 
-
-
-				Random r = new Random();
-				int rInt = r.Next(1, 6); //for ints
-				int range = 6;
-				double rDouble = r.NextDouble()* range; //for doubles
-
-				Int32 rFileID = Convert.ToInt32 (rDouble);
-
-				if (rFileID < 1 || rFileID > 6) {
-					rFileID = 1;
-				}
-
-
-			 	fileName = "subheader_" + rFileID.ToString ();
-
-				return ImageSource.FromFile (fileName);
-			}
-		}
-        
-		public ImageSource FavoriteImage
-		{
-			get
-			{
-				if (IsFavorite)
-				{
-					return ImageSource.FromFile("Favorite");
-				}
-				else
-				{
-					return ImageSource.FromFile("NotFavorite");
-				}
-			}
-		}
-
-
-		public ImageSource FavoriteCircle
-		{
-			get {
-
-				int photoSize = Device.OnPlatform (50, 50, 80);
-				//var a = new 
-				var photo = new ImageCircle.Forms.Plugin.Abstractions.CircleImage {
-					Source = FavoriteImage,
-					WidthRequest = photoSize,
-					HeightRequest = photoSize,
-					Aspect = Aspect.AspectFill,
-					HorizontalOptions = LayoutOptions.Center
-				};
-			//	photo.SetBinding (Image.SourceProperty, s => s.Image);
-
-				//	photo.
-				return photo.Source;
-			}
-			
-		}
+//		public ImageSource FavoriteCircle
+//		{
+//			get {
+//
+//				int photoSize = Device.OnPlatform (50, 50, 80);
+//				//var a = new 
+//				var photo = new ImageCircle.Forms.Plugin.Abstractions.CircleImage {
+//					Source = FavoriteImage,
+//					WidthRequest = photoSize,
+//					HeightRequest = photoSize,
+//					Aspect = Aspect.AspectFill,
+//					HorizontalOptions = LayoutOptions.Center
+//				};
+//			//	photo.SetBinding (Image.SourceProperty, s => s.Image);
+//
+//				//	photo.
+//				return photo.Source;
+//			}
+//			
+//		}
 
 //		protected override bool DrawChild(Canvas canvas, global::Android.Views.View child, long drawingTime)
 //		{
@@ -206,14 +208,14 @@ namespace Eventarin.Core.Models
 //
 //		}
 
-        public ImageSource HeadshotDisplayUrl
-		{
-			get
-			{
-					return ImageSource.FromFile("NoAvatar.png");
-			}
-		}
-
+//        public ImageSource HeadshotDisplayUrl
+//		{
+//			get
+//			{
+//					return ImageSource.FromFile("NoAvatar.png");
+//			}
+//		}
+//
 	}
 }
 

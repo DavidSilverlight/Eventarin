@@ -16,6 +16,9 @@ namespace Eventarin.Core.Pages
 			viewModel = App.SimpleIoC.Resolve<SessionsViewModel>();
 			BindingContext = viewModel;
 
+
+			stackSessions.HeightRequest = 250 * viewModel.Sessions.Count;
+
 			//DS 010715 CodeSmell - Use Commanding. Research why the EventarinCell Command is always null
 			ListSessions.ItemSelected += (sender, e) => {
 				viewModel.CurrentSession = (Eventarin.Core.Models.Session)e.SelectedItem;
@@ -29,34 +32,7 @@ namespace Eventarin.Core.Pages
 
 			};
 
-
-
-
-//			this.ToolbarItems.Add(new ToolbarItem {
-//                Text = "Refresh",
-//				Icon = "reload.png",
-//				Command = viewModel.RefreshCommand
-//			});
-			//this.ToolbarItems.Clear ();
-//			var hamburgerItem = new ToolbarItem ();
-//			hamburgerItem.Order = ToolbarItemOrder.Primary;
-//			hamburgerItem.Priority = 0;
-//			hamburgerItem.Text = "Back to sessions";
-//		
-
-			//(TextCell = "Sessions", "hamburger_menu_icon.png", Action.Combine, ToolbarItemOrder.Primary, 0);
-		//	this.ToolbarItems.Add (hamburgerItem);
-//			this.ToolbarItems.Add(new ToolbarItem {
-//				Text = "",
-//			
-//				Icon = "hamburger_menu_icon.png",
-//
-//				Command = viewModel.RefreshCommand
-//
-//			});
-			//
-
-			this.BackgroundColor = Color.White;    
+			  
 		}
 
 

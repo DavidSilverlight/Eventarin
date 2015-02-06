@@ -114,6 +114,10 @@ namespace Eventarin.Android
 
 				try {
 					speakerImageURL = item.ChildNodes [2].InnerText;
+					if (speakerImageURL.Length < 10)
+					{
+						speakerImageURL  = "";
+					}
 
 				}
 				catch(Exception exc) {
@@ -150,14 +154,62 @@ namespace Eventarin.Android
 
 		}
 
+		public static void RefreshLocalTracksXML()
+		{
+
+			Eventarin.Core.App.Database.ClearExistingTracks ();
+			//var url = "http://www.fladotnet.com/flanetdata/api/ccsessions";
+			var url = "http://www.fladotnet.com/flanetdata/api/cctracks";
+			string content;
+
+			XmlDocument doc = new XmlDocument ();
+			doc.Load (url);
+
+			int c = 0;
+
+			foreach (XmlNode item in doc.DocumentElement.ChildNodes) {
+
+				try {
+
+				var trackID = item.ChildNodes [0].InnerText;
+				var trackRoom = item.ChildNodes [1].InnerText;
+				var trackName =  item.ChildNodes [2].InnerText;
+				var	trackDesc = item.ChildNodes [3].InnerText;
+
+
+
+
+				Track newTrack = new Track();
+				newTrack.Id = int.Parse(trackID);
+				newTrack.Room = trackRoom;
+				newTrack.Name = trackName;
+				newTrack.Description = trackDesc;
+
+
+				Eventarin.Core.App.Database.AddTrack(newTrack);
+				//App.Database.AddSession(newSession);
+				//	Eventarin.Core.App.Database.SaveSession(newSession);
+
+				}
+				catch ( Exception exc ) {
+					//Handle cases where the data is invalid
+				}
+
+
+				c++;
+			}
+
+		}
+
+
 
 
 		public static void RefreshLocalSessionsXML()
 		{
 
 			Eventarin.Core.App.Database.ClearExistingSessions ();
-			var url = "http://www.fladotnet.com/flanetdata/api/ccsessions";
-
+			//var url = "http://www.fladotnet.com/flanetdata/api/ccsessions";
+			var url = "http://www.fladotnet.com/flanetdata/api/ccsessiondetails";
 			string content;
 
 			XmlDocument doc = new XmlDocument ();
@@ -182,17 +234,29 @@ namespace Eventarin.Android
 				newSession.Begins = DateTime.Now;//  sessionJSON.start;
 				newSession.Ends = DateTime.Now;// sessionJSON.end;
 				newSession.Location = " ";  //sessionJSON.location;
+				newSession.Track = "N/A";
+
+				var track = Eventarin.Core.App.Database.GetTrack (int.Parse(trackID));
+				if (track != null) {
+					newSession.Track = track.Name;
+				}
+				//newSession.Track =" ";  //sessionJSON.track;
 
 
 
-				newSession.Track =" ";  //sessionJSON.track;
 				newSession.Sponsor = " "; //sessionJSON.sponsor;
-				newSession.Speakers = " "; //sessionJSON.speakers;
 
+
+				newSession.Speakers = " "; //sessionJSON.speakers;
 				var speaker = Eventarin.Core.App.Database.GetSpeaker (int.Parse(newSession.Speaker_Id));
 				if (speaker != null) {
 					newSession.Speakers = speaker.Name;
 				}
+
+
+
+
+
 				Eventarin.Core.App.Database.AddSession(newSession);
 				//App.Database.AddSession(newSession);
 				//	Eventarin.Core.App.Database.SaveSession(newSession);

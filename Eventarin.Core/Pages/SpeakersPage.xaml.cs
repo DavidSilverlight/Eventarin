@@ -21,6 +21,7 @@ namespace Eventarin.Core.Pages
 
 			ListSpeakers.ItemSelected += (sender, e) => {
 				viewModel.CurrentSpeaker = (Eventarin.Core.Models.Speaker)e.SelectedItem;
+				ListSpeakers.HeightRequest = 470 * viewModel.Speakers.Count;
 				var speakerID = 0;
 				{
 					if (viewModel.CurrentSpeaker != null) {
@@ -40,12 +41,12 @@ namespace Eventarin.Core.Pages
 
 
 
-
-		protected override void OnParentSet()
-		{
-			base.OnParentSet();
-	//		viewModel.RefreshCommand.Execute(null);
-		}
+//
+//		protected override void OnParentSet()
+//		{
+//			base.OnParentSet();
+//	//		viewModel.RefreshCommand.Execute(null);
+//		}
 
 
 	}

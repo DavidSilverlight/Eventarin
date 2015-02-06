@@ -1,44 +1,50 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			 xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
-			 xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
-			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
-			 xmlns:ContentViews="clr-namespace:Eventarin.Core.ContentViews;assembly=Eventarin.Core"
-		     x:Class="Eventarin.Core.Pages.SpeakerPage"
-		     Title="{Binding PageTitle}"
- 		     BackgroundColor="White">
- 	<ContentPage.Resources>
-		<ResourceDictionary>
-			<converters:OppositeConverter x:Key="oppositeConverter" />
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pages="clr-namespace:Eventarin.Core.Pages;assembly=Eventarin.Core"
+             xmlns:views="clr-namespace:Eventarin.Core.Views;assembly=Eventarin.Core"
+             xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
+             x:Class="Eventarin.Core.Pages.SpeakerPage"
+             Title="{Binding PageTitle}"
+             BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:OppositeConverter x:Key="oppositeConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
 
-		<StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
-			<Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
+        <StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="White"  >
+            <StackLayout  HorizontalOptions="StartAndExpand" VerticalOptions="Start"  HeightRequest="35"  WidthRequest="400" BackgroundColor="White" >
+            	<Button Image="hamburger_menu_icon.png" BackgroundColor="White"  Command="{Binding CloseSpeakerClicked}" HorizontalOptions="Start"  />			
+	        </StackLayout>
+            <Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
 
-	           	<Image  Source="{Binding CurrentSpeaker.SpeakerSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"  />
+                   <Image  Source="{Binding SpeakerSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"  />
 
-	           	<StackLayout Padding="5,15,0,0"  >
-	           		<StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand"  />
-	           	</StackLayout>
+                   <StackLayout Padding="5,15,0,0"  >
+                       <StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand"  />
+                   </StackLayout>
 
-	           	<StackLayout Padding="5,115,0,0"  >
-	           		<Label Text="{Binding CurrentSpeaker.Name}" FontFamily="Open Sans"	 Font="30" TextColor="Black"    />  
-	           	</StackLayout>
+                   <StackLayout Padding="5,115,0,0"  >
+                       <Label Text="{Binding CurrentSpeaker.Name}" FontFamily="Open Sans"     Font="30" TextColor="Black"    />  
+                   </StackLayout>
 
-	        </Grid>
-		           	
-            <StackLayout Padding="10" Orientation="Vertical"	BackgroundColor="White" HeightRequest="150" WidthRequest="360" >
-                <Label Text="{Binding CurrentSpeaker.Company}" 	Font="12" FontAttributes="Bold" TextColor="Black"  WidthRequest="380" VerticalOptions="Start"   />
-            	<Label Text="{Binding CurrentSpeaker.Position}" 	Font="10" TextColor="Black"  WidthRequest="380"  VerticalOptions="Start" HorizontalOptions="Start"  />
-            	<Label Text="{Binding CurrentSpeaker.Bio}" 	Font="10" TextColor="Black"  WidthRequest="380" VerticalOptions="StartAndExpand" HorizontalOptions="Start" />
-			</StackLayout>
-
-		</StackLayout>
+            </Grid>
+                       
+            <StackLayout Padding="10" Orientation="Vertical"    BackgroundColor="White" HeightRequest="150" WidthRequest="360" >
+                <Label Text="{Binding CurrentSpeaker.Company}"     Font="12" FontAttributes="Bold" TextColor="Black"  WidthRequest="380" VerticalOptions="Start"   />
+                <Label Text="{Binding CurrentSpeaker.Position}"     Font="10" TextColor="Black"  WidthRequest="380"  VerticalOptions="Start" HorizontalOptions="Start"  />
+                <Label Text="{Binding CurrentSpeaker.Bio}"     Font="10" TextColor="Black"  WidthRequest="380" VerticalOptions="StartAndExpand" HorizontalOptions="Start" />
+            </StackLayout>
 
 
 
-	</ContentPage.Content>
+                
+
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
 </pages:BaseContentPage>

@@ -23,7 +23,7 @@ namespace Eventarin.Core.ViewModels
             _webService = webService;
 			_navigationService = navigationService;
             PageTitle = " ";
-            GetSpeakers();  //according to the compiler, we should use async wait
+           // GetSpeakers();  //according to the compiler, we should use async wait
         }
 
 
@@ -55,12 +55,31 @@ namespace Eventarin.Core.ViewModels
 			{
 				return new Command(() =>
 					{
+						//DS I would like to punch the NavigateModel in the face.
 
 						//_navigationService.Navigate<SpeakerPage>();
 						_navigationService.NavigateModal<SpeakerPage>();
+
+						//_navigationService.NavigateModalToSpeaker<SpeakerPage>(new NavigationPage());
 					});
 			}
 		}
+
+
+		public ICommand CloseSpeakerClicked
+		{
+			get
+			{
+				return new Command(() =>
+					{
+						_navigationService.NavigateFromSpeaker<SpeakerPage>();
+					//	RaisePropertyChanged(() => CurrentSession);
+					});
+
+			}
+		}
+
+
 		private Speaker _currentSpeaker = null;
 		public Speaker CurrentSpeaker
 		{
@@ -79,7 +98,29 @@ namespace Eventarin.Core.ViewModels
 			}
 		}
 
+		public ImageSource SpeakerSubheader {
+			get {
+				var fileName = "subheader_1";
 
+
+
+				Random r = new Random();
+				int rInt = r.Next(1, 6); //for ints
+				int range = 6;
+				double rDouble = r.NextDouble()* range; //for doubles
+
+				Int32 rFileID = Convert.ToInt32 (rDouble);
+
+				if (rFileID < 1 || rFileID > 6) {
+					rFileID = 1;
+				}
+
+
+				fileName = "subheader_" + rFileID.ToString ();
+
+				return ImageSource.FromFile (fileName);
+			}
+		}
 
         private async Task GetSpeakers()
         {

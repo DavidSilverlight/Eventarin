@@ -12,6 +12,9 @@ using Android.Content.PM;
 using System.IO;
 using SQLite;
 using ImageCircle.Forms.Plugin.Droid;
+using Android.Graphics.Drawables;
+//using Android.Graphics;
+using Android.Graphics;
 
 
 namespace Eventarin.Android
@@ -30,7 +33,44 @@ namespace Eventarin.Android
             //Initialize database
             InitializeDatabase();
 
+
+
+
+			//ImageView imgStatus = (ImageView) findViewById(R.id.imgInfoIcon);
+			// Load the icon as drawable object
+		//	Drawable d = getResources().getDrawable(R.drawable.ic_menu_info_details);
+
+			// Get the color of the icon depending on system state
+		//	int iconColor = android.graphics.Color.RED;
+//				if (systemState == Status.ERROR)
+//					iconColor = android.graphics.Color.RED
+//				else if (systemState == Status.WARNING)
+//					iconColor = android.graphics.Color.YELLOW
+//				else if (systemState == Status.OK)
+//					iconColor = android.graphics.Color.GREEN
+
+					// Set the correct new color
+		//			d.setColorFilter( iconColor, Mode.MULTIPLY );
+
+				// Load the updated drawable to the image viewer
+				//imgStatus.setImageDrawable(d);
+
+
+
+
+
+
+
+
 			SetPage (App.GetMainPage ());
+			ActionBar actionBar;// = ActionBar.SetBackgroundDrawable();
+
+			ColorDrawable coldraw = new ColorDrawable ();
+			coldraw.Color = Color.White;
+
+			ActionBar.SetBackgroundDrawable (coldraw); //.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg));
+			ActionBar.SetIcon (Resource.Drawable.hamburger_menu_icon);
+			ActionBar.SetTitle (Resource.String.header);
 		}
 
 
@@ -57,7 +97,7 @@ namespace Eventarin.Android
             //Initialize database
             var sqliteFilename = "Eventarin.db3";
             string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
-            var path = Path.Combine(documentsPath, sqliteFilename);
+			var path = System.IO.Path.Combine(documentsPath, sqliteFilename);
 
             // This is where we copy in the prepopulated database
             //Console.WriteLine (path);
@@ -79,20 +119,38 @@ namespace Eventarin.Android
             
           App.SetDatabaseConnection(conn);
 
-            RefreshLocalData ();
-
+           // RefreshLocalData ();
+			RefreshLocalDataSequentially ();
 
         }
 
 
         public void RefreshLocalData()
         {
+
+			EventXMLData.RefreshLocalTracksXML();
+			EventXMLData.RefreshLocalSpeakersXML ();
+			EventXMLData.RefreshLocalSessionsXML();
+
+
+
         //    EventJSONData.RefreshLocalSpeakers();
-			EventJSONData.RefreshLocalSpeakersXML ();
+
            // EventJSONData.RefreshLocalSessions();
-			EventJSONData.RefreshLocalSessionsXML();
+
 		//	EventJSONData.GetSessionDetail (3519);
         }
+
+
+		public void RefreshLocalDataSequentially()
+		{
+
+			EventXMLData.RefreshLocalTracksXML();
+		//	EventXMLData.RefreshLocalSpeakersXML ();
+		//	EventXMLData.RefreshLocalSessionsXML();
+
+		}
+
 
 	}
 }

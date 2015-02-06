@@ -15,25 +15,38 @@
 	</ContentPage.Resources>
 	<ContentPage.Content>
 
-    	<ScrollView Orientation="Vertical" HeightRequest="500" VerticalOptions="FillAndExpand" >
-			<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand">
-  	    		<Image  Source="Sessions_header.png"  VerticalOptions="Start"  />	
+    	<ScrollView Orientation="Vertical" HeightRequest="500" >
+    		<StackLayout x:Name="stackSessions" Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand" HeightRequest="3000"  >
+  	    	
+			<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand"  >
+  	    		<Image  Source="Sessions_header.png"  VerticalOptions="Start" />	
 
 
-				<views:PullToRefreshListView   VerticalOptions="FillAndExpand"  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions"  HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading..." HeightRequest="100000"  >
+				<views:PullToRefreshListView   VerticalOptions="FillAndExpand"  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSessions"  HasUnevenRows="true" ItemsSource="{Binding Sessions}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading..."  >
 					<ListView.ItemTemplate>
 
 						<DataTemplate>
 							<views:EventarinCell>
 								<StackLayout Padding="20" >
 	                            	<StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
-										<Grid HeightRequest="100" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White"  >
+										<Grid  WidthRequest="455" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White"  >
 
-								           	<Image  Source="subheader_1_100x400.png"  VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  />
+								           	<Image  Source="subheader_1.png"  HeightRequest="185"  VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  />
 
-								           	<StackLayout Padding="5,25,0,0"  >
+								           	<StackLayout Padding="5,25,0,0" Orientation="Vertical" >
 								           		<Label Text="{Binding Title}" 	 Font="16" TextColor="Black"    />  
+
+								           		<StackLayout  Orientation="Horizontal" >
+
+								           		<Label Text="Presenter: " FontFamily="Open Sans"	 Font="16" TextColor="Black"   />  								  				
+								           		<Label Text="{Binding Speakers}" FontFamily="Open Sans"	 Font="16" TextColor="Black" />  
+								  				</StackLayout>
 								           	</StackLayout>
+
+									        <StackLayout Padding="10,140,20,15" Orientation="Horizontal" HorizontalOptions="Center" >
+								           		<ContentViews:SessionImageContentView  />
+								           	</StackLayout>
+
 
 								        </Grid>
 									      
@@ -77,7 +90,7 @@
 					</ListView.ItemTemplate>
 				</views:PullToRefreshListView>
 			</StackLayout>
-
+			</StackLayout>
 	</ScrollView>
 	</ContentPage.Content>
 </pages:BaseContentPage>

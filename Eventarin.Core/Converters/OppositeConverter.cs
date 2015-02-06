@@ -14,7 +14,9 @@ namespace Eventarin.Core.Converters
 
 		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
-			throw new NotImplementedException();
+			bool passedInValue = (bool)value;
+
+			return passedInValue;
 		}
 	}
 }

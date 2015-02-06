@@ -6,7 +6,7 @@
 			 xmlns:converters="clr-namespace:Eventarin.Core.Converters;assembly=Eventarin.Core"
              xmlns:ContentViews="clr-namespace:Eventarin.Core.ContentViews;assembly=Eventarin.Core"
 		     x:Class="Eventarin.Core.Pages.SpeakersPage"
-		     Title="{Binding PageTitle}"
+		     Title="Speakers"
  		     BackgroundColor="White">
  	<ContentPage.Resources>
 		<ResourceDictionary>
@@ -15,66 +15,49 @@
 	</ContentPage.Resources>
 	<ContentPage.Content>
 
-	 <ScrollView>
-		
 
 
-		<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" HeightRequest="30000" VerticalOptions="StartAndExpand" >
-		<Image  Source="Speakers_header.png"  VerticalOptions="Start"  />
+	    <ScrollView Orientation="Vertical" HeightRequest="500" >
+			<StackLayout Orientation="Vertical" BackgroundColor="#f0f0f0" VerticalOptions="FillAndExpand"  >
+  	    		<Image  Source="Speakers_header.png"  VerticalOptions="Start"  />	
 
-			<Grid VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
-				<Grid.RowDefinitions>
-	      			<RowDefinition Height="*" />
-	      		</Grid.RowDefinitions>
-				
 
-				<views:PullToRefreshListView  IsVisible="{Binding IsBusy, Converter={StaticResource oppositeConverter}}" x:Name="ListSpeakers" Grid.Row="0" HasUnevenRows="true" ItemsSource="{Binding Speakers}" IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding RefreshCommand}"  Message="Loading...">
+ 				<ListView    HasUnevenRows="true"   x:Name="ListSpeakers" ItemsSource="{Binding Speakers}" HeightRequest="5000"    >
+					
 					<ListView.ItemTemplate>
 						<DataTemplate>
-							<views:EventarinCell>
-								<StackLayout Padding="20" >
+							<ViewCell>
+								<StackLayout Padding="0" >
+	                            <StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
 
 
 
-		                            <StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  >
-										<Grid HeightRequest="100" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
+									<Grid HeightRequest="100" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
 
-								           	<Image  Source="subheader_1_100x400.png"  VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  />
+							           	<Image  Source="subheader_1_100x400.png"  VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  />
 
-								           	<StackLayout Padding="10,5,20,15" Orientation="Horizontal"  >
-								           		<ContentViews:SpeakerImageContentView  />
-								           		<Label Text="{Binding Name}" FontFamily="Open Sans"	 Font="16" TextColor="Black"  VerticalOptions="CenterAndExpand"   />  
-								           	</StackLayout>
+							           	<StackLayout Padding="10,5,20,15" Orientation="Horizontal"  >
+							           		<ContentViews:SpeakerImageContentView  />
+							           		<Label Text="{Binding Name}" FontFamily="Open Sans"	 Font="16" TextColor="Black"  VerticalOptions="CenterAndExpand"   />  
+							           	</StackLayout>
 
-								        </Grid>
+							        </Grid>
 
 
-									           	
-							            <StackLayout Padding="10" Orientation="Vertical"	BackgroundColor="White" HeightRequest="150" WidthRequest="360" >
-							                <Label Text="{Binding Company}" 	Font="12" FontAttributes="Bold" TextColor="Black"  WidthRequest="380" VerticalOptions="Start"   />
-							            	<Label Text="{Binding Position}" 	Font="10" TextColor="Black"  WidthRequest="380"  VerticalOptions="Start" HorizontalOptions="Start"  />
-							            	<Label Text="{Binding BioExcerpt}" 	Font="10" TextColor="Black"  WidthRequest="380" VerticalOptions="StartAndExpand" HorizontalOptions="Start" />
-										</StackLayout>
-
+								           	
+						            <StackLayout Padding="10" Orientation="Vertical"	BackgroundColor="White" HeightRequest="150" WidthRequest="360" >
+						                <Label Text="{Binding Company}" 	Font="12" FontAttributes="Bold" TextColor="Black"  WidthRequest="380" VerticalOptions="Start"   />
+						            	<Label Text="{Binding Position}" 	Font="10" TextColor="Black"  WidthRequest="380"  VerticalOptions="Start" HorizontalOptions="Start"  />
+						            	<Label Text="{Binding BioExcerpt}" 	Font="10" TextColor="Black"  WidthRequest="380" VerticalOptions="StartAndExpand" HorizontalOptions="Start" />
 									</StackLayout>
 
-
 								</StackLayout>
-
-
-
-
-
-
-
-							</views:EventarinCell>
+											</StackLayout>
+							</ViewCell>
 						</DataTemplate>
 					</ListView.ItemTemplate>
-				</views:PullToRefreshListView>
-			</Grid>
-		</StackLayout>
-
-									</ScrollView>
+				</ListView>
+			</StackLayout>
+		</ScrollView>
 	</ContentPage.Content>
 </pages:BaseContentPage>
-	

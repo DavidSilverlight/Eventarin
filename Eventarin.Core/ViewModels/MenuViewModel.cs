@@ -23,7 +23,7 @@ namespace Eventarin.Core.ViewModels
 			{
 				return new Command(() =>
 				{
-					_navigationService.Navigate<ItineraryPage>();
+					_navigationService.NavigateToItinerary<ItineraryPage>();
 				});
 			}
 		}

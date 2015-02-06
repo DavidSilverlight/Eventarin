@@ -9,8 +9,9 @@
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand" Orientation="Vertical"  >
 			<Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
-				<Image  Source="SessionBackground1.png" HeightRequest="120" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" />
-				<StackLayout Padding="0,75,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+				<Image  Source="SessionBackground1.png" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" />
+			
+				<StackLayout Padding="0,60,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
 					<TableView Intent="Menu" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  HeightRequest="400">
 						<TableRoot>
 							<TableSection>	

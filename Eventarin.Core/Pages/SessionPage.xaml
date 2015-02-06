@@ -13,18 +13,20 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
- 
-		<StackLayout VerticalOptions="Start" Orientation="Vertical">
 
-			<Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
-
-	           	<Image  Source="{Binding CurrentSession.SessionSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"  />
+        <StackLayout Spacing="0"  Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="White"  >
+            <StackLayout  HorizontalOptions="StartAndExpand" VerticalOptions="Start"  HeightRequest="35"  WidthRequest="440" BackgroundColor="White" >
+            	<Button Image="hamburger_menu_icon.png" BackgroundColor="White"  Command="{Binding CloseSessionClicked}" HorizontalOptions="Start"  />			
+	        </StackLayout>
+            <Grid HeightRequest="200" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="White" VerticalOptions="StartAndExpand"  >
+				        	
+	           	<Image  Source="{Binding SessionSubheader}"   VerticalOptions="Start" HorizontalOptions="StartAndExpand"   />
 
 	           	<StackLayout Padding="5,15,0,0"  >
 	           		<StackLayout x:Name="stackCircles" HorizontalOptions="StartAndExpand"  />
 	           	</StackLayout>
 
-	           	<StackLayout Padding="5,115,0,0"  >
+	           	<StackLayout Padding="5,75,0,0"  >
 	           		<Label Text="{Binding CurrentSession.Title}" 	 Font="16" TextColor="Black"    />  
 	           		<StackLayout Orientation="Horizontal" >	
 						<Label TextColor="White" Text="By:" Font="20"  />	
@@ -38,7 +40,7 @@
 			<StackLayout Padding="10" Orientation="Vertical" VerticalOptions="StartAndExpand">
 
 				<StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand" VerticalOptions="Start" HeightRequest="50"  >
-					<Button Image="{Binding CurrentSession.FavoriteImage}" BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="200" HeightRequest="30" Command="{Binding FavoriteStarClicked}"  />
+					<Button Image="{Binding FavoriteImage, Mode=TwoWay}" BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="200" HeightRequest="25" Command="{Binding FavoriteStarClicked}"  />
 				</StackLayout>
 
 				<Label Font="16" Text="When and Where" /> 

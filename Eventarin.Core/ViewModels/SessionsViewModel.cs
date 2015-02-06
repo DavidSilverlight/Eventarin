@@ -67,6 +67,18 @@ namespace Eventarin.Core.ViewModels
 		}
 
 
+		public ObservableCollection<Session> TrackSessions
+		{
+			get
+			{
+				return EventRepository.GetTrackSessions();
+			}
+
+		}
+
+
+
+
 		private Session _currentSession = null;
 		public Session CurrentSession
 		{
@@ -108,7 +120,10 @@ namespace Eventarin.Core.ViewModels
 					{
 
 					//	_navigationService.Navigate<SessionPage>();
+					//	SessionPage page = new SessionsPage();
+
 						_navigationService.NavigateModal<SessionPage>();
+
 					});
 			}
 		}
@@ -122,13 +137,42 @@ namespace Eventarin.Core.ViewModels
 						CurrentSession.IsFavorite = !CurrentSession.IsFavorite;
 						EventRepository.SaveSession(CurrentSession);
 
-
+						RaisePropertyChanged(() => FavoriteImage);
 						RaisePropertyChanged(() => CurrentSession);
 					});
 
 			}
 		}
 
+		public ICommand CloseSessionClicked
+		{
+			get
+			{
+				return new Command(() =>
+					{
+						_navigationService.NavigateFromSession<SessionPage>();
+					});
+
+			}
+		}
+
+
+
+//
+//		public ICommand CloseSessionClicked
+//		{
+//			get
+//			{
+//				return new Command(() =>
+//					{
+//						//_navigationService.NavigateFromSession();
+//
+//
+//					//	RaisePropertyChanged(() => CurrentSession);
+//					});
+//
+//			}
+//		}
 
 		private async Task GetSessions()
 		{
@@ -154,6 +198,73 @@ namespace Eventarin.Core.ViewModels
 
 
 
+		public bool HasFavorites
+		{
+			get
+			{
+				var sessions = Sessions.Where(s => s.IsFavorite == true);
+				bool hasFavorites = false;
+
+				if (sessions != null)
+				{
+					hasFavorites = (sessions.Count() > 0);
+				}
+				return hasFavorites;
+			}
+
+		}
+
+		public bool NoFavorites
+		{
+			get
+			{
+			return !HasFavorites;
+			}
+		}
+
+
+		public ImageSource SessionSubheader {
+			get {
+				var fileName = "subheader_1";
+
+
+
+				Random r = new Random();
+				int rInt = r.Next(1, 6); //for ints
+				int range = 6;
+				double rDouble = r.NextDouble()* range; //for doubles
+
+				Int32 rFileID = Convert.ToInt32 (rDouble);
+
+				if (rFileID < 1 || rFileID > 6) {
+					rFileID = 1;
+				}
+
+
+				fileName = "subheader_" + rFileID.ToString () ;
+
+			//	return ImageSource.FromFile (fileName);
+
+				return UriImageSource.FromFile(fileName);
+			}
+		}
+
+		public ImageSource FavoriteImage
+		{
+			get
+			{
+				if (CurrentSession.IsFavorite)
+				{
+					//return ImageSource.FromFile("Favorite");
+					return ImageSource.FromFile ("ItineraryAdded");
+				}
+				else
+				{
+					//return ImageSource.FromFile("NotFavorite");
+					return ImageSource.FromFile ("ItineraryAdding");
+				}
+			}
+		}
 
 
 

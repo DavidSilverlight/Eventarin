@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
+	<string name="hello">.</string>
+    <string name="header"> </string>
 	<string name="app_name">Eventarin.Android</string>
 	<string name="planet_prompt">Choose a planet</string>
+	<color name="white">#FFFFFF</color>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

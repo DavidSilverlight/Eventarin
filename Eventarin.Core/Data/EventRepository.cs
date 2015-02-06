@@ -68,6 +68,14 @@ namespace Eventarin.Core.Data
 		}
 
 
+		public static ObservableCollection<Session> GetTrackSessions ()
+		{
+			return me.db.GetTrackSessions();
+		}
+
+
+
+
         public static ObservableCollection<Session> GetMySessions()
         {
             return me.db.GetMySessions();
