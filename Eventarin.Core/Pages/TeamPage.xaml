@@ -57,7 +57,7 @@
 		            			  <StackLayout x:Name="stackZacharyWeiner" />
 			                      <StackLayout  Orientation="Vertical" >
 			                      		<Label TextColor="Black"   Font="16" Text="Zachary Weiner" />
-			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developmer" />
+			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developer" />
 			                 	  </StackLayout>
 		            		</StackLayout>
 
@@ -68,7 +68,7 @@
 			        	     	<StackLayout x:Name="stackCarlosMacias" />
 			                      <StackLayout  Orientation="Vertical" >
 			                      		<Label TextColor="Black"   Font="16" Text="Carlos Macias" />
-			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developmer" />
+			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developer" />
 			                 	  </StackLayout>
 			    	         </StackLayout>
 
@@ -76,7 +76,7 @@
 			                     <StackLayout x:Name="stackPaulPleasant" />
 			                      <StackLayout  Orientation="Vertical" >
 			                      		<Label TextColor="Black"   Font="16" Text="Paul Pleasant" />
-			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developmer" />
+			                      		<Label TextColor="Black"   Font="16" Text="Mobile Developer" />
 			                 	  </StackLayout>
 			            	</StackLayout>
 
