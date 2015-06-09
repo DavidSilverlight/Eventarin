@@ -19,12 +19,15 @@ namespace Eventarin.Core.Tests.ViewModels
 	{
 		Mock<IWebService> _webService;
 		SessionsViewModel viewModel;
+		Mock<INavigationService> _navigationService;
 
 		[SetUp]
 		public void Init()
 		{
 			_webService = new Mock<IWebService>();
-			viewModel = new SessionsViewModel(_webService.Object);
+			_navigationService = new Mock<INavigationService>();
+
+			viewModel = new SessionsViewModel(_webService.Object, _navigationService.Object);
 		}
 
 		[Test]
